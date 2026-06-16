@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SymbTr Analysis Book
 
 
@@ -139,3 +140,7 @@ The dataset contains "20,293" missing values( cell 20,293), corresponding to app
 The PCA and clustering notebooks require `scikit-learn`.
 
 If `scikit-learn` is not available
+=======
+# SymbTr-Analysis-Book
+Exploring Turkish Maqam Music Through Data Science and Computational Musicology
+>>>>>>> b50425e208465f3a6679d14d6c6bcf24cfe726bf
