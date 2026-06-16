@@ -10,12 +10,16 @@ https://zenodo.org/records/15470412
 
 #### Available Files
 
-- Turkish maqam music pieces in time series format_3000 rows x 365 columns.csv
-- pdf_v3.zip
-- xml_v3.zip
-- txt_v3.zip
-- mu2_v3.zip
-- mid_v3.zip
+- [Turkish maqam music pieces in time series format_3000 rows x 365 columns.csv](https://zenodo.org/records/15470412/files/Turkish%20maqam%20music%20pieces%20in%20time%20series%20format_3000%20rows%20x%20365%20columns
+- [pdf_v3.zip](https://zenodo.org/records/15470412/files/pdf_v3.zip?download=1)
+
+- [xml_v3.zip](https://zenodo.org/records/15470412/files/xml_v3.zip?download=1)
+
+- [txt_v3.zip](https://zenodo.org/records/15470412/files/txt_v3.zip?download=1)
+
+- [mu2_v3.zip](https://zenodo.org/records/15470412/files/mu2_v3.zip?download=1)
+
+- [mid_v3.zip](https://zenodo.org/records/15470412/files/mid_v3.zip?download=1)
 
 #### Dataset Used in This Book
 
@@ -34,3 +38,6 @@ which contains pitch trajectory representations of 3000 Turkish maqam music piec
 - NumPy
 - Matplotlib
 - Scikit-learn
+
+
+
