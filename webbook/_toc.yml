@@ -1,0 +1,13 @@
+format: jb-book
+root: landing
+
+chapters:
+  - file: introduction
+  - file: notebooks/01_download_data
+  - file: notebooks/02_data_overview
+  - file: notebooks/03_statistical_analysis
+  - file: notebooks/04_visualizations
+  - file: notebooks/05_pca_analysis
+  - file: notebooks/06_clustering
+  - file: notebooks/07_cluster_interpretation
+  - file: references

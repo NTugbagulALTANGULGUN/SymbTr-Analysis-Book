@@ -1,0 +1,37 @@
+# Book settings
+title: SymbTr Analysis Book
+author: N. Tuğbagül Altan Gülgün
+copyright: "2026"
+logo: images/logo.png
+
+# Notebook execution
+execute:
+  execute_notebooks: off
+  allow_errors: true
+  timeout: 20000
+
+# Launch buttons
+launch_buttons:
+  notebook_interface: "classic"
+  colab_url: "https://colab.research.google.com"
+  thebe: true
+
+# Repository information
+repository:
+  url: https://github.com/NTugbagulALTANGULGUN/SymbTr-Analysis-Book
+  path_to_book: webbook
+  branch: main
+
+# HTML options
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: false
+
+# Exclude files and folders from build
+exclude_patterns:
+  - .venv/*
+  - _build/*
+  - .jupyter_cache/*
+  - data/raw/*
+  - data/processed/*

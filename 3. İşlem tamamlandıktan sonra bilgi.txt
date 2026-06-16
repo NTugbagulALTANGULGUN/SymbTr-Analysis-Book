@@ -1,0 +1,10 @@
+3. İşlem tamamlandıktan sonra **bilgisayarınızı yeniden başlatın**. (Eğer bilgisayarınızda WSL zaten kuruluysa, bu adım hızlıca geçilecektir).
+
+---
+
+## 🐋 Adım 2: Docker Desktop Kurulumu
+
+1. [Docker Desktop Resmi Sayfasına](https://www.docker.com/products/docker-desktop/) gidin ve **"Download for Windows"** butonuna tıklayarak `.exe` kurulum dosyasını indirin.
+2. İndirdiğiniz dosyayı çalıştırın. Kurulum ekranında **"Use WSL 2 instead of Hyper-V"** seçeneğinin işaretli olduğundan emin olun.
+3. Kurulum tamamlandığında **Close and restart** (Kapat ve Yeniden Başlat) veya log out uyarısı gelecektir. Bilgisayarı veya oturumu yeniden başlatın.
+4. Bilgisayar açıldığında Docker Desktop uygulamasını başlatın. İlk açılışta üyelik veya sözleşme onaylama ekranı gelecektir, "Accept" diyerek geçebilirsiniz. Sağ altta Docker simgesinin yeşil (running) olduğunu görmelisiniz.
