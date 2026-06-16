@@ -44,8 +44,6 @@ which contains pitch trajectory representations of 3000 Turkish maqam music piec
 
 ## Citation
 
-## Citation
-
 Dataset DOI:
 
 https://doi.org/10.5281/zenodo.15470412
