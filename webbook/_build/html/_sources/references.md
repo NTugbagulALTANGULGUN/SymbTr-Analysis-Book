@@ -2,6 +2,13 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15470412.svg)](https://doi.org/10.5281/zenodo.15470412)
 
+
+## Source Code
+
+GitHub Repository:
+
+https://github.com/NTugbagulALTANGULGUN/SymbTr-Analysis-Book
+
 ## Dataset
 
 ### SymbTr v3.0 Turkish Maqam Music Dataset
@@ -32,6 +39,32 @@ Turkish maqam music pieces in time series format_3000 rows x 365 columns.csv
 
 which contains pitch trajectory representations of 3000 Turkish maqam music pieces.
 
+
+## Related Turkish Makam Music Datasets
+
+### Turkish Makam Symbolic Phrase Dataset
+
+A large machine-readable dataset of Turkish makam music scores segmented into phrases by expert annotators. The dataset supports research on phrase structure, segmentation, and computational analysis of Turkish makam music.
+
+Project page:
+
+[Turkish Makam Symbolic Phrase Dataset](http://compmusic.upf.edu/node/237)
+
+### Turkish Makam Melodic Phrase Dataset
+
+A dataset of SymbTr scores manually annotated into melodic segments by expert musicians. The dataset provides phrase-level annotations for research on melodic structure and automatic segmentation.
+
+Project page:
+
+[Turkish Makam Melodic Phrase Dataset](http://compmusic.upf.edu/node/236)
+
+### Dynamic Dataset Analysis
+
+Detailed statistics and computational analyses of these datasets are provided in the chapter:
+
+Related Turkish Makam Music Datasets
+
+
 ## Software
 
 - Python
@@ -42,12 +75,12 @@ which contains pitch trajectory representations of 3000 Turkish maqam music piec
 - Matplotlib
 - Scikit-learn
 
+
 ## Citation
 
-Dataset DOI:
+If you use the dataset presented in this book, please cite:
 
-https://doi.org/10.5281/zenodo.15470412
-
+DOI: https://doi.org/10.5281/zenodo.15470412
 
 
 

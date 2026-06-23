@@ -3,12 +3,7 @@
 The online book “Turkish Delight Corpus (TDC): A Repository for Turkish Makam Music Research and Computational Methods” is an interactive resource built around the SymbTr v3.0 dataset, one of the largest machine-readable collections of Turkish makam music. The corpus is intended to support research in music information retrieval (MIR), computational musicology, and machine learning applied to Turkish classical and folk music.
 SymbTr (Symbolic Turkish Music Corpus) is a large symbolic music dataset containing:
 
--Approximately 3,000 musical pieces
--164 makams (modal structures)
--135 usuls (rhythmic cycles)
--61 musical forms
--About 1.2 million notes
--Roughly 145 hours of nominal playback time
+```{include} _includes/symbtr_stats.md
 
 The collection includes scores in multiple formats such as MusicXML, MIDI, PDF, text, and mu2, making it suitable for computational analysis and music software applications.
 

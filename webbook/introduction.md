@@ -1,4 +1,4 @@
-# Introduction
+# SymbTr Dataset Analysis
 
 Turkish maqam music is a rich modal music tradition characterized by distinctive melodic structures, pitch organizations, and performance practices.
 
@@ -8,11 +8,12 @@ The dataset contains 3000 musical pieces represented as time-series pitch trajec
 
 The analysis presented in this book includes:
 
-- Exploratory Data Analysis (EDA)
-- Statistical Analysis
-- Data Visualization
-- Principal Component Analysis (PCA)
-- K-Means Clustering
-- Cluster Interpretation
+* Exploratory Data Analysis (EDA)
+* Statistical Analysis
+* Data Visualization
+* Principal Component Analysis (PCA)
+* K-Means Clustering
+* Cluster Interpretation
 
 The goal is to explore patterns, similarities, and structures that emerge from the data.
+

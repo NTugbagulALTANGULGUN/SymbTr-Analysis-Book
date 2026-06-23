@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js adaptivetheme">
+  <head>
+    <link href="http://compmusic.upf.edu/themes/custom/pixture_reloaded/images/touch-icons/Icon-60.png" rel="apple-touch-icon" sizes="60x60" /><link href="http://compmusic.upf.edu/themes/custom/pixture_reloaded/images/touch-icons/Icon-76.png" rel="apple-touch-icon" sizes="76x76" /><link href="http://compmusic.upf.edu/themes/custom/pixture_reloaded/images/touch-icons/Icon-60-2x.png" rel="apple-touch-icon" sizes="120x120" /><link href="http://compmusic.upf.edu/themes/custom/pixture_reloaded/images/touch-icons/Icon-76-2x.png" rel="apple-touch-icon" sizes="152x152" />
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="und" href="http://compmusic.upf.edu/node/236" />
+<link rel="canonical" href="http://compmusic.upf.edu/node/236" />
+<link rel="shortlink" href="http://compmusic.upf.edu/node/236" />
+
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com"><title>Turkish Makam Melodic Phrase Dataset | Computational models</title>
+    <link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/core/modules/views/css/views.module.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/font-awesome.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/webfonts.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/base.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/tables.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/form.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/field.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/image.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/page.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/block.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/block--branding.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/block--breadcrumb.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/node.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/user.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/views.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/menu.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/pagers.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/labels.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/markers.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/messages.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/print.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/generated/pixture_reloaded.layout.page.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/comments.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/contact-forms.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/block--language-switcher.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/responsive-tables.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/search.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/taxonomy.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/ckeditor.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/color.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/tabs.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/components/jquery-ui.css?tgbb3l" />
+<link rel="stylesheet" media="all" href="/themes/custom/pixture_reloaded/styles/css/custom.css?tgbb3l" />
+
+    
+  </head><body  class="layout-type--flex-builder user-logged-out path-not-frontpage path-node path-node-236 path-query-qfeed-news page-node-type--page theme-name--pixture-reloaded">
+        <a href="#block-pixture-reloaded-content" class="visually-hidden focusable skip-link">Skip to main content</a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="page js-layout">
+  <div data-at-row="header" class="l-header l-row">
+  
+  <header class="l-pr page__row pr-header" role="banner" id="masthead">
+    <div class="l-rw regions container pr-header__rw arc--1 hr--1" data-at-regions="">
+      <div  data-at-region="1" class="l-r region pr-header__header-first" id="rid-header-first"><div id="block-header" class="l-bl block block-config-provider--block-content block-plugin-id--block-content-960d426b-9e65-46b4-8530-3da48db9fa7b block--type-basic block--view-mode-full">
+  <div class="block__inner">
+
+    <div class="block__content"><div class="clearfix text-formatted field field-block-content--body field-formatter-text-default field-name-body field-type-text-with-summary field-label-hidden has-single"><div class="field__items"><div class="field__item"><div class="clear-block" id="header">
+<div id="erc">
+<ul>
+<li><a href="http://www.upf.edu"><img alt="Universitat Pompeu Fabra" border="0" data-entity-type data-entity-uuid height="57" src="/themes/files/upf.png" width="197"></a></li>
+<li><a href="http://erc.europa.eu/"><img alt="European Research Council" border="0" data-entity-type data-entity-uuid height="57" src="/themes/files/erc.png" width="56"></a></li>
+</ul>
+</div>
+<div id="title">
+<div id="custom-sitename"><span class="sitenametop">Computational models</span><br>
+    <span class="sitenamebottom">for the discovery of the World’s Music</span></div>
+</div>
+<div id="website"><a href="/" title="Home"><img alt="Home" data-entity-type data-entity-uuid id="logo" src="/themes/files/logotoweb.png"> </a></div>
+</div>
+</div></div>
+</div>
+</div></div>
+</div>
+</div>
+    </div>
+  </header>
+  
+</div>
+<div data-at-row="highlighted" class="l-highlighted l-row">
+  
+  <div class="l-pr page__row pr-highlighted" id="highlighted">
+    <div class="l-rw regions container pr-highlighted__rw arc--1 hr--1" data-at-regions="">
+      <div  data-at-region="1" class="l-r region pr-highlighted__highlighted" id="rid-highlighted"><div class="l-bl block--messages" id="system-messages-block" data-drupal-messages><div data-drupal-messages-fallback class="hidden"></div></div></div>
+    </div>
+  </div>
+  
+</div>
+<div data-at-row="main" class="l-main l-row">
+  
+  <div class="l-pr page__row pr-main regions-multiple" id="main-content">
+    <div class="l-rw regions container pr-main__rw arc--3 hr--1-2-3" data-at-regions="">
+      <div  data-at-region="1" data-at-block-count="3" class="l-r region pr-main__content" id="rid-content"><main id="block-pixture-reloaded-content" class="l-bl block block-main-content" role="main">
+  
+  <article data-history-node-id="236" class="node node--id-236 node--type-page node--view-mode-full" role="article">
+  <div class="node__container">
+
+    <header class="node__header"><h1 class="node__title"><span class="field field-name-title field-formatter-string field-type-string field-label-hidden">Turkish Makam Melodic Phrase Dataset</span>
+</h1></header>
+
+    <div class="node__content"><div class="clearfix text-formatted field field-node--body field-formatter-text-default field-name-body field-type-text-with-summary field-label-hidden has-single"><div class="field__items"><div class="field__item"><p>
+	Karaosmanoğlu and Bozkurt have studied the problem of usul and makam driven automatic melodic segmentation for Turkish Music.</p>
+<p>
+	<em>B. Bozkurt, M. K. Karaosmanoğlu, B. Karaçalı, and E. Ünal. 2014.&nbsp;<strong>Usul and Makam Driven Automatic Melodic Segmentation for Turkish Music.</strong> Journal of New Music Research,&nbsp;</em><span style="font-size: 13.12px; line-height: 17.056px;">43:4, pp. 375-389.</span></p>
+<p>
+	There are 899 SymbTr-scores. The scores were manually annotated into melodic segments by 3 experts. In total, there are 31362 phrase annotations in this dataset.</p>
+<h3>
+	Download</h3>
+<p>
+	This dataset can be downloaded <a href="https://zenodo.org/record/1283344#.WyeNexyxXMU"><strong>here</strong></a>.</p>
+</div></div>
+</div>
+</div></div>
+</article>
+
+  
+</main>
+</div><div  data-at-region="2" data-at-block-count="2" class="l-r region pr-main__sidebar-first" id="rid-sidebar-first"><nav role="navigation" aria-labelledby="block-primarylinks-menu" id="block-primarylinks" class="l-bl block block-menu block-config-provider--system block-plugin-id--system-menu-block-primary-links">
+  <div class="block__inner block-menu__inner">
+
+    
+    <h2 class="visually-hidden block__title block-menu__title" id="block-primarylinks-menu"><span>Primary links</span></h2>
+    <div class="block__content block-menu__content">
+    <ul class="menu odd menu-level-1 menu-name--primary-links">      
+                          
+      
+            <li class="menu__item menu__item-title--home" id="menu-name--primary-links__home">
+
+        <span class="menu__link--wrapper">
+          <a href="/home" class="menu__link" data-drupal-link-system-path="node/1">Home</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item--collapsed menu__item-title--description" id="menu-name--primary-links__description">
+
+        <span class="menu__link--wrapper">
+          <a href="/node/2" class="menu__link" data-drupal-link-system-path="node/2">Description</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--team" id="menu-name--primary-links__team">
+
+        <span class="menu__link--wrapper">
+          <a href="/node/3" class="menu__link" data-drupal-link-system-path="node/3">Team</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--publications" id="menu-name--primary-links__publications">
+
+        <span class="menu__link--wrapper">
+          <a href="/publications" class="menu__link" data-drupal-link-system-path="node/4">Publications</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--corpora" id="menu-name--primary-links__corpora">
+
+        <span class="menu__link--wrapper">
+          <a href="/corpora" class="menu__link" data-drupal-link-system-path="node/203">Corpora</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--software" id="menu-name--primary-links__software">
+
+        <span class="menu__link--wrapper">
+          <a href="/software" class="menu__link" data-drupal-link-system-path="node/205">Software</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--events" id="menu-name--primary-links__events">
+
+        <span class="menu__link--wrapper">
+          <a href="/events" class="menu__link" data-drupal-link-system-path="node/241">Events</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--blog" id="menu-name--primary-links__blog">
+
+        <span class="menu__link--wrapper">
+          <a href="/blog" class="menu__link" data-drupal-link-system-path="blog">Blog</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--news" id="menu-name--primary-links__news">
+
+        <span class="menu__link--wrapper">
+          <a href="/news" class="menu__link" data-drupal-link-system-path="news">News</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--resources" id="menu-name--primary-links__resources">
+
+        <span class="menu__link--wrapper">
+          <a href="/resources" class="menu__link" data-drupal-link-system-path="node/8">Resources</a>
+        </span>
+
+        
+      </li>      
+                          
+      
+            <li class="menu__item menu__item-title--get-involved" id="menu-name--primary-links__get-involved">
+
+        <span class="menu__link--wrapper">
+          <a href="/node/5" class="menu__link" data-drupal-link-system-path="node/5">Get Involved</a>
+        </span>
+
+        
+      </li></ul>
+  
+
+</div></div>
+</nav>
+<div class="search-block-form submit-is-visible l-bl block block-search block-config-provider--search block-plugin-id--search-form-block" data-drupal-selector="search-block-form" id="block-searchform" role="search" aria-labelledby="block-searchform-menu">
+  <div class="block__inner block-search__inner">
+
+    
+      <h2 class="visually-hidden block__title block-search__title" id="block-searchform-menu"><span>Search form</span></h2>
+    <div class="block__content block-search__content"><form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="search-block-form__form">
+  <div class="js-form-item form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="" maxlength="128" class="form-search" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions element-container-wrapper js-form-wrapper form-wrapper" id="edit-actions"><input class="search-form__submit button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" />
+</div>
+
+</form>
+</div></div>
+</div>
+<div class="views-element-container l-bl block-views-css-class--block-news block block-config-provider--views block-plugin-id--views-block-news-block-1 has-title" id="block-views-block-news-block-1" role="region" aria-labelledby="block-views-block-news-block-1-title">
+  <div class="block__inner">
+
+    <h2  class="block__title" id="block-views-block-news-block-1-title"><span>News</span></h2><div class="block__content"><div class="element-container-wrapper"><div class="block-news view view-news view-id-news view-display-id-block_1 js-view-dom-id-34ca24f7f3674640ba1410ccb4ac6070bc65fd441c8284da521243cc0630d9b4">
+  
+    
+      
+      <div class="view-content view-rows">
+          <div class="blog-news-row views-row">
+    <span class="views-field views-field-title"><span class="field-content"><a href="/node/368" hreflang="en">&quot;Indian Art Music: A Computational Perspective&quot;, a new ebook is feely available</a></span></span>
+  </div>
+    <div class="blog-news-row views-row">
+    <span class="views-field views-field-title"><span class="field-content"><a href="/node/367" hreflang="en">A tutorial and a workshop within ISMIR 2022</a></span></span>
+  </div>
+    <div class="blog-news-row views-row">
+    <span class="views-field views-field-title"><span class="field-content"><a href="/node/363" hreflang="und">Last two PhD thesis of CompMusic defended</a></span></span>
+  </div>
+    <div class="blog-news-row views-row">
+    <span class="views-field views-field-title"><span class="field-content"><a href="/node/360" hreflang="und">European Research Music Conference in Barcelona</a></span></span>
+  </div>
+    <div class="blog-news-row views-row">
+    <span class="views-field views-field-title"><span class="field-content"><a href="/node/359" hreflang="und">MOOC on North Indian Classical Music by the MTG on the Kadenze platform</a></span></span>
+  </div>
+
+    </div>
+  
+          <div class="more-link element-container-wrapper"><a href="/news">more</a></div>
+
+      </div>
+</div>
+</div></div>
+</div>
+</div><div  data-at-region="3" data-at-block-count="2" class="l-r region pr-main__sidebar-second" id="rid-sidebar-second"><div class="language-switcher-language-url l-bl block block-config-provider--language block-plugin-id--language-block-language-interface" id="block-languageswitcher">
+  <div class="block__inner">
+
+    <div class="block__content"><ul class="links"><li hreflang="en" data-drupal-link-system-path="node/236" class="en is-active" aria-current="page"><span class="en__link-wrapper"><a href="/node/236" class="en__link is-active" hreflang="en" data-drupal-link-system-path="node/236" aria-current="page">    <img class="language-icon" src="/modules/contrib/languageicons/flags/en.png" width="16" height="12" alt="English" title="English" loading="lazy" />
+ English
+</a></span></li><li hreflang="tr" data-drupal-link-system-path="node/236" class="tr"><span class="tr__link-wrapper"><a href="/tr/node/236" class="tr__link" hreflang="tr" data-drupal-link-system-path="node/236">    <img class="language-icon" src="/modules/contrib/languageicons/flags/tr.png" width="16" height="12" alt="Turkish" title="Turkish" loading="lazy" />
+ Turkish
+</a></span></li><li hreflang="ar" data-drupal-link-system-path="node/236" class="ar"><span class="ar__link-wrapper"><a href="/ar/node/236" class="ar__link" hreflang="ar" data-drupal-link-system-path="node/236">    <img class="language-icon" src="/modules/contrib/languageicons/flags/ar.png" width="16" height="12" alt="Arabic" title="Arabic" loading="lazy" />
+ Arabic
+</a></span></li><li hreflang="zh-hans" data-drupal-link-system-path="node/236" class="zh-hans"><span class="zh-hans__link-wrapper"><a href="/zh-hans/node/236" class="zh-hans__link" hreflang="zh-hans" data-drupal-link-system-path="node/236">    <img class="language-icon" src="/modules/contrib/languageicons/flags/zh-hans.png" width="16" height="12" alt="Chinese, Simplified" title="Chinese, Simplified" loading="lazy" />
+ Chinese, Simplified
+</a></span></li><li hreflang="hi" data-drupal-link-system-path="node/236" class="hi"><span class="hi__link-wrapper"><a href="/hi/node/236" class="hi__link" hreflang="hi" data-drupal-link-system-path="node/236">    <img class="language-icon" src="/modules/contrib/languageicons/flags/hi.png" width="16" height="12" alt="Hindi" title="Hindi" loading="lazy" />
+ Hindi
+</a></span></li><li hreflang="te" data-drupal-link-system-path="node/236" class="te"><span class="te__link-wrapper"><a href="/te/node/236" class="te__link" hreflang="te" data-drupal-link-system-path="node/236">    <img class="language-icon" src="/modules/contrib/languageicons/flags/te.png" width="16" height="12" alt="Telugu" title="Telugu" loading="lazy" />
+ Telugu
+</a></span></li><li hreflang="ta" data-drupal-link-system-path="node/236" class="ta"><span class="ta__link-wrapper"><a href="/ta/node/236" class="ta__link" hreflang="ta" data-drupal-link-system-path="node/236">    <img class="language-icon" src="/modules/contrib/languageicons/flags/ta.png" width="16" height="12" alt="Tamil" title="Tamil" loading="lazy" />
+ Tamil
+</a></span></li><li hreflang="kn" data-drupal-link-system-path="node/236" class="kn"><span class="kn__link-wrapper"><a href="/kn/node/236" class="kn__link" hreflang="kn" data-drupal-link-system-path="node/236">    <img class="language-icon" src="/modules/contrib/languageicons/flags/kn.png" width="16" height="12" alt="Kannada" title="Kannada" loading="lazy" />
+ Kannada
+</a></span></li></ul></div></div>
+</div>
+<div class="views-element-container l-bl block-views-css-class--block-blog block block-config-provider--views block-plugin-id--views-block-blog-block-1 has-title" id="block-views-block-blog-block-1" role="region" aria-labelledby="block-views-block-blog-block-1-title">
+  <div class="block__inner">
+
+    <h2  class="block__title" id="block-views-block-blog-block-1-title"><span>Blog</span></h2><div class="block__content"><div class="element-container-wrapper"><div class="block-blog view view-blog view-id-blog view-display-id-block_1 js-view-dom-id-2b8ff1064d5e06f355ddc2dc437370318fd3032d325ba5f925be814849ee0d6d">
+  
+    
+      
+      <div class="view-content view-rows">
+          <div class="blog-news-row views-row">
+    <span class="views-field views-field-title"><span class="field-content"><a href="/node/353" hreflang="und">Interviews published in a Chinese Wechat Official Account</a></span></span>
+  </div>
+    <div class="blog-news-row views-row">
+    <span class="views-field views-field-title"><span class="field-content"><a href="/node/350" hreflang="und">Final Report</a></span></span>
+  </div>
+    <div class="blog-news-row views-row">
+    <span class="views-field views-field-title"><span class="field-content"><a href="/node/297" hreflang="und">Technology and Multiculturality</a></span></span>
+  </div>
+    <div class="blog-news-row views-row">
+    <span class="views-field views-field-title"><span class="field-content"><a href="/node/288" hreflang="und">Two evenings of Chinese traditional music</a></span></span>
+  </div>
+    <div class="blog-news-row views-row">
+    <span class="views-field views-field-title"><span class="field-content"><a href="/node/268" hreflang="und">Nīla Saṅgīta - An evening of Indian Classical Music and Dance</a></span></span>
+  </div>
+
+    </div>
+  
+          <div class="more-link element-container-wrapper"><a href="/blog">more</a></div>
+
+      </div>
+</div>
+</div></div>
+</div>
+</div>
+    </div>
+  </div>
+  
+</div>
+<div data-at-row="footer" class="l-footer l-row">
+  
+  <footer class="l-pr page__row pr-footer" role="contentinfo" id="footer">
+    <div class="l-rw regions container pr-footer__rw arc--1 hr--1" data-at-regions="">
+      <div  data-at-region="1" data-at-block-count="1" class="l-r region pr-footer__footer" id="rid-footer"><nav role="navigation" aria-labelledby="block-useraccountmenu-menu" id="block-useraccountmenu" class="l-bl block block-menu block-config-provider--system block-plugin-id--system-menu-block-account">
+  <div class="block__inner block-menu__inner">
+
+    
+    <h2 class="visually-hidden block__title block-menu__title" id="block-useraccountmenu-menu"><span>User account menu</span></h2>
+    <div class="block__content block-menu__content">
+    <ul class="menu odd menu-level-1 menu-name--account">      
+                          
+      
+            <li class="menu__item menu__item-title--log-in" id="menu-name--account__log-in">
+
+        <span class="menu__link--wrapper">
+          <a href="/user/login" class="menu__link" data-drupal-link-system-path="user/login">Log in</a>
+        </span>
+
+        
+      </li></ul>
+  
+
+</div></div>
+</nav>
+<div id="block-footer" class="l-bl block block-config-provider--block-content block-plugin-id--block-content-da9056b7-7ea5-4995-8e77-7a5ea7841141 block--type-basic block--view-mode-full">
+  <div class="block__inner">
+
+    <div class="block__content"><div class="clearfix text-formatted field field-block-content--body field-formatter-text-default field-name-body field-type-text-with-summary field-label-hidden has-single"><div class="field__items"><div class="field__item"><div align="center" id="footer">
+<div id="footer-region">&nbsp;</div>
+<div id="footer-message">
+<h4><a href="https://upf.edu/web/mtg">Music Technology Group - UPF</a></h4>
+<h6><a href="https://upf.edu/web/mtg">All content is licensed under a </a><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/es/deed.en" rel="license"> <img alt="Creative&lt;br /&gt;
+    Commons License" data-entity-type data-entity-uuid src="http://i.creativecommons.org/l/by-nc-nd/3.0/es/80x15.png"> </a> unless otherwise specified.</h6>
+<h6><a href="https://www.upf.edu" target="_blank" title="Universitat Pompeu Fabra">Universitat Pompeu Fabra</a> | Theme based on Pixture Reloaded<br>
+    <span class="binary">01100011 01101111 01101101 01110000 01101101 01110101 01110011 01101001 01100011</span></h6>
+</div>
+</div>
+</div></div>
+</div>
+</div></div>
+</div>
+</div>
+    </div>
+  </footer>
+  
+</div>
+
+  <div data-at-row="attribution" class="l-attribution l-row"><div class="l-pr attribution"><div class="l-rw"><a href="//drupal.org/project/at_theme" class="attribution__link" target="_blank">Design by Adaptive Theme</a></div></div></div>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/236","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxTrustedUrl":{"\/search\/node":true},"pixture_reloaded":{"at_breakpoints":{"at_core_advanced_huge":{"breakpoint":"huge","mediaquery":"all and (min-width: 120.0625em)"},"at_core_advanced_tablet":{"breakpoint":"tablet","mediaquery":"all and (min-width: 45.0625em)"},"at_core_advanced_wide":{"breakpoint":"wide","mediaquery":"all and (min-width: 60.0625em)"},"at_core_advanced_wide-isolate":{"breakpoint":"wide-isolate","mediaquery":"all and (min-width: 60.0625em) and (max-width: 120em)"},"at_core_advanced_tablet-isolate":{"breakpoint":"tablet-isolate","mediaquery":"all and (min-width: 45.0625em) and (max-width: 60em)"},"at_core_advanced_mobile-isolate":{"breakpoint":"mobile-isolate","mediaquery":"all and (max-width: 45em)"},"at_core_simple_wide":{"breakpoint":"wide","mediaquery":"all and (min-width: 60.0625em)"},"at_core_simple_tablet-isolate":{"breakpoint":"tablet-isolate","mediaquery":"all and (min-width: 45.0625em) and (max-width: 60em)"},"at_core_simple_mobile":{"breakpoint":"mobile","mediaquery":"all and (max-width: 45em)"}}},"user":{"uid":0,"permissionsHash":"ab1be1a4664691a33dd8fd48daacb7265a934ef74d2ce6b86dd500b931e8ce84"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.7.1"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=10.6.10"></script>
+<script src="/core/misc/drupal.js?v=10.6.10"></script>
+<script src="/core/misc/drupal.init.js?v=10.6.10"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.6/enquire.min.js"></script>
+<script src="/themes/contrib/adaptivetheme/at_core/scripts/min/at.breakpoints.min.js?v=10.6.10"></script>
+<script src="/themes/contrib/adaptivetheme/at_core/scripts/min/matchMedia.min.js?v=10.6.10"></script>
+<script src="/themes/contrib/adaptivetheme/at_core/scripts/min/matchMedia.addListener.min.js?v=10.6.10"></script>
+<script src="/themes/contrib/adaptivetheme/at_core/scripts/min/at.responsiveTables.min.js?v=10.6.10"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.1.0/fontfaceobserver.js"></script>
+<script src="/themes/custom/pixture_reloaded/scripts/fontfaceobserver-check.js?v=8.x-1.0"></script>
+
+  </body>
+</html>

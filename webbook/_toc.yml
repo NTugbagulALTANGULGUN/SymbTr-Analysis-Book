@@ -10,4 +10,5 @@ chapters:
   - file: notebooks/05_pca_analysis
   - file: notebooks/06_clustering
   - file: notebooks/07_cluster_interpretation
+  - file: notebooks/08_related_datasets
   - file: references

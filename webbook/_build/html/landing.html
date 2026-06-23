@@ -63,7 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'landing';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction" href="introduction.html" />
+    <link rel="next" title="SymbTr Dataset Analysis" href="introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -170,7 +170,7 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">SymbTr Dataset Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/01_download_data.html">Download Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/02_data_overview.html">Data Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/03_statistical_analysis.html">Statistical Analysis</a></li>
@@ -178,6 +178,7 @@
 <li class="toctree-l1"><a class="reference internal" href="notebooks/05_pca_analysis.html">PCA Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/06_clustering.html">Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/07_cluster_interpretation.html">Cluster Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/08_related_datasets.html">Related Turkish Makam Music Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 
@@ -371,11 +372,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-this-book-about">What is this book about?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-workflow">Project Workflow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technologies">Technologies</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbtr-collection-overview">SymbTr Collection Overview</a></li>
 </ul>
             </nav>
         </div>
@@ -391,51 +388,19 @@
 <h1>Welcome!<a class="headerlink" href="#welcome" title="Link to this heading">#</a></h1>
 <p>The online book “Turkish Delight Corpus (TDC): A Repository for Turkish Makam Music Research and Computational Methods” is an interactive resource built around the SymbTr v3.0 dataset, one of the largest machine-readable collections of Turkish makam music. The corpus is intended to support research in music information retrieval (MIR), computational musicology, and machine learning applied to Turkish classical and folk music.
 SymbTr (Symbolic Turkish Music Corpus) is a large symbolic music dataset containing:</p>
-<p>-Approximately 3,000 musical pieces
--164 makams (modal structures)
--135 usuls (rhythmic cycles)
--61 musical forms
--About 1.2 million notes
--Roughly 145 hours of nominal playback time</p>
-<p>The collection includes scores in multiple formats such as MusicXML, MIDI, PDF, text, and mu2, making it suitable for computational analysis and music software applications.</p>
-<section id="what-is-this-book-about">
-<h2>What is this book about?<a class="headerlink" href="#what-is-this-book-about" title="Link to this heading">#</a></h2>
-<p>This book project “Turkish Delight Corpus (TDC): A Repository for Turkish Makam Music Research and Computational Methods” focuses on statistical analysis, visualization, dimensionality reduction, clustering, and cluster interpretation of Turkish maqam music pieces represented as time-series pitch trajectories.</p>
-</section>
-<section id="project-workflow">
-<h2>Project Workflow<a class="headerlink" href="#project-workflow" title="Link to this heading">#</a></h2>
-<p>Topics covered include:</p>
+<section id="symbtr-collection-overview">
+<h2>SymbTr Collection Overview<a class="headerlink" href="#symbtr-collection-overview" title="Link to this heading">#</a></h2>
+<p>The latest version of the SymbTr collection consists of:</p>
 <ul class="simple">
-<li><p>Dataset acquisition and validation</p></li>
-<li><p>Exploratory Data Analysis (EDA)</p></li>
-<li><p>Statistical Analysis</p></li>
-<li><p>Data Visualization</p></li>
-<li><p>Principal Component Analysis (PCA)</p></li>
-<li><p>K-Means Clustering</p></li>
-<li><p>Cluster Interpretation</p></li>
+<li><p>Approximately <strong>3000 musical pieces</strong></p></li>
+<li><p><strong>164 makams</strong> (modal structures)</p></li>
+<li><p><strong>135 usuls</strong> (rhythmic cycles)</p></li>
+<li><p><strong>61 musical forms</strong></p></li>
+<li><p>About <strong>1.200.000 musical notes</strong></p></li>
+<li><p>Roughly <strong>145 hours</strong> of nominal playback time</p></li>
 </ul>
-</section>
-<section id="dataset">
-<h2>Dataset<a class="headerlink" href="#dataset" title="Link to this heading">#</a></h2>
-<p>SymbTr v3.0 Turkish Maqam Music Dataset</p>
-<p>Zenodo Record:
-<a class="reference external" href="https://zenodo.org/records/15470412">https://zenodo.org/records/15470412</a>
-Additionally, the Zenodo record can be accessed through the References section.</p>
-</section>
-<section id="technologies">
-<h2>Technologies<a class="headerlink" href="#technologies" title="Link to this heading">#</a></h2>
-<p>-Python
--Jupyter Notebook
--Jupyter Book
--Pandas
--NumPy
--Matplotlib
--Scikit-learn</p>
-</section>
-<section id="citation">
-<h2>Citation<a class="headerlink" href="#citation" title="Link to this heading">#</a></h2>
-<p>Dataset DOI:
-<a class="reference external" href="https://doi.org/10.5281/zenodo.15470412">https://doi.org/10.5281/zenodo.15470412</a></p>
+<p>The collection includes scores in multiple formats such as MusicXML, MIDI, PDF, text, mu2, making it suitable for computational analysis and music software applications.</p>
+<p><em>Source: SymbTr v3.0 Zenodo record.</em></p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -476,7 +441,7 @@ Additionally, the Zenodo record can be accessed through the References section.<
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">SymbTr Dataset Analysis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -498,11 +463,7 @@ Additionally, the Zenodo record can be accessed through the References section.<
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-this-book-about">What is this book about?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-workflow">Project Workflow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technologies">Technologies</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbtr-collection-overview">SymbTr Collection Overview</a></li>
 </ul>
   </nav></div>
 
