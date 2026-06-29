@@ -1,14 +1,28 @@
 format: jb-book
 root: landing
 
-chapters:
-  - file: introduction
-  - file: notebooks/01_download_data
-  - file: notebooks/02_data_overview
-  - file: notebooks/03_statistical_analysis
-  - file: notebooks/04_visualizations
-  - file: notebooks/05_pca_analysis
-  - file: notebooks/06_clustering
-  - file: notebooks/07_cluster_interpretation
-  - file: notebooks/08_related_datasets
-  - file: references
+parts:
+  - caption: Overview
+    chapters:
+      - file: intro
+
+  - caption: Dataset
+    chapters:
+      - file: notebooks/01_download_data
+      - file: notebooks/02_data_overview
+
+  - caption: Exploratory Analysis
+    chapters:
+      - file: notebooks/03_statistical_analysis
+      - file: notebooks/04_visualizations
+
+  - caption: Computational Analysis
+    chapters:
+      - file: notebooks/05_pca_analysis
+      - file: notebooks/06_clustering
+      - file: notebooks/07_cluster_interpretation
+
+  - caption: Resources
+    chapters:
+      - file: notebooks/08_related_datasets
+      - file: references

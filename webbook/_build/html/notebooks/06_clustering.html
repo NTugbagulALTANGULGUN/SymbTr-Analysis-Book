@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Clustering &#8212; SymbTr Analysis Book</title>
+    <title>Unsupervised Clustering &#8212; SymbTr Analysis Book</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/06_clustering';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Cluster Interpretation" href="07_cluster_interpretation.html" />
-    <link rel="prev" title="PCA Analysis" href="05_pca_analysis.html" />
+    <link rel="next" title="Interpreting Cluster Structure" href="07_cluster_interpretation.html" />
+    <link rel="prev" title="Principal Component Analysis (PCA)" href="05_pca_analysis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -164,19 +164,29 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../landing.html">
-                    Welcome!
+                    Home!
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="01_download_data.html">Download Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_data_overview.html">Data Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_statistical_analysis.html">Statistical Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_visualizations.html">Visualizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_pca_analysis.html">PCA Analysis</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_cluster_interpretation.html">Cluster Interpretation</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Dataset</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_download_data.html">Accessing the SymbTr Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_data_overview.html">Dataset Characteristics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exploratory Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="03_statistical_analysis.html">Descriptive Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_visualizations.html">Exploratory Visualizations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Analysis</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_pca_analysis.html">Principal Component Analysis (PCA)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Unsupervised Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_cluster_interpretation.html">Interpreting Cluster Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="08_related_datasets.html">Related Symbolic Music Corpora</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 
@@ -407,7 +417,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Clustering</h1>
+    <h1>Unsupervised Clustering</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -421,9 +431,9 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="clustering">
-<h1>Clustering<a class="headerlink" href="#clustering" title="Link to this heading">#</a></h1>
-<p>This notebook applies K-Means clustering to identify groups of similar pitch trajectories.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="unsupervised-clustering">
+<h1>Unsupervised Clustering<a class="headerlink" href="#unsupervised-clustering" title="Link to this heading">#</a></h1>
+<p>This chapter investigates similarity relationships among musical pieces using unsupervised clustering techniques.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -607,7 +617,7 @@ Name: count, dtype: int64
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">PCA Analysis</p>
+        <p class="prev-next-title">Principal Component Analysis (PCA)</p>
       </div>
     </a>
     <a class="right-next"
@@ -615,7 +625,7 @@ Name: count, dtype: int64
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Cluster Interpretation</p>
+        <p class="prev-next-title">Interpreting Cluster Structure</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
