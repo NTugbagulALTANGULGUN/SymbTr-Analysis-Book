@@ -5,6 +5,7 @@ parts:
   - caption: Overview
     chapters:
       - file: intro
+      - file: tutorial
 
   - caption: Dataset
     chapters:
@@ -26,3 +27,4 @@ parts:
     chapters:
       - file: notebooks/08_related_datasets
       - file: references
+      
