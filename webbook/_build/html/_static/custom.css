@@ -115,3 +115,35 @@
     background: white;
 }
 
+/* ---------- Main content width ---------- */
+
+.bd-main .bd-content {
+    max-width: 1050px !important;
+}
+
+/* ---------- Right TOC ---------- */
+
+.bd-toc {
+    width: 220px !important;
+}
+
+/* ---------- Article width ---------- */
+
+.bd-article-container {
+    max-width: 1050px !important;
+}
+
+/* ---------- Better reading ---------- */
+
+.bd-content p {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.bd-toc {
+    display: none;
+}
+
+.bd-main .bd-content {
+    max-width: 1150px !important;
+}
