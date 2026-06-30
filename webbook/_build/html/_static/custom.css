@@ -1,23 +1,57 @@
-.bd-content h1{
-    font-size: 2.8rem !important;
-    font-weight:700;
+/* ==========================
+   Academic Typography
+   ========================== */
+
+/* Main article width */
+.bd-main .bd-content {
+    max-width: 860px;
 }
 
-.bd-content h2{
-    font-size:2.0rem !important;
-    font-weight:600;
+/* Paragraphs */
+
+.bd-content p,
+.bd-content li {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: justify;
+    color: #2f2f2f;
 }
 
-.bd-content h3{
-    font-size:1.5rem !important;
-    font-weight:600;
+/* H1 */
+
+.bd-content h1 {
+    font-size: 2.1rem !important;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 12px;
+    margin-bottom: 20px;
 }
 
-.bd-content p{
-    font-size:17px;
-    line-height:1.8;
+/* H2 */
+
+.bd-content h2 {
+    font-size: 1.55rem !important;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 36px;
+    margin-bottom: 14px;
 }
 
+/* H3 */
+
+.bd-content h3 {
+    font-size: 1.22rem !important;
+    font-weight: 600;
+    color: #374151;
+    margin-top: 28px;
+    margin-bottom: 10px;
+}
+
+/* Lists */
+
+.bd-content ul li{
+    margin-bottom:0.45rem;
+}
 /* ===========================
    Academic Sidebar Style
    =========================== */
