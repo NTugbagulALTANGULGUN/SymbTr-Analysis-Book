@@ -1,149 +1,131 @@
-/* ==========================
-   Academic Typography
-   ========================== */
+/* ==========================================================
+   Turkish Delight Corpus
+   Academic Theme
+   ========================================================== */
 
-/* Main article width */
-.bd-main .bd-content {
-    max-width: 860px;
+
+/* ---------- Global page width ---------- */
+
+.bd-page-width{
+    max-width:1600px !important;
 }
 
-/* Paragraphs */
+
+/* ---------- Main article ---------- */
+
+.bd-main .bd-content{
+    max-width:1100px !important;
+}
+
+.bd-article-container{
+    max-width:1100px !important;
+}
+
+
+/* ---------- Typography ---------- */
 
 .bd-content p,
-.bd-content li {
-    font-size: 15px;
-    line-height: 1.7;
-    text-align: justify;
-    color: #2f2f2f;
+.bd-content li{
+    font-size:15px;
+    line-height:1.8;
+    text-align:justify;
+    color:#2f2f2f;
 }
 
-/* H1 */
-
-.bd-content h1 {
-    font-size: 2.1rem !important;
-    font-weight: 600;
-    color: #1f2937;
-    margin-top: 12px;
-    margin-bottom: 20px;
+.bd-content h1{
+    font-size:2.2rem !important;
+    font-weight:600;
+    color:#1f2937;
+    margin-top:12px;
+    margin-bottom:20px;
 }
 
-/* H2 */
-
-.bd-content h2 {
-    font-size: 1.55rem !important;
-    font-weight: 600;
-    color: #1f2937;
-    margin-top: 36px;
-    margin-bottom: 14px;
+.bd-content h2{
+    font-size:1.55rem !important;
+    font-weight:600;
+    color:#1f2937;
+    margin-top:36px;
+    margin-bottom:14px;
 }
 
-/* H3 */
-
-.bd-content h3 {
-    font-size: 1.22rem !important;
-    font-weight: 600;
-    color: #374151;
-    margin-top: 28px;
-    margin-bottom: 10px;
+.bd-content h3{
+    font-size:1.22rem !important;
+    font-weight:600;
+    color:#374151;
+    margin-top:28px;
+    margin-bottom:10px;
 }
-
-/* Lists */
 
 .bd-content ul li{
     margin-bottom:0.45rem;
 }
-/* ===========================
-   Academic Sidebar Style
-   =========================== */
 
-.bd-sidebar-primary {
-    background: #fafafa;
-    border-right: 1px solid #dddddd;
+
+/* ---------- Left sidebar ---------- */
+
+.bd-sidebar-primary{
+    background:#fafafa;
+    border-right:1px solid #dddddd;
 }
 
-/* Section titles */
-
-.bd-sidebar-primary .caption {
-    font-size: 16px;
-    font-weight: 700;
-    color: #1f2937 !important;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-    margin-top: 28px;
-    margin-bottom: 10px;
+.bd-sidebar-primary .caption{
+    font-size:15px;
+    font-weight:700;
+    text-transform:uppercase;
+    color:#1f2937;
+    margin-top:26px;
 }
 
-/* Menu items */
-
-.bd-sidebar-primary .nav li a {
-    color: #4b5563 !important;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.8;
-    transition: all .15s ease;
+.bd-sidebar-primary .nav li a{
+    font-size:15px;
+    color:#4b5563;
 }
 
-/* Hover */
-
-.bd-sidebar-primary .nav li a:hover {
-    color: #0f3d6e !important;
-    text-decoration: none;
+.bd-sidebar-primary .nav li a:hover{
+    color:#0f3d6e;
 }
 
-/* Active page */
-
-.bd-sidebar-primary .nav .active > a {
-    color: #0f3d6e !important;
-    font-weight: 700;
-    border-left: 3px solid #0f3d6e;
-    background: #f3f6fb;
-    padding-left: 10px;
+.bd-sidebar-primary .nav .active>a{
+    color:#0f3d6e;
+    font-weight:700;
+    border-left:3px solid #0f3d6e;
+    background:#f3f6fb;
 }
 
-/* Nested pages */
 
-.bd-sidebar-primary .nav .nav li a {
-    font-size: 14px;
-    color: #6b7280 !important;
+/* ---------- Search ---------- */
+
+.bd-search input{
+    border-radius:8px;
 }
 
-/* Search */
 
-.bd-search input {
-    border-radius: 8px;
-    border: 1px solid #cfd8e3;
-    background: white;
+/* ---------- RIGHT CONTENTS PANEL ---------- */
+
+.bd-sidebar-secondary{
+    width:190px !important;
+    max-width:190px !important;
 }
 
-/* ---------- Main content width ---------- */
 
-.bd-main .bd-content {
-    max-width: 1050px !important;
+/* ---------- TOC ---------- */
+
+.toc-entry a{
+    font-size:14px;
 }
 
-/* ---------- Right TOC ---------- */
 
-.bd-toc {
-    width: 220px !important;
+/* ---------- Tables ---------- */
+
+table{
+    font-size:14px;
 }
 
-/* ---------- Article width ---------- */
 
-.bd-article-container {
-    max-width: 1050px !important;
-}
+/* ---------- Figures ---------- */
 
-/* ---------- Better reading ---------- */
-
-.bd-content p {
-    text-align: justify;
-    line-height: 1.8;
-}
-
-.bd-toc {
-    display: none;
-}
-
-.bd-main .bd-content {
-    max-width: 1150px !important;
+figcaption{
+    font-size:14px;
+    font-style:italic;
+    text-align:center;
 }
