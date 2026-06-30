@@ -35,3 +35,24 @@ exclude_patterns:
   - .jupyter_cache/*
   - data/raw/*
   - data/processed/*
+
+# HTML options
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: false
+
+# Exclude files and folders from build
+exclude_patterns:
+  - .venv/*
+  - _build/*
+  - .jupyter_cache/*
+  - data/raw/*
+  - data/processed/*
+
+# Sphinx configuration
+sphinx:
+  config:
+    html_css_files:
+      - custom.css
+ 
