@@ -2,183 +2,245 @@
    Turkish Delight Corpus — Academic Theme
    ========================================================== */
 
-/* ---------- Flexible three-column layout ---------- */
+/* ---------- Page width ---------- */
 
 .bd-page-width{
-    display:grid !important;
-    grid-template-columns:
-        minmax(240px, 18%)
-        minmax(700px, 1fr)
-        minmax(180px, 16%);
-    column-gap:2rem;
-    max-width:1900px !important;
-    width:96%;
-    margin:auto;
+    max-width: 1720px !important;
+    width: 96% !important;
 }
 
-/* ---------- Main article ---------- */
+/* ---------- Left sidebar ---------- */
 
-.bd-main,
+.bd-sidebar-primary{
+    flex: 0 0 300px !important;
+    max-width: 300px !important;
+    min-width: 260px !important;
+
+    background: #fafafa;
+    border-right: 1px solid #dddddd;
+
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* ---------- Main content ---------- */
+
+.bd-main{
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+}
+
 .bd-main .bd-content{
-    width:100% !important;
+    max-width: none !important;
+    width: 100% !important;
 }
 
 .bd-main .bd-content .bd-article-container{
-    width:100% !important;
-    max-width:none !important;
+    max-width: 980px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ---------- Right contents ---------- */
+
+.bd-sidebar-secondary{
+    flex: 0 0 230px !important;
+    max-width: 230px !important;
+    min-width: 190px !important;
+
+    border-left: 1px solid #dddddd;
+
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.bd-sidebar-secondary a,
+.bd-toc nav ul li a{
+    display: block;
+    text-align: left !important;
+    font-size: 14px;
+    line-height: 1.55 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
 }
 
 /* ---------- Typography ---------- */
 
 .bd-content p,
 .bd-content li{
-    font-size:15px;
-    line-height:1.8;
-    text-align:justify;
-    color:#2f2f2f;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #2f2f2f;
 }
 
 .bd-content h1{
-    font-size:2.2rem !important;
-    font-weight:600;
-    color:#1f2937;
-    margin-top:12px;
-    margin-bottom:20px;
+    font-size: 2.2rem !important;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 12px;
+    margin-bottom: 20px;
 }
 
 .bd-content h2{
-    font-size:1.55rem !important;
-    font-weight:600;
-    color:#1f2937;
-    margin-top:36px;
-    margin-bottom:14px;
+    font-size: 1.55rem !important;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 36px;
+    margin-bottom: 14px;
 }
 
 .bd-content h3{
-    font-size:1.22rem !important;
-    font-weight:600;
-    color:#374151;
-    margin-top:28px;
-    margin-bottom:10px;
+    font-size: 1.22rem !important;
+    font-weight: 600;
+    color: #374151;
+    margin-top: 28px;
+    margin-bottom: 10px;
 }
 
 .bd-content ul li{
-    margin-bottom:0.45rem;
+    margin-bottom: 0.45rem;
 }
 
-/* ---------- Left sidebar ---------- */
-
-.bd-sidebar-primary{
-    width:auto !important;
-    max-width:none !important;
-    background:#fafafa;
-    border-right:1px solid #dddddd;
-
-    position:sticky;
-    top:0;
-    height:100vh;
-    overflow-y:auto;
-    overflow-x:hidden;
-}
+/* ---------- Sidebar menu ---------- */
 
 .bd-sidebar-primary .caption{
-    font-size:15px;
-    font-weight:700;
-    text-transform:uppercase;
-    color:#1f2937;
-    margin-top:26px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1f2937;
+    margin-top: 26px;
 }
 
 .bd-sidebar-primary .nav li a{
-    font-size:15px;
-    color:#4b5563;
+    font-size: 15px;
+    color: #4b5563;
 }
 
 .bd-sidebar-primary .nav li a:hover{
-    color:#0f3d6e;
+    color: #0f3d6e;
 }
 
-.bd-sidebar-primary .nav .active>a{
-    color:#0f3d6e;
-    font-weight:700;
-    border-left:3px solid #0f3d6e;
-    background:#f3f6fb;
+.bd-sidebar-primary .nav .active > a{
+    color: #0f3d6e;
+    font-weight: 700;
+    border-left: 3px solid #0f3d6e;
+    background: #f3f6fb;
 }
 
-/* ---------- Right contents panel ---------- */
-
-.bd-sidebar-secondary{
-    width:auto !important;
-    max-width:none !important;
-
-    position:sticky;
-    top:0;
-    height:100vh;
-    overflow-y:auto;
-    overflow-x:hidden;
-}
-
-.bd-sidebar-secondary a,
-.bd-toc nav ul li a{
-    display:block;
-    text-align:left !important;
-    font-size:14px;
-    line-height:1.55 !important;
-    white-space:normal !important;
-    word-break:normal !important;
-    overflow-wrap:break-word !important;
-}
-
-/* ---------- Search ---------- */
+/* ---------- Search, tables, figures ---------- */
 
 .bd-search input{
-    border-radius:8px;
+    border-radius: 8px;
 }
 
-/* ---------- Tables and figures ---------- */
-
-table{
-    font-size:14px;
-}
 
 figcaption{
-    font-size:14px;
-    font-style:italic;
-    text-align:center;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
 }
 
-/* ---------- Scrollbar ---------- */
+/* ---------- Scrollbars ---------- */
 
 .bd-sidebar-primary::-webkit-scrollbar,
 .bd-sidebar-secondary::-webkit-scrollbar{
-    width:8px;
+    width: 8px;
 }
 
 .bd-sidebar-primary::-webkit-scrollbar-thumb,
 .bd-sidebar-secondary::-webkit-scrollbar-thumb{
-    background:#c7c7c7;
-    border-radius:8px;
+    background: #c7c7c7;
+    border-radius: 8px;
 }
 
 .bd-sidebar-primary::-webkit-scrollbar-thumb:hover,
 .bd-sidebar-secondary::-webkit-scrollbar-thumb:hover{
-    background:#9e9e9e;
+    background: #9e9e9e;
 }
 
-/* ---------- Responsive layout ---------- */
+/* ---------- Responsive ---------- */
 
-@media (max-width:1400px){
-    .bd-page-width{
-        grid-template-columns:240px 1fr 190px;
-    }
-}
-
-@media (max-width:1200px){
-    .bd-page-width{
-        grid-template-columns:250px 1fr;
+@media (max-width: 1400px){
+    .bd-sidebar-primary{
+        flex-basis: 270px !important;
+        max-width: 270px !important;
     }
 
     .bd-sidebar-secondary{
-        display:none !important;
+        flex-basis: 210px !important;
+        max-width: 210px !important;
     }
+
+    .bd-main .bd-content .bd-article-container{
+        max-width: 900px !important;
+    }
+}
+
+@media (max-width: 1200px){
+    .bd-sidebar-secondary{
+        display: none !important;
+    }
+
+    .bd-main .bd-content .bd-article-container{
+        max-width: 950px !important;
+    }
+}
+
+/* ==========================================================
+   Tables
+   ========================================================== */
+
+table{
+    width:100%;
+    font-size:14px;
+    border-collapse:collapse;
+}
+
+table th,
+table td{
+    padding:8px 10px;
+}
+
+/* Header */
+
+table thead th{
+    text-align:left !important;
+    vertical-align:middle !important;
+    font-weight:700;
+}
+
+/* Body */
+
+table tbody td{
+    text-align:left !important;
+    vertical-align:top !important;
+}
+
+/* Pandas DataFrame */
+
+.dataframe thead th{
+    text-align:left !important;
+    font-weight:700;
+    vertical-align:middle !important;
+}
+
+.dataframe tbody td{
+    text-align:left !important;
+    vertical-align:top !important;
+}
+
+.dataframe tbody th{
+    text-align:left !important;
+    font-weight:400;
+    vertical-align:top !important;
 }

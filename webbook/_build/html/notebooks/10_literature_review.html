@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d1200723" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb639cf9" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -447,6 +447,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature-review-roadmap">Literature Review Roadmap</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organization-of-the-literature">Organization of the Literature</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-music-corpora">1. Symbolic Music Corpora</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phrase-segmentation-and-melodic-analysis">2. Phrase Segmentation and Melodic Analysis</a></li>
@@ -456,6 +457,12 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-learning">6. Deep Learning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#foundation-models-for-music">7. Foundation Models for Music</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-and-research-gaps">8. Summary and Research Gaps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Summary and Research Gaps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-summary">Overall Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remaining-challenges">Remaining Challenges</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#future-outlook">Future Outlook</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
@@ -475,6 +482,67 @@
 <p>Computational research on Turkish makam music has expanded considerably over the past two decades. The development of symbolic music corpora, phrase-level annotations, audio recordings, and machine-readable metadata has enabled increasingly sophisticated computational approaches for music analysis.</p>
 <p>This chapter reviews representative studies related to Turkish makam music from the perspectives of computational musicology, Music Information Retrieval (MIR), symbolic music processing, machine learning, and artificial intelligence. Rather than providing an exhaustive bibliography, the objective is to summarize the principal research directions, highlight methodological developments, and identify emerging research opportunities.</p>
 </section>
+<section id="literature-review-roadmap">
+<h2>Literature Review Roadmap<a class="headerlink" href="#literature-review-roadmap" title="Link to this heading">#</a></h2>
+<p>This roadmap summarizes the conceptual progression of the literature reviewed in this chapter.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">stages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Symbolic</span><span class="se">\n</span><span class="s2">Corpora&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Phrase</span><span class="se">\n</span><span class="s2">Segmentation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Audio–Score</span><span class="se">\n</span><span class="s2">Alignment&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Music Information</span><span class="se">\n</span><span class="s2">Retrieval&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Machine Learning</span><span class="se">\n</span><span class="s2">&amp; AI&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Deep Learning&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Foundation</span><span class="se">\n</span><span class="s2">Models&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Research</span><span class="se">\n</span><span class="s2">Gaps&quot;</span>
+<span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mf">2.8</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+
+<span class="n">x_positions</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">stages</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">stage</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">stages</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+        <span class="n">i</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">stage</span><span class="p">,</span>
+        <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+        <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span>
+        <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;round,pad=0.45&quot;</span><span class="p">,</span>
+            <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+            <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">stages</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+            <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mf">0.72</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span>
+            <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mf">0.28</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+        <span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">stages</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.4</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">output_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;../_static/literature_review_workflow.png&quot;</span><span class="p">)</span>
+<span class="n">output_path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/69188a8f8a02f54ef5c9d07325471d8f738e8c56a8491c0a838ab99282ad9b5c.png" src="../_images/69188a8f8a02f54ef5c9d07325471d8f738e8c56a8491c0a838ab99282ad9b5c.png" />
+</div>
+</div>
+</section>
 <section id="organization-of-the-literature">
 <h2>Organization of the Literature<a class="headerlink" href="#organization-of-the-literature" title="Link to this heading">#</a></h2>
 <p>The reviewed studies are organized into six thematic categories:</p>
@@ -487,6 +555,12 @@
 <li><p>Future Research Trends</p></li>
 </ol>
 <p>This organization follows the historical development of computational research on Turkish makam music, beginning with dataset creation and progressing toward advanced artificial intelligence methods.</p>
+<figure class="align-center" id="literature-review-workflow">
+<a class="reference internal image-reference" href="../_images/literature_review_workflow.png"><img alt="../_images/literature_review_workflow.png" src="../_images/literature_review_workflow.png" style="width: 95%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Conceptual organization of the literature review, from symbolic corpora to foundation models and open research gaps.</span><a class="headerlink" href="#literature-review-workflow" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -591,10 +665,18 @@
 <section id="symbolic-music-corpora">
 <h2>1. Symbolic Music Corpora<a class="headerlink" href="#symbolic-music-corpora" title="Link to this heading">#</a></h2>
 <p>The availability of publicly accessible symbolic music corpora has played a fundamental role in advancing computational research on Turkish makam music. Open symbolic datasets enable reproducible experimentation, facilitate comparative evaluation of computational methods, and provide standardized benchmarks for the development of Music Information Retrieval (MIR) algorithms.</p>
-<p>The introduction of the SymbTr corpus represented the first comprehensive machine-readable symbolic collection specifically designed for Turkish makam music. It established a standardized representation of symbolic scores and enabled research on melody processing, symbolic music analysis, similarity analysis, makam recognition, and computational musicology <span class="bibtex-citation" id="id1">[<a class="reference internal" href="#id26" title="M. Kemal Karaosmanoğlu. A turkish makam music symbolic database for music information retrieval: symbtr. In Proceedings of the 13th International Society for Music Information Retrieval Conference (ISMIR), 223–228. Porto, Portugal, 2012.">1</a>]</span>.</p>
-<p>The latest release, <strong>SymbTr v3.0</strong>, considerably expands the available symbolic resources by providing approximately 3,000 musical works covering 164 makams, 135 usuls, and more than 1.2 million symbolic notes. Owing to its size, diversity, and standardized representation, SymbTr v3.0 has become one of the principal benchmark datasets for computational studies on Turkish makam music <span class="bibtex-citation" id="id2">[<a class="reference internal" href="#id27" title="M. Kemal Karaosmanoğlu. Turkish maqam music symbolic data (symbtr v3.0). 2025. doi:10.5281/zenodo.15470412.">2</a>]</span>.</p>
-<p>Beyond the main SymbTr corpus, several complementary symbolic datasets have been developed to support more specialized research problems. These include phrase-level symbolic datasets, melodic segmentation annotations, and corpora designed for score–audio alignment, enabling investigations into structural analysis, phrase segmentation, tonic identification, mode recognition, and multimodal music analysis <span class="bibtex-citation" id="id3">[<a class="reference internal" href="#id28" title="M. Kemal Karaosmanoğlu, Barış Bozkurt, André Holzapfel, and Nilgün Doğrusöz Dişiaçık. A symbolic dataset of turkish makam music phrases. In Proceedings of the 4th International Workshop on Folk Music Analysis (FMA). Istanbul, Turkey, 2014.">3</a>, <a class="reference internal" href="#id30" title="Sertan Şentürk, Sankalp Gulati, and Xavier Serra. Towards alignment of score and audio recordings of ottoman-turkish makam music. In Proceedings of the 4th International Workshop on Folk Music Analysis (FMA), 57–60. Istanbul, Turkey, 2014.">4</a>, <a class="reference internal" href="#id32" title="Burak Uyar, Hasan Sercan Atlı, Sertan Şentürk, Barış Bozkurt, and Xavier Serra. A corpus for computational research of turkish makam music. In Proceedings of the 1st International Workshop on Digital Libraries for Musicology (DLfM), 57–63. London, United Kingdom, 2014.">5</a>]</span>.</p>
+<p>The introduction of the SymbTr corpus represented the first comprehensive machine-readable symbolic collection specifically designed for Turkish makam music. It established a standardized representation of symbolic scores and enabled research on melody processing, symbolic music analysis, similarity analysis, makam recognition, and computational musicology <span class="bibtex-citation" id="id1">[<a class="reference internal" href="#id27" title="M. Kemal Karaosmanoğlu. A turkish makam music symbolic database for music information retrieval: symbtr. In Proceedings of the 13th International Society for Music Information Retrieval Conference (ISMIR), 223–228. Porto, Portugal, 2012.">1</a>]</span>.</p>
+<p>The latest release, <strong>SymbTr v3.0</strong>, considerably expands the available symbolic resources by providing approximately 3,000 musical works covering 164 makams, 135 usuls, and more than 1.2 million symbolic notes. Owing to its size, diversity, and standardized representation, SymbTr v3.0 has become one of the principal benchmark datasets for computational studies on Turkish makam music <span class="bibtex-citation" id="id2">[<a class="reference internal" href="#id28" title="M. Kemal Karaosmanoğlu. Turkish maqam music symbolic data (symbtr v3.0). 2025. doi:10.5281/zenodo.15470412.">2</a>]</span>.</p>
+<p>Beyond the main SymbTr corpus, several complementary symbolic datasets have been developed to support more specialized research problems. These include phrase-level symbolic datasets, melodic segmentation annotations, and corpora designed for score–audio alignment, enabling investigations into structural analysis, phrase segmentation, tonic identification, mode recognition, and multimodal music analysis <span class="bibtex-citation" id="id3">[<a class="reference internal" href="#id29" title="M. Kemal Karaosmanoğlu, Barış Bozkurt, André Holzapfel, and Nilgün Doğrusöz Dişiaçık. A symbolic dataset of turkish makam music phrases. In Proceedings of the 4th International Workshop on Folk Music Analysis (FMA). Istanbul, Turkey, 2014.">3</a>, <a class="reference internal" href="#id31" title="Sertan Şentürk, Sankalp Gulati, and Xavier Serra. Towards alignment of score and audio recordings of ottoman-turkish makam music. In Proceedings of the 4th International Workshop on Folk Music Analysis (FMA), 57–60. Istanbul, Turkey, 2014.">4</a>, <a class="reference internal" href="#id33" title="Burak Uyar, Hasan Sercan Atlı, Sertan Şentürk, Barış Bozkurt, and Xavier Serra. A corpus for computational research of turkish makam music. In Proceedings of the 1st International Workshop on Digital Libraries for Musicology (DLfM), 57–63. London, United Kingdom, 2014.">5</a>]</span>.</p>
 <p>Collectively, these symbolic resources have established a robust foundation for reproducible computational musicology research and continue to support the development of increasingly sophisticated machine learning and artificial intelligence methods for Turkish makam music analysis.</p>
+<div class="tip admonition">
+<p class="admonition-title">Key Takeaways</p>
+<ul class="simple">
+<li><p>Public symbolic corpora enabled reproducible computational research on Turkish makam music.</p></li>
+<li><p>SymbTr established a standardized symbolic representation for makam-based computational analysis.</p></li>
+<li><p>Phrase-level and multimodal datasets extended the scope from score-level analysis to structural and audio–symbolic research.</p></li>
+</ul>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
@@ -668,55 +750,103 @@
 <section id="phrase-segmentation-and-melodic-analysis">
 <h2>2. Phrase Segmentation and Melodic Analysis<a class="headerlink" href="#phrase-segmentation-and-melodic-analysis" title="Link to this heading">#</a></h2>
 <p>Phrase segmentation represents one of the fundamental research topics in computational musicology because musical phrases correspond to meaningful structural units perceived by musicians and listeners. Compared with complete musical scores, phrase-level representations provide a more detailed description of melodic organization while reducing computational complexity.</p>
-<p>To facilitate phrase-based computational research, the <strong>Turkish Makam Symbolic Phrase Dataset</strong> introduced expert-annotated phrase boundaries for the SymbTr corpus, creating one of the first large-scale symbolic phrase datasets specifically designed for Turkish makam music <span class="bibtex-citation" id="id4">[<a class="reference internal" href="#id28" title="M. Kemal Karaosmanoğlu, Barış Bozkurt, André Holzapfel, and Nilgün Doğrusöz Dişiaçık. A symbolic dataset of turkish makam music phrases. In Proceedings of the 4th International Workshop on Folk Music Analysis (FMA). Istanbul, Turkey, 2014.">3</a>]</span>. The availability of expert-annotated phrase boundaries has also facilitated reproducible benchmarking and comparative evaluation of automatic phrase segmentation methods across different computational approaches <span class="bibtex-citation" id="id5">[<a class="reference internal" href="#id37" title="Sertan Şentürk and Xavier Serra. A method for structural analysis of ottoman-turkish makam music scores. In Proceedings of the 6th International Workshop on Folk Music Analysis (FMA), 39–46. Dublin, Ireland, 2016.">6</a>]</span>.</p>
+<p>To facilitate phrase-based computational research, the <strong>Turkish Makam Symbolic Phrase Dataset</strong> introduced expert-annotated phrase boundaries for the SymbTr corpus, creating one of the first large-scale symbolic phrase datasets specifically designed for Turkish makam music <span class="bibtex-citation" id="id4">[<a class="reference internal" href="#id29" title="M. Kemal Karaosmanoğlu, Barış Bozkurt, André Holzapfel, and Nilgün Doğrusöz Dişiaçık. A symbolic dataset of turkish makam music phrases. In Proceedings of the 4th International Workshop on Folk Music Analysis (FMA). Istanbul, Turkey, 2014.">3</a>]</span>. The availability of expert-annotated phrase boundaries has also facilitated reproducible benchmarking and comparative evaluation of automatic phrase segmentation methods across different computational approaches <span class="bibtex-citation" id="id5">[<a class="reference internal" href="#id38" title="Sertan Şentürk and Xavier Serra. A method for structural analysis of ottoman-turkish makam music scores. In Proceedings of the 6th International Workshop on Folk Music Analysis (FMA), 39–46. Dublin, Ireland, 2016.">6</a>]</span>.</p>
 <p>Phrase annotations enable a wide range of computational analyses, including melodic similarity measurement, structural segmentation, motif discovery, phrase classification, and music information retrieval. Because phrase boundaries are manually annotated by domain experts, they also provide valuable benchmark data for evaluating automatic segmentation algorithms.</p>
-<p>Subsequent studies further demonstrated that phrase-level representations improve structural analysis and computational modeling of Turkish makam music. These representations have been successfully employed for investigating melodic organization, hierarchical musical structure, and phrase similarity within large symbolic music collections <span class="bibtex-citation" id="id6">[<a class="reference internal" href="#id37" title="Sertan Şentürk and Xavier Serra. A method for structural analysis of ottoman-turkish makam music scores. In Proceedings of the 6th International Workshop on Folk Music Analysis (FMA), 39–46. Dublin, Ireland, 2016.">6</a>]</span>.</p>
+<p>Subsequent studies further demonstrated that phrase-level representations improve structural analysis and computational modeling of Turkish makam music. These representations have been successfully employed for investigating melodic organization, hierarchical musical structure, and phrase similarity within large symbolic music collections <span class="bibtex-citation" id="id6">[<a class="reference internal" href="#id38" title="Sertan Şentürk and Xavier Serra. A method for structural analysis of ottoman-turkish makam music scores. In Proceedings of the 6th International Workshop on Folk Music Analysis (FMA), 39–46. Dublin, Ireland, 2016.">6</a>]</span>.</p>
 <p>More recently, phrase-based symbolic datasets have become increasingly important for machine learning and artificial intelligence applications. Rather than learning from complete musical scores, modern computational approaches frequently operate on phrase-level representations, enabling algorithms to capture local melodic characteristics, improve generalization performance, and learn meaningful symbolic representations. Consequently, phrase-level datasets are expected to play an increasingly important role in future foundation models and representation learning approaches for symbolic music analysis.</p>
+<div class="tip admonition">
+<p class="admonition-title">Key Takeaways</p>
+<ul class="simple">
+<li><p>Phrase segmentation provides meaningful structural units for computational analysis.</p></li>
+<li><p>Expert-annotated phrase datasets enable reproducible benchmarking of segmentation algorithms.</p></li>
+<li><p>Phrase-level representations improve melodic analysis, similarity measurement, and machine learning applications.</p></li>
+</ul>
+</div>
 </section>
 <section id="audioscore-alignment">
 <h2>3. Audio–Score Alignment<a class="headerlink" href="#audioscore-alignment" title="Link to this heading">#</a></h2>
 <p>Audio–score alignment aims to establish temporal correspondences between symbolic music scores and their audio performances. This task enables computational systems to associate symbolic note events with performed audio, thereby supporting music analysis, performance studies, automatic annotation, and interactive music applications.</p>
 <p>Unlike Western classical music, Turkish makam music presents additional challenges for alignment because of expressive timing, ornamentation, improvisational characteristics, and microtonal pitch structures. These characteristics require alignment methods capable of handling significant temporal and melodic variability while preserving the musical structure of performances.</p>
-<p>Within the CompMusic project, several studies introduced computational methods for aligning symbolic scores with audio recordings of Turkish makam music. These works demonstrated that score-informed alignment substantially improves synchronization accuracy and provides an effective framework for linking symbolic and audio representations <span class="bibtex-citation" id="id7">[<a class="reference internal" href="#id30" title="Sertan Şentürk, Sankalp Gulati, and Xavier Serra. Towards alignment of score and audio recordings of ottoman-turkish makam music. In Proceedings of the 4th International Workshop on Folk Music Analysis (FMA), 57–60. Istanbul, Turkey, 2014.">4</a>]</span> <span class="bibtex-citation" id="id8">[<a class="reference internal" href="#id31" title="Sertan Şentürk, André Holzapfel, and Xavier Serra. Linking scores and audio recordings in makam music of turkey. Journal of New Music Research, 43(1):34–52, 2014.">7</a>]</span>.</p>
-<p>Reliable score–audio alignment has subsequently enabled a variety of higher-level Music Information Retrieval (MIR) tasks, including automatic tonic identification, score following, performance synchronization, melodic comparison, and computational performance analysis. In particular, score-informed tonic identification significantly improved automatic makam analysis by combining symbolic information with acoustic observations <span class="bibtex-citation" id="id9">[<a class="reference internal" href="#id29" title="Sertan Şentürk, Sankalp Gulati, and Xavier Serra. Score informed tonic identification for makam music of turkey. In Proceedings of the 14th International Society for Music Information Retrieval Conference (ISMIR), 175–180. Curitiba, Brazil, 2013.">8</a>]</span>.</p>
-<p>The availability of aligned symbolic scores and audio recordings has also facilitated the development of comprehensive computational corpora for Turkish makam music. These multimodal datasets support reproducible research across symbolic analysis, audio signal processing, machine learning, and computational musicology, while providing common benchmark resources for algorithm evaluation <span class="bibtex-citation" id="id10">[<a class="reference internal" href="#id32" title="Burak Uyar, Hasan Sercan Atlı, Sertan Şentürk, Barış Bozkurt, and Xavier Serra. A corpus for computational research of turkish makam music. In Proceedings of the 1st International Workshop on Digital Libraries for Musicology (DLfM), 57–63. London, United Kingdom, 2014.">5</a>]</span>.</p>
+<p>Within the CompMusic project, several studies introduced computational methods for aligning symbolic scores with audio recordings of Turkish makam music. These works demonstrated that score-informed alignment substantially improves synchronization accuracy and provides an effective framework for linking symbolic and audio representations <span class="bibtex-citation" id="id7">[<a class="reference internal" href="#id31" title="Sertan Şentürk, Sankalp Gulati, and Xavier Serra. Towards alignment of score and audio recordings of ottoman-turkish makam music. In Proceedings of the 4th International Workshop on Folk Music Analysis (FMA), 57–60. Istanbul, Turkey, 2014.">4</a>]</span> <span class="bibtex-citation" id="id8">[<a class="reference internal" href="#id32" title="Sertan Şentürk, André Holzapfel, and Xavier Serra. Linking scores and audio recordings in makam music of turkey. Journal of New Music Research, 43(1):34–52, 2014.">7</a>]</span>.</p>
+<p>Reliable score–audio alignment has subsequently enabled a variety of higher-level Music Information Retrieval (MIR) tasks, including automatic tonic identification, score following, performance synchronization, melodic comparison, and computational performance analysis. In particular, score-informed tonic identification significantly improved automatic makam analysis by combining symbolic information with acoustic observations <span class="bibtex-citation" id="id9">[<a class="reference internal" href="#id30" title="Sertan Şentürk, Sankalp Gulati, and Xavier Serra. Score informed tonic identification for makam music of turkey. In Proceedings of the 14th International Society for Music Information Retrieval Conference (ISMIR), 175–180. Curitiba, Brazil, 2013.">8</a>]</span>.</p>
+<p>The availability of aligned symbolic scores and audio recordings has also facilitated the development of comprehensive computational corpora for Turkish makam music. These multimodal datasets support reproducible research across symbolic analysis, audio signal processing, machine learning, and computational musicology, while providing common benchmark resources for algorithm evaluation <span class="bibtex-citation" id="id10">[<a class="reference internal" href="#id33" title="Burak Uyar, Hasan Sercan Atlı, Sertan Şentürk, Barış Bozkurt, and Xavier Serra. A corpus for computational research of turkish makam music. In Proceedings of the 1st International Workshop on Digital Libraries for Musicology (DLfM), 57–63. London, United Kingdom, 2014.">5</a>]</span>.</p>
 <p>More recently, score–audio alignment has become an important component of multimodal artificial intelligence systems. By integrating symbolic notation with performance recordings, alignment methods provide complementary musical representations that are increasingly employed for representation learning, cross-modal retrieval, automatic transcription, and foundation models for music understanding.</p>
+<div class="tip admonition">
+<p class="admonition-title">Key Takeaways</p>
+<ul class="simple">
+<li><p>Audio–score alignment connects symbolic scores with performance recordings.</p></li>
+<li><p>Alignment techniques support performance analysis, score following, and multimodal MIR applications.</p></li>
+<li><p>Turkish makam music presents unique alignment challenges due to ornamentation, tempo flexibility, and microtonality.</p></li>
+</ul>
+</div>
 </section>
 <section id="music-information-retrieval">
 <h2>4. Music Information Retrieval<a class="headerlink" href="#music-information-retrieval" title="Link to this heading">#</a></h2>
-<p>Music Information Retrieval (MIR) is an interdisciplinary research field that combines computer science, signal processing, musicology, machine learning, and artificial intelligence to develop computational methods for organizing, analyzing, searching, and understanding musical data. Since its emergence in the late 1990s, MIR has become one of the principal research areas for computational analysis of both audio and symbolic music collections <span class="bibtex-citation" id="id11">[<a class="reference internal" href="#id39" title="J. Stephen Downie. Music information retrieval. Annual Review of Information Science and Technology, 37:295–340, 2003. doi:10.1002/aris.1440370108.">9</a>]</span>.</p>
+<p>Music Information Retrieval (MIR) is an interdisciplinary research field that combines computer science, signal processing, musicology, machine learning, and artificial intelligence to develop computational methods for organizing, analyzing, searching, and understanding musical data. Since its emergence in the late 1990s, MIR has become one of the principal research areas for computational analysis of both audio and symbolic music collections <span class="bibtex-citation" id="id11">[<a class="reference internal" href="#id40" title="J. Stephen Downie. Music information retrieval. Annual Review of Information Science and Technology, 37:295–340, 2003. doi:10.1002/aris.1440370108.">9</a>]</span>.</p>
 <p>Early MIR research primarily focused on audio-based tasks such as genre classification, melody extraction, query-by-humming, and music recommendation. As increasingly large symbolic music corpora became publicly available, symbolic Music Information Retrieval evolved into an important research direction, enabling investigations of musical structure, similarity analysis, score processing, and computational musicology.</p>
-<p>Content-Based Music Information Retrieval (CBMIR) further extended the field by emphasizing computational representations extracted directly from musical content rather than manually assigned metadata. This paradigm has enabled efficient retrieval based on melodic, rhythmic, harmonic, and structural characteristics while supporting automatic organization of large-scale music collections <span class="bibtex-citation" id="id12">[<a class="reference internal" href="#id40" title="Michael A. Casey, Remco C. Veltkamp, Masataka Goto, Marc Leman, Christophe Rhodes, and Malcolm Slaney. Content-based music information retrieval: current directions and future challenges. Proceedings of the IEEE, 96(4):668–696, 2008. doi:10.1109/JPROC.2008.916370.">10</a>]</span>.</p>
-<p>The diversity of musical traditions has also motivated research beyond Western music. The CompMusic project introduced a multicultural perspective to MIR by developing computational approaches applicable to non-Western musical traditions, including Turkish makam music, Hindustani music, Carnatic music, Arab-Andalusian music, and Beijing Opera. This initiative demonstrated the importance of culturally informed computational models and highlighted the need for publicly accessible datasets representing diverse musical systems <span class="bibtex-citation" id="id13">[<a class="reference internal" href="#id41" title="Xavier Serra. A multicultural approach in music information research. In Proceedings of the 12th International Society for Music Information Retrieval Conference (ISMIR). 2011.">11</a>]</span>.</p>
+<p>Content-Based Music Information Retrieval (CBMIR) further extended the field by emphasizing computational representations extracted directly from musical content rather than manually assigned metadata. This paradigm has enabled efficient retrieval based on melodic, rhythmic, harmonic, and structural characteristics while supporting automatic organization of large-scale music collections <span class="bibtex-citation" id="id12">[<a class="reference internal" href="#id41" title="Michael A. Casey, Remco C. Veltkamp, Masataka Goto, Marc Leman, Christophe Rhodes, and Malcolm Slaney. Content-based music information retrieval: current directions and future challenges. Proceedings of the IEEE, 96(4):668–696, 2008. doi:10.1109/JPROC.2008.916370.">10</a>]</span>.</p>
+<p>The diversity of musical traditions has also motivated research beyond Western music. The CompMusic project introduced a multicultural perspective to MIR by developing computational approaches applicable to non-Western musical traditions, including Turkish makam music, Hindustani music, Carnatic music, Arab-Andalusian music, and Beijing Opera. This initiative demonstrated the importance of culturally informed computational models and highlighted the need for publicly accessible datasets representing diverse musical systems <span class="bibtex-citation" id="id13">[<a class="reference internal" href="#id42" title="Xavier Serra. A multicultural approach in music information research. In Proceedings of the 12th International Society for Music Information Retrieval Conference (ISMIR). 2011.">11</a>]</span>.</p>
 <p>Within Turkish makam music, MIR research has expanded from corpus construction toward increasingly sophisticated computational analyses involving symbolic music processing, score–audio alignment, phrase segmentation, machine learning, multimodal analysis, and representation learning. The availability of standardized symbolic datasets such as SymbTr has substantially accelerated research progress by providing common benchmark datasets and reproducible evaluation frameworks.</p>
 <p>Today, MIR continues to evolve through advances in deep learning, self-supervised learning, multimodal representation learning, and foundation models. These developments are expected to further improve automatic music understanding while enabling increasingly powerful computational analysis of culturally diverse musical traditions.</p>
+<div class="tip admonition">
+<p class="admonition-title">Key Takeaways</p>
+<ul class="simple">
+<li><p>MIR provides the computational foundation for analyzing, retrieving, and organizing music collections.</p></li>
+<li><p>Turkish makam music extends classical MIR with culture-specific musical characteristics.</p></li>
+<li><p>Standardized datasets have enabled reproducible evaluation of MIR algorithms for makam music.</p></li>
+</ul>
+</div>
 </section>
 <section id="machine-learning-and-artificial-intelligence">
 <h2>5. Machine Learning and Artificial Intelligence<a class="headerlink" href="#machine-learning-and-artificial-intelligence" title="Link to this heading">#</a></h2>
 <p>Machine learning has become one of the principal computational paradigms for analyzing symbolic and audio music data. Unlike traditional rule-based systems, machine learning algorithms automatically discover complex patterns from large collections of musical examples, enabling scalable solutions for classification, retrieval, recommendation, segmentation, and music understanding.</p>
-<p>Early applications of machine learning in Music Information Retrieval primarily employed supervised learning algorithms such as k-Nearest Neighbors (KNN), Support Vector Machines (SVM), Decision Trees, and Random Forests. These methods demonstrated strong performance across various MIR tasks, including genre classification, instrument recognition, mood prediction, and symbolic music classification <span class="bibtex-citation" id="id14">[<a class="reference internal" href="#id49" title="Thomas M. Cover and Peter E. Hart. Nearest neighbor pattern classification. IEEE Transactions on Information Theory, 13(1):21–27, 1967. doi:10.1109/TIT.1967.1053964.">12</a>]</span> <span class="bibtex-citation" id="id15">[<a class="reference internal" href="#id48" title="Corinna Cortes and Vladimir Vapnik. Support-vector networks. Machine Learning, 20(3):273–297, 1995. doi:10.1007/BF00994018.">13</a>]</span> <span class="bibtex-citation" id="id16">[<a class="reference internal" href="#id47" title="Leo Breiman. Random forests. Machine Learning, 45(1):5–32, 2001. doi:10.1023/A:1010933404324.">14</a>]</span>.</p>
+<p>Early applications of machine learning in Music Information Retrieval primarily employed supervised learning algorithms such as k-Nearest Neighbors (KNN), Support Vector Machines (SVM), Decision Trees, and Random Forests. These methods demonstrated strong performance across various MIR tasks, including genre classification, instrument recognition, mood prediction, and symbolic music classification <span class="bibtex-citation" id="id14">[<a class="reference internal" href="#id50" title="Thomas M. Cover and Peter E. Hart. Nearest neighbor pattern classification. IEEE Transactions on Information Theory, 13(1):21–27, 1967. doi:10.1109/TIT.1967.1053964.">12</a>]</span> <span class="bibtex-citation" id="id15">[<a class="reference internal" href="#id49" title="Corinna Cortes and Vladimir Vapnik. Support-vector networks. Machine Learning, 20(3):273–297, 1995. doi:10.1007/BF00994018.">13</a>]</span> <span class="bibtex-citation" id="id16">[<a class="reference internal" href="#id48" title="Leo Breiman. Random forests. Machine Learning, 45(1):5–32, 2001. doi:10.1023/A:1010933404324.">14</a>]</span>.</p>
 <p>Support Vector Machines became particularly popular because of their ability to model high-dimensional feature spaces using kernel functions. Random Forests introduced robust ensemble learning strategies capable of reducing overfitting while providing interpretable feature importance measures. Meanwhile, nearest-neighbor approaches offered simple yet competitive baselines for similarity-based music retrieval and classification problems.</p>
-<p>As symbolic music datasets increased in both size and diversity, machine learning methods expanded beyond conventional classification toward representation learning, feature engineering, clustering, dimensionality reduction, and multimodal data fusion. Comprehensive textbooks such as <em>Pattern Recognition and Machine Learning</em> and <em>The Elements of Statistical Learning</em> established the theoretical foundations that continue to underpin modern computational music research <span class="bibtex-citation" id="id17">[<a class="reference internal" href="#id50" title="Christopher M. Bishop. Pattern Recognition and Machine Learning. Springer, 2006.">15</a>]</span> <span class="bibtex-citation" id="id18">[<a class="reference internal" href="#id51" title="Trevor Hastie, Robert Tibshirani, and Jerome Friedman. The Elements of Statistical Learning. Springer, 2 edition, 2009.">16</a>]</span> <span class="bibtex-citation" id="id19">[<a class="reference internal" href="#id52" title="Kevin P. Murphy. Machine Learning: A Probabilistic Perspective. MIT Press, 2012.">17</a>]</span>.</p>
+<p>As symbolic music datasets increased in both size and diversity, machine learning methods expanded beyond conventional classification toward representation learning, feature engineering, clustering, dimensionality reduction, and multimodal data fusion. Comprehensive textbooks such as <em>Pattern Recognition and Machine Learning</em> and <em>The Elements of Statistical Learning</em> established the theoretical foundations that continue to underpin modern computational music research <span class="bibtex-citation" id="id17">[<a class="reference internal" href="#id51" title="Christopher M. Bishop. Pattern Recognition and Machine Learning. Springer, 2006.">15</a>]</span> <span class="bibtex-citation" id="id18">[<a class="reference internal" href="#id52" title="Trevor Hastie, Robert Tibshirani, and Jerome Friedman. The Elements of Statistical Learning. Springer, 2 edition, 2009.">16</a>]</span> <span class="bibtex-citation" id="id19">[<a class="reference internal" href="#id53" title="Kevin P. Murphy. Machine Learning: A Probabilistic Perspective. MIT Press, 2012.">17</a>]</span>.</p>
 <p>Within Turkish makam music research, machine learning techniques have increasingly been applied to symbolic score analysis, makam recognition, phrase classification, melodic similarity analysis, tonic identification, and computational performance modeling. The availability of standardized benchmark datasets has significantly improved reproducibility and facilitated objective comparisons among computational approaches.</p>
 <p>Today, machine learning serves as the foundation for more advanced artificial intelligence techniques, including deep neural networks, self-supervised learning, multimodal representation learning, and large-scale foundation models. Consequently, modern computational musicology increasingly combines traditional machine learning algorithms with recent advances in artificial intelligence to better understand complex musical structures and cultural diversity.</p>
+<div class="tip admonition">
+<p class="admonition-title">Key Takeaways</p>
+<ul class="simple">
+<li><p>Machine learning enables automatic recognition, classification, and analysis of symbolic music.</p></li>
+<li><p>Classical algorithms remain effective for many symbolic music analysis tasks.</p></li>
+<li><p>Feature engineering continues to play an important role in computational musicology.</p></li>
+</ul>
+</div>
 </section>
 <section id="deep-learning">
 <h2>6. Deep Learning<a class="headerlink" href="#deep-learning" title="Link to this heading">#</a></h2>
 <p>The rapid growth of large-scale music datasets and advances in computational hardware have significantly accelerated the adoption of deep learning methods in Music Information Retrieval. Unlike conventional machine learning algorithms that rely on manually engineered features, deep neural networks automatically learn hierarchical feature representations directly from raw or minimally processed musical data.</p>
-<p>Convolutional Neural Networks (CNNs) were among the first deep learning architectures successfully applied to music analysis, demonstrating remarkable performance improvements in tasks such as music genre classification, instrument recognition, audio tagging, and music recommendation. Their ability to learn complex local patterns has made CNNs particularly effective for processing spectrograms and other time–frequency representations of musical signals <span class="bibtex-citation" id="id20">[<a class="reference internal" href="#id55" title="Alex Krizhevsky, Ilya Sutskever, and Geoffrey E. Hinton. Imagenet classification with deep convolutional neural networks. In Advances in Neural Information Processing Systems (NeurIPS), 1097–1105. 2012.">18</a>]</span> <span class="bibtex-citation" id="id21">[<a class="reference internal" href="#id54" title="Yann LeCun, Yoshua Bengio, and Geoffrey Hinton. Deep learning. Nature, 521(7553):436–444, 2015. doi:10.1038/nature14539.">19</a>]</span>.</p>
+<p>Convolutional Neural Networks (CNNs) were among the first deep learning architectures successfully applied to music analysis, demonstrating remarkable performance improvements in tasks such as music genre classification, instrument recognition, audio tagging, and music recommendation. Their ability to learn complex local patterns has made CNNs particularly effective for processing spectrograms and other time–frequency representations of musical signals <span class="bibtex-citation" id="id20">[<a class="reference internal" href="#id56" title="Alex Krizhevsky, Ilya Sutskever, and Geoffrey E. Hinton. Imagenet classification with deep convolutional neural networks. In Advances in Neural Information Processing Systems (NeurIPS), 1097–1105. 2012.">18</a>]</span> <span class="bibtex-citation" id="id21">[<a class="reference internal" href="#id55" title="Yann LeCun, Yoshua Bengio, and Geoffrey Hinton. Deep learning. Nature, 521(7553):436–444, 2015. doi:10.1038/nature14539.">19</a>]</span>.</p>
 <p>Subsequent developments introduced Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTM) networks, and attention-based architectures capable of modeling temporal dependencies within musical sequences. These models significantly improved the analysis of sequential musical structures, including melody generation, phrase prediction, symbolic music modeling, and automatic transcription.</p>
 <p>Deep representation learning has also transformed symbolic music analysis. Rather than relying solely on handcrafted descriptors, modern systems learn latent representations that capture melodic, rhythmic, and structural relationships across large music collections. These learned representations have substantially improved clustering, similarity analysis, retrieval, and downstream machine learning tasks.</p>
 <p>Within Turkish makam music research, deep learning remains an emerging area because publicly available annotated datasets are considerably smaller than those available for Western music traditions. Nevertheless, recent increases in corpus size, phrase-level annotations, and multimodal symbolic resources have created favorable conditions for applying deep neural networks to makam recognition, melodic analysis, symbolic generation, and computational musicology.</p>
 <p>As computational resources continue to improve and larger annotated corpora become available, deep learning is expected to become an increasingly important component of future computational analysis frameworks for Turkish makam music.</p>
+<div class="tip admonition">
+<p class="admonition-title">Key Takeaways</p>
+<ul class="simple">
+<li><p>Deep learning reduces dependence on handcrafted feature extraction.</p></li>
+<li><p>Neural architectures learn hierarchical musical representations directly from data.</p></li>
+<li><p>Large annotated datasets remain essential for training reliable deep learning models.</p></li>
+</ul>
+</div>
 </section>
 <section id="foundation-models-for-music">
 <h2>7. Foundation Models for Music<a class="headerlink" href="#foundation-models-for-music" title="Link to this heading">#</a></h2>
 <p>Recent advances in artificial intelligence have introduced foundation models capable of learning general-purpose representations from extremely large datasets. Unlike conventional supervised learning approaches, foundation models are typically pretrained using self-supervised objectives and subsequently adapted to diverse downstream tasks through fine-tuning or prompt-based learning. This paradigm has fundamentally transformed natural language processing, computer vision, and, more recently, Music Information Retrieval.</p>
-<p>The introduction of the Transformer architecture established the foundation for modern sequence modeling by replacing recurrent computations with self-attention mechanisms capable of capturing long-range dependencies within sequential data <span class="bibtex-citation" id="id22">[<a class="reference internal" href="#id59" title="Ashish Vaswani and others. Attention is all you need. In Advances in Neural Information Processing Systems. 2017.">20</a>]</span>. Since musical compositions naturally exhibit hierarchical and long-term structural relationships, Transformer-based architectures have become increasingly attractive for symbolic music analysis, music generation, automatic transcription, and multimodal music understanding.</p>
-<p>The broader concept of foundation models further expanded this paradigm by demonstrating that large-scale pretrained models can serve as general computational backbones for numerous downstream applications <span class="bibtex-citation" id="id23">[<a class="reference internal" href="#id60" title="Rishi Bommasani and others. On the opportunities and risks of foundation models. arXiv preprint arXiv:2108.07258, 2021.">21</a>]</span>. Rather than designing task-specific models for individual music analysis problems, researchers increasingly develop unified architectures capable of supporting classification, retrieval, recommendation, generation, segmentation, and music understanding within a common representation space.</p>
-<p>Recent surveys indicate that foundation models are rapidly becoming a major research direction in computational music analysis. Music foundation models integrate symbolic scores, audio recordings, textual metadata, and multimodal representations to learn comprehensive musical knowledge from diverse sources. These models support a wide variety of applications, including music generation, performance analysis, cross-modal retrieval, music recommendation, educational systems, and interactive artificial intelligence <span class="bibtex-citation" id="id24">[<a class="reference internal" href="#id61" title="Qingqing Huang and others. Music foundation models: a survey. ACM Computing Surveys, 2025.">22</a>]</span>.</p>
+<p>The introduction of the Transformer architecture established the foundation for modern sequence modeling by replacing recurrent computations with self-attention mechanisms capable of capturing long-range dependencies within sequential data <span class="bibtex-citation" id="id22">[<a class="reference internal" href="#id60" title="Ashish Vaswani and others. Attention is all you need. In Advances in Neural Information Processing Systems. 2017.">20</a>]</span>. Since musical compositions naturally exhibit hierarchical and long-term structural relationships, Transformer-based architectures have become increasingly attractive for symbolic music analysis, music generation, automatic transcription, and multimodal music understanding.</p>
+<p>The broader concept of foundation models further expanded this paradigm by demonstrating that large-scale pretrained models can serve as general computational backbones for numerous downstream applications <span class="bibtex-citation" id="id23">[<a class="reference internal" href="#id61" title="Rishi Bommasani and others. On the opportunities and risks of foundation models. arXiv preprint arXiv:2108.07258, 2021.">21</a>]</span>. Rather than designing task-specific models for individual music analysis problems, researchers increasingly develop unified architectures capable of supporting classification, retrieval, recommendation, generation, segmentation, and music understanding within a common representation space.</p>
+<p>Recent surveys indicate that foundation models are rapidly becoming a major research direction in computational music analysis. Music foundation models integrate symbolic scores, audio recordings, textual metadata, and multimodal representations to learn comprehensive musical knowledge from diverse sources. These models support a wide variety of applications, including music generation, performance analysis, cross-modal retrieval, music recommendation, educational systems, and interactive artificial intelligence <span class="bibtex-citation" id="id24">[<a class="reference internal" href="#id62" title="Qingqing Huang and others. Music foundation models: a survey. ACM Computing Surveys, 2025.">22</a>]</span>.</p>
 <p>For Turkish makam music, foundation models remain largely unexplored because of the limited availability of large-scale annotated datasets. Nevertheless, the continuous expansion of symbolic corpora such as SymbTr, together with phrase-level annotations, score–audio alignment resources, and multimodal datasets, provides an increasingly favorable environment for developing culturally informed foundation models. Such models have the potential to support automatic makam recognition, symbolic music generation, melodic similarity analysis, computational musicology, and digital preservation of Turkish musical heritage.</p>
 <p>The emergence of foundation models represents a significant opportunity for future research, enabling computational systems capable of learning richer musical representations while supporting reproducible, scalable, and culturally aware music analysis across diverse musical traditions.</p>
+<div class="tip admonition">
+<p class="admonition-title">Key Takeaways</p>
+<ul class="simple">
+<li><p>Foundation models represent a major shift toward general-purpose musical intelligence.</p></li>
+<li><p>Large-scale pretraining enables transferable representations across multiple music tasks.</p></li>
+<li><p>Turkish makam music remains largely underrepresented in current foundation models, creating significant research opportunities.</p></li>
+</ul>
+</div>
 </section>
 <section id="summary-and-research-gaps">
 <h2>8. Summary and Research Gaps<a class="headerlink" href="#summary-and-research-gaps" title="Link to this heading">#</a></h2>
@@ -726,99 +856,120 @@
 <p>Despite these advances, several important challenges remain. Turkish makam music continues to face limitations in the availability of large-scale annotated datasets, standardized benchmark tasks, multimodal corpora, and foundation models specifically designed for culturally diverse musical traditions. Furthermore, issues related to explainability, reproducibility, cross-cultural generalization, and human-centered artificial intelligence remain largely unexplored.</p>
 <p>These challenges represent promising directions for future research. The following chapter discusses these open research problems and outlines potential opportunities for developing next-generation computational methods for Turkish makam music analysis.</p>
 </section>
+<section id="id25">
+<h2>Summary and Research Gaps<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<section id="overall-summary">
+<h3>Overall Summary<a class="headerlink" href="#overall-summary" title="Link to this heading">#</a></h3>
+<p>…</p>
+</section>
+<section id="remaining-challenges">
+<h3>Remaining Challenges<a class="headerlink" href="#remaining-challenges" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Limited benchmark datasets</p></li>
+<li><p>Limited multimodal resources</p></li>
+<li><p>Scarcity of large-scale pretrained models</p></li>
+<li><p>Lack of explainable AI approaches</p></li>
+<li><p>Need for reproducible evaluation protocols</p></li>
+</ul>
+</section>
+<section id="future-outlook">
+<h3>Future Outlook<a class="headerlink" href="#future-outlook" title="Link to this heading">#</a></h3>
+<p>…</p>
+</section>
+</section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id25">
+<div class="docutils container" id="id26">
 <div role="list" class="citation-list">
-<div class="citation" id="id26" role="doc-biblioentry">
+<div class="citation" id="id27" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>M. Kemal Karaosmanoğlu. A turkish makam music symbolic database for music information retrieval: symbtr. In <em>Proceedings of the 13th International Society for Music Information Retrieval Conference (ISMIR)</em>, 223–228. Porto, Portugal, 2012.</p>
 </div>
-<div class="citation" id="id27" role="doc-biblioentry">
+<div class="citation" id="id28" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>M. Kemal Karaosmanoğlu. Turkish maqam music symbolic data (symbtr v3.0). 2025. <a class="reference external" href="https://doi.org/10.5281/zenodo.15470412">doi:10.5281/zenodo.15470412</a>.</p>
 </div>
-<div class="citation" id="id28" role="doc-biblioentry">
+<div class="citation" id="id29" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
 <p>M. Kemal Karaosmanoğlu, Barış Bozkurt, André Holzapfel, and Nilgün Doğrusöz Dişiaçık. A symbolic dataset of turkish makam music phrases. In <em>Proceedings of the 4th International Workshop on Folk Music Analysis (FMA)</em>. Istanbul, Turkey, 2014.</p>
 </div>
-<div class="citation" id="id30" role="doc-biblioentry">
+<div class="citation" id="id31" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id7">2</a>)</span>
 <p>Sertan Şentürk, Sankalp Gulati, and Xavier Serra. Towards alignment of score and audio recordings of ottoman-turkish makam music. In <em>Proceedings of the 4th International Workshop on Folk Music Analysis (FMA)</em>, 57–60. Istanbul, Turkey, 2014.</p>
 </div>
-<div class="citation" id="id32" role="doc-biblioentry">
+<div class="citation" id="id33" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id10">2</a>)</span>
 <p>Burak Uyar, Hasan Sercan Atlı, Sertan Şentürk, Barış Bozkurt, and Xavier Serra. A corpus for computational research of turkish makam music. In <em>Proceedings of the 1st International Workshop on Digital Libraries for Musicology (DLfM)</em>, 57–63. London, United Kingdom, 2014.</p>
 </div>
-<div class="citation" id="id37" role="doc-biblioentry">
+<div class="citation" id="id38" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id5">1</a>,<a role="doc-backlink" href="#id6">2</a>)</span>
 <p>Sertan Şentürk and Xavier Serra. A method for structural analysis of ottoman-turkish makam music scores. In <em>Proceedings of the 6th International Workshop on Folk Music Analysis (FMA)</em>, 39–46. Dublin, Ireland, 2016.</p>
 </div>
-<div class="citation" id="id31" role="doc-biblioentry">
+<div class="citation" id="id32" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">7</a><span class="fn-bracket">]</span></span>
 <p>Sertan Şentürk, André Holzapfel, and Xavier Serra. Linking scores and audio recordings in makam music of turkey. <em>Journal of New Music Research</em>, 43(1):34–52, 2014.</p>
 </div>
-<div class="citation" id="id29" role="doc-biblioentry">
+<div class="citation" id="id30" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">8</a><span class="fn-bracket">]</span></span>
 <p>Sertan Şentürk, Sankalp Gulati, and Xavier Serra. Score informed tonic identification for makam music of turkey. In <em>Proceedings of the 14th International Society for Music Information Retrieval Conference (ISMIR)</em>, 175–180. Curitiba, Brazil, 2013.</p>
 </div>
-<div class="citation" id="id39" role="doc-biblioentry">
+<div class="citation" id="id40" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">9</a><span class="fn-bracket">]</span></span>
 <p>J. Stephen Downie. Music information retrieval. <em>Annual Review of Information Science and Technology</em>, 37:295–340, 2003. <a class="reference external" href="https://doi.org/10.1002/aris.1440370108">doi:10.1002/aris.1440370108</a>.</p>
 </div>
-<div class="citation" id="id40" role="doc-biblioentry">
+<div class="citation" id="id41" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">10</a><span class="fn-bracket">]</span></span>
 <p>Michael A. Casey, Remco C. Veltkamp, Masataka Goto, Marc Leman, Christophe Rhodes, and Malcolm Slaney. Content-based music information retrieval: current directions and future challenges. <em>Proceedings of the IEEE</em>, 96(4):668–696, 2008. <a class="reference external" href="https://doi.org/10.1109/JPROC.2008.916370">doi:10.1109/JPROC.2008.916370</a>.</p>
 </div>
-<div class="citation" id="id41" role="doc-biblioentry">
+<div class="citation" id="id42" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">11</a><span class="fn-bracket">]</span></span>
 <p>Xavier Serra. A multicultural approach in music information research. In <em>Proceedings of the 12th International Society for Music Information Retrieval Conference (ISMIR)</em>. 2011.</p>
 </div>
-<div class="citation" id="id49" role="doc-biblioentry">
+<div class="citation" id="id50" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">12</a><span class="fn-bracket">]</span></span>
 <p>Thomas M. Cover and Peter E. Hart. Nearest neighbor pattern classification. <em>IEEE Transactions on Information Theory</em>, 13(1):21–27, 1967. <a class="reference external" href="https://doi.org/10.1109/TIT.1967.1053964">doi:10.1109/TIT.1967.1053964</a>.</p>
 </div>
-<div class="citation" id="id48" role="doc-biblioentry">
+<div class="citation" id="id49" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">13</a><span class="fn-bracket">]</span></span>
 <p>Corinna Cortes and Vladimir Vapnik. Support-vector networks. <em>Machine Learning</em>, 20(3):273–297, 1995. <a class="reference external" href="https://doi.org/10.1007/BF00994018">doi:10.1007/BF00994018</a>.</p>
 </div>
-<div class="citation" id="id47" role="doc-biblioentry">
+<div class="citation" id="id48" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">14</a><span class="fn-bracket">]</span></span>
 <p>Leo Breiman. Random forests. <em>Machine Learning</em>, 45(1):5–32, 2001. <a class="reference external" href="https://doi.org/10.1023/A:1010933404324">doi:10.1023/A:1010933404324</a>.</p>
 </div>
-<div class="citation" id="id50" role="doc-biblioentry">
+<div class="citation" id="id51" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">15</a><span class="fn-bracket">]</span></span>
 <p>Christopher M. Bishop. <em>Pattern Recognition and Machine Learning</em>. Springer, 2006.</p>
 </div>
-<div class="citation" id="id51" role="doc-biblioentry">
+<div class="citation" id="id52" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id18">16</a><span class="fn-bracket">]</span></span>
 <p>Trevor Hastie, Robert Tibshirani, and Jerome Friedman. <em>The Elements of Statistical Learning</em>. Springer, 2 edition, 2009.</p>
 </div>
-<div class="citation" id="id52" role="doc-biblioentry">
+<div class="citation" id="id53" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">17</a><span class="fn-bracket">]</span></span>
 <p>Kevin P. Murphy. <em>Machine Learning: A Probabilistic Perspective</em>. MIT Press, 2012.</p>
 </div>
-<div class="citation" id="id55" role="doc-biblioentry">
+<div class="citation" id="id56" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id20">18</a><span class="fn-bracket">]</span></span>
 <p>Alex Krizhevsky, Ilya Sutskever, and Geoffrey E. Hinton. Imagenet classification with deep convolutional neural networks. In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 1097–1105. 2012.</p>
 </div>
-<div class="citation" id="id54" role="doc-biblioentry">
+<div class="citation" id="id55" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id21">19</a><span class="fn-bracket">]</span></span>
 <p>Yann LeCun, Yoshua Bengio, and Geoffrey Hinton. Deep learning. <em>Nature</em>, 521(7553):436–444, 2015. <a class="reference external" href="https://doi.org/10.1038/nature14539">doi:10.1038/nature14539</a>.</p>
 </div>
-<div class="citation" id="id59" role="doc-biblioentry">
+<div class="citation" id="id60" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id22">20</a><span class="fn-bracket">]</span></span>
 <p>Ashish Vaswani and others. Attention is all you need. In <em>Advances in Neural Information Processing Systems</em>. 2017.</p>
 </div>
-<div class="citation" id="id60" role="doc-biblioentry">
+<div class="citation" id="id61" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id23">21</a><span class="fn-bracket">]</span></span>
 <p>Rishi Bommasani and others. On the opportunities and risks of foundation models. <em>arXiv preprint arXiv:2108.07258</em>, 2021.</p>
 </div>
-<div class="citation" id="id61" role="doc-biblioentry">
+<div class="citation" id="id62" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id24">22</a><span class="fn-bracket">]</span></span>
 <p>Qingqing Huang and others. Music foundation models: a survey. <em>ACM Computing Surveys</em>, 2025.</p>
 </div>
@@ -894,6 +1045,7 @@
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature-review-roadmap">Literature Review Roadmap</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organization-of-the-literature">Organization of the Literature</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-music-corpora">1. Symbolic Music Corpora</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phrase-segmentation-and-melodic-analysis">2. Phrase Segmentation and Melodic Analysis</a></li>
@@ -903,6 +1055,12 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-learning">6. Deep Learning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#foundation-models-for-music">7. Foundation Models for Music</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-and-research-gaps">8. Summary and Research Gaps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Summary and Research Gaps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-summary">Overall Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remaining-challenges">Remaining Challenges</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#future-outlook">Future Outlook</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
