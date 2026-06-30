@@ -1,17 +1,17 @@
 .bd-content p{
-    text-align:justify;
-    line-height:1.8;
-    font-size:17px;
+    text-align: justify !important;
+    line-height: 1.8;
+    font-size: 17px;
 }
 
 .bd-content{
-    max-width:900px;
+    max-width: 900px;
 }
 
 .bd-content h1{
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .bd-content h2{
-    margin-top:40px;
+    margin-top: 40px;
 }
