@@ -44,3 +44,9 @@ sphinx:
   config:
     html_css_files:
       - custom.css
+      # Sphinx configuration
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+    html_css_files:
+      - custom.css

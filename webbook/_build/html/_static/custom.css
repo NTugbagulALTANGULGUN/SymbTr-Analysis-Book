@@ -129,3 +129,30 @@ figcaption{
     font-style:italic;
     text-align:center;
 }
+
+/* ==========================================
+   Right Contents Panel
+   ========================================== */
+
+.bd-sidebar-secondary {
+    width: 220px !important;
+    max-width: 220px !important;
+}
+
+.bd-sidebar-secondary a {
+    text-align: left !important;
+    display: block;
+    line-height: 1.6 !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+}
+
+.bd-toc nav ul li a {
+    text-align: left !important;
+    display: block;
+    line-height: 1.6 !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+}

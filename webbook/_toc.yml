@@ -4,7 +4,7 @@ root: landing
 parts:
   - caption: Overview
     chapters:
-      - file: intro
+      - file: introduction
       - file: tutorial
 
   - caption: Dataset
