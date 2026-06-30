@@ -15,3 +15,66 @@
 .bd-content h2{
     margin-top: 40px;
 }
+
+/* ===========================
+   Academic Sidebar Style
+   =========================== */
+
+.bd-sidebar-primary {
+    background: #fafafa;
+    border-right: 1px solid #dddddd;
+}
+
+/* Section titles */
+
+.bd-sidebar-primary .caption {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f2937 !important;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    margin-top: 28px;
+    margin-bottom: 10px;
+}
+
+/* Menu items */
+
+.bd-sidebar-primary .nav li a {
+    color: #4b5563 !important;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+    transition: all .15s ease;
+}
+
+/* Hover */
+
+.bd-sidebar-primary .nav li a:hover {
+    color: #0f3d6e !important;
+    text-decoration: none;
+}
+
+/* Active page */
+
+.bd-sidebar-primary .nav .active > a {
+    color: #0f3d6e !important;
+    font-weight: 700;
+    border-left: 3px solid #0f3d6e;
+    background: #f3f6fb;
+    padding-left: 10px;
+}
+
+/* Nested pages */
+
+.bd-sidebar-primary .nav .nav li a {
+    font-size: 14px;
+    color: #6b7280 !important;
+}
+
+/* Search */
+
+.bd-search input {
+    border-radius: 8px;
+    border: 1px solid #cfd8e3;
+    background: white;
+}
