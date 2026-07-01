@@ -1,0 +1,1870 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Statistical Analysis of Turkish Makam Music SymbTr v3.0 Dataset &#8212; Turkish Delight Corpus: An Open Handbook for Computational Analysis of Turkish Makam Music</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb639cf9" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/03_statistical_analysis';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exploratory Visualizations" href="04_visualizations.html" />
+    <link rel="prev" title="SymbTr V3.0 Dataset Characteristics" href="02_data_overview.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../landing.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Turkish Delight Corpus: An Open Handbook for Computational Analysis of Turkish Makam Music - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Turkish Delight Corpus: An Open Handbook for Computational Analysis of Turkish Makam Music - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../landing.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">SymbTr Dataset Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Computational Analysis of Turkish Makam Music Datasets: A Practical Tutorial</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dataset</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_download_data.html">Accessing the SymbTr V3.0 Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_data_overview.html">SymbTr V3.0 Dataset Characteristics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exploratory Analysis</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Statistical Analysis of Turkish Makam Music SymbTr v3.0 Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_visualizations.html">Exploratory Visualizations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_pca_analysis.html">Principal Component Analysis (PCA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_clustering.html">Unsupervised Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_cluster_interpretation.html">Interpreting Cluster Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Related Datasets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="08_related_datasets.html">Related Symbolic Music Corpora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_related_datasets_and_statistical_analysis.html">Related Datasets and Statistical Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_related_datasets_and_research.html">Related Datasets and Research</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Literature Review and Future Directions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_literature_review.html">Literature Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_open_research_problems.html">Open Research Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Information</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13_contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Resources and References</a></li>
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/NTugbagulALTANGULGUN/SymbTr-Analysis-Book/blob/main/webbook/notebooks/03_statistical_analysis.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NTugbagulALTANGULGUN/SymbTr-Analysis-Book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NTugbagulALTANGULGUN/SymbTr-Analysis-Book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/03_statistical_analysis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/03_statistical_analysis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Statistical Analysis of Turkish Makam Music SymbTr v3.0 Dataset</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-perform-statistical-analysis-on-the-symbtr-v3-0-dataset">Why Perform Statistical Analysis on the SymbTr v3.0 Dataset?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-overview">Dataset Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-value-analysis">Missing Value Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-missing-values-in-the-symbtr-v3-0-dataset">Interpretation of the Missing Values in the SymbTr V3.0 Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-descriptive-statistics">Global Descriptive Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#piece-wise-descriptive-statistics">Piece-wise Descriptive Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-mean-feature-values">Distribution of Mean Feature Values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-variability-analysis">Feature Variability Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-analysis">Correlation Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-heatmap">Correlation Heatmap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-correlation-structure">Interpretation of the Correlation Structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-step">Next Step</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="statistical-analysis-of-turkish-makam-music-symbtr-v3-0-dataset">
+<h1>Statistical Analysis of Turkish Makam Music SymbTr v3.0 Dataset<a class="headerlink" href="#statistical-analysis-of-turkish-makam-music-symbtr-v3-0-dataset" title="Link to this heading">#</a></h1>
+<p>The SymbTr v3.0 dataset provides a numerical representation of Turkish makam music by encoding complete musical scores as fixed-length feature vectors. Unlike the annotation-based phrase datasets presented later in this notebook, SymbTr is designed for statistical learning and machine learning applications, where each musical piece is represented by a set of numerical attributes.</p>
+<p>The dataset supports exploratory data analysis, statistical modeling, dimensionality reduction, clustering, similarity analysis, and machine learning. The following statistical analyses examine the numerical characteristics of the dataset and establish a reproducible foundation for subsequent computational analyses.</p>
+<section id="why-perform-statistical-analysis-on-the-symbtr-v3-0-dataset">
+<h2>Why Perform Statistical Analysis on the SymbTr v3.0 Dataset?<a class="headerlink" href="#why-perform-statistical-analysis-on-the-symbtr-v3-0-dataset" title="Link to this heading">#</a></h2>
+<p>Statistical analysis is a fundamental step in understanding the structure and numerical characteristics of the SymbTr v3.0 dataset before applying advanced computational methods. By examining descriptive statistics, missing-value patterns, feature variability, and relationships among numerical features, researchers can gain valuable insights into the quality, complexity, and representativeness of the dataset.</p>
+<p>These analyses help identify potential data characteristics that may influence subsequent machine learning and music information retrieval (MIR) tasks, such as dimensionality reduction, clustering, similarity analysis, and classification. Furthermore, statistical exploration provides an evidence-based foundation for selecting appropriate preprocessing techniques and interpreting the results of later computational analyses.</p>
+<p>Within this tutorial, the statistical analyses presented in this section are intended not only to describe the dataset but also to guide readers through a reproducible exploratory workflow that supports a deeper understanding of symbolic Turkish makam music data. The findings obtained here serve as the basis for the visualization, Principal Component Analysis (PCA), clustering, and similarity analyses presented in the following chapters.</p>
+</section>
+<section id="dataset-overview">
+<h2>Dataset Overview<a class="headerlink" href="#dataset-overview" title="Link to this heading">#</a></h2>
+<p>The SymbTr V3.0 dataset contains symbolic representations of Turkish makam music encoded as numerical time-series features. The following table summarizes the overall numerical characteristics of the dataset, including the number of observations, numerical features, missing values, and global descriptive statistics. This overview provides an initial understanding of the dataset before more detailed statistical analyses are performed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">overview_rows</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">[</span><span class="s2">&quot;SymbTr&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+
+<span class="n">overview_rows</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">&quot;Dataset&quot;</span><span class="p">:</span><span class="s2">&quot;SymbTr&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Observations&quot;</span><span class="p">:</span><span class="n">datasets</span><span class="p">[</span><span class="s2">&quot;SymbTr&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="s2">&quot;Numeric Features&quot;</span><span class="p">:</span><span class="n">datasets</span><span class="p">[</span><span class="s2">&quot;SymbTr&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="s2">&quot;Missing Values&quot;</span><span class="p">:</span><span class="n">datasets</span><span class="p">[</span><span class="s2">&quot;SymbTr&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="s2">&quot;Mean&quot;</span><span class="p">:</span><span class="n">values</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="s2">&quot;Median&quot;</span><span class="p">:</span><span class="n">values</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+    <span class="s2">&quot;Standard Deviation&quot;</span><span class="p">:</span><span class="n">values</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span>
+    <span class="s2">&quot;Minimum&quot;</span><span class="p">:</span><span class="n">values</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+    <span class="s2">&quot;Maximum&quot;</span><span class="p">:</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="p">})</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">overview_rows</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dataset</th>
+      <th>Observations</th>
+      <th>Numeric Features</th>
+      <th>Missing Values</th>
+      <th>Mean</th>
+      <th>Median</th>
+      <th>Standard Deviation</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>SymbTr</td>
+      <td>3000</td>
+      <td>365</td>
+      <td>20293</td>
+      <td>325.29</td>
+      <td>327.0</td>
+      <td>22.45</td>
+      <td>0.0</td>
+      <td>402.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="missing-value-analysis">
+<h2>Missing Value Analysis<a class="headerlink" href="#missing-value-analysis" title="Link to this heading">#</a></h2>
+<p>This section examines the occurrence of missing values in the dataset. Identifying incomplete observations is an important preprocessing step before performing statistical analyses and machine learning.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Missing value analysis</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">datasets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="n">missing</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total missing values        : </span><span class="si">{</span><span class="n">missing</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Columns with missing values : </span><span class="si">{</span><span class="p">(</span><span class="n">missing</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">missing_df</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">missing</span><span class="p">[</span><span class="n">missing</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s2">&quot;Missing Values&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">missing_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>============================================================
+SymbTr
+============================================================
+Total missing values        : 20293
+Columns with missing values : 363
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Missing Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>p183</th>
+      <td>351</td>
+    </tr>
+    <tr>
+      <th>p184</th>
+      <td>195</td>
+    </tr>
+    <tr>
+      <th>p92</th>
+      <td>179</td>
+    </tr>
+    <tr>
+      <th>p182</th>
+      <td>174</td>
+    </tr>
+    <tr>
+      <th>p91</th>
+      <td>166</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>p2</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>p360</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>p361</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>p363</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>p1</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>363 rows × 1 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="interpretation-of-the-missing-values-in-the-symbtr-v3-0-dataset">
+<h2>Interpretation of the Missing Values in the SymbTr V3.0 Dataset<a class="headerlink" href="#interpretation-of-the-missing-values-in-the-symbtr-v3-0-dataset" title="Link to this heading">#</a></h2>
+<p>The missing values observed in the SymbTr V3.0 dataset originate from the variable temporal lengths of symbolic music pieces rather than from incomplete or erroneous measurements. Since all pieces are represented within a fixed-length time-series matrix, shorter pieces are naturally padded with missing values (NaN). Consequently, these missing values reflect structural characteristics of the dataset rather than data quality issues.</p>
+</section>
+<section id="global-descriptive-statistics">
+<h2>Global Descriptive Statistics<a class="headerlink" href="#global-descriptive-statistics" title="Link to this heading">#</a></h2>
+<p>Global Descriptive Statistics</p>
+<p>This section summarizes the overall numerical characteristics of each dataset. The reported statistics provide a general overview of the distribution of numerical values before feature-level analyses are performed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Global descriptive statistics</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">datasets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="n">values</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+
+    <span class="n">global_stats</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s2">&quot;Statistic&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Observations&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Numeric Features&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Mean&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Median&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Standard Deviation&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Minimum&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Maximum&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;Value&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">values</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+            <span class="n">values</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+            <span class="n">values</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span>
+            <span class="n">values</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+            <span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <span class="p">]</span>
+    <span class="p">})</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">global_stats</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>============================================================
+SymbTr
+============================================================
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Statistic</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Observations</td>
+      <td>3000.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Numeric Features</td>
+      <td>365.00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mean</td>
+      <td>325.29</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Median</td>
+      <td>327.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Standard Deviation</td>
+      <td>22.45</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Minimum</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Maximum</td>
+      <td>402.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Feature-wise descriptive statistics</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">datasets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="n">feature_stats</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">feature_stats</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>============================================================
+SymbTr
+============================================================
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>p1</th>
+      <td>2999.0</td>
+      <td>324.26</td>
+      <td>20.55</td>
+      <td>230.0</td>
+      <td>305.0</td>
+      <td>327.0</td>
+      <td>340.0</td>
+      <td>380.0</td>
+    </tr>
+    <tr>
+      <th>p2</th>
+      <td>2990.0</td>
+      <td>326.95</td>
+      <td>19.82</td>
+      <td>230.0</td>
+      <td>313.0</td>
+      <td>327.0</td>
+      <td>344.0</td>
+      <td>380.0</td>
+    </tr>
+    <tr>
+      <th>p3</th>
+      <td>2988.0</td>
+      <td>328.30</td>
+      <td>19.91</td>
+      <td>230.0</td>
+      <td>314.0</td>
+      <td>327.0</td>
+      <td>344.0</td>
+      <td>380.0</td>
+    </tr>
+    <tr>
+      <th>p4</th>
+      <td>2976.0</td>
+      <td>328.46</td>
+      <td>19.54</td>
+      <td>221.0</td>
+      <td>318.0</td>
+      <td>327.0</td>
+      <td>344.0</td>
+      <td>380.0</td>
+    </tr>
+    <tr>
+      <th>p5</th>
+      <td>2967.0</td>
+      <td>328.05</td>
+      <td>19.86</td>
+      <td>221.0</td>
+      <td>318.0</td>
+      <td>327.0</td>
+      <td>340.0</td>
+      <td>380.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>p361</th>
+      <td>2990.0</td>
+      <td>306.78</td>
+      <td>14.67</td>
+      <td>230.0</td>
+      <td>296.0</td>
+      <td>305.0</td>
+      <td>313.0</td>
+      <td>380.0</td>
+    </tr>
+    <tr>
+      <th>p362</th>
+      <td>2989.0</td>
+      <td>305.17</td>
+      <td>13.75</td>
+      <td>243.0</td>
+      <td>296.0</td>
+      <td>305.0</td>
+      <td>313.0</td>
+      <td>384.0</td>
+    </tr>
+    <tr>
+      <th>p363</th>
+      <td>2995.0</td>
+      <td>303.36</td>
+      <td>12.86</td>
+      <td>243.0</td>
+      <td>296.0</td>
+      <td>305.0</td>
+      <td>305.0</td>
+      <td>402.0</td>
+    </tr>
+    <tr>
+      <th>p364</th>
+      <td>3000.0</td>
+      <td>301.80</td>
+      <td>11.70</td>
+      <td>230.0</td>
+      <td>296.0</td>
+      <td>305.0</td>
+      <td>305.0</td>
+      <td>402.0</td>
+    </tr>
+    <tr>
+      <th>p365</th>
+      <td>3000.0</td>
+      <td>301.58</td>
+      <td>11.24</td>
+      <td>269.0</td>
+      <td>296.0</td>
+      <td>305.0</td>
+      <td>305.0</td>
+      <td>402.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>365 rows × 8 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="piece-wise-descriptive-statistics">
+<h2>Piece-wise Descriptive Statistics<a class="headerlink" href="#piece-wise-descriptive-statistics" title="Link to this heading">#</a></h2>
+<p>This section computes the average numerical feature value for each musical piece and summarizes the distribution of these averages across each dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Piece-wise descriptive statistics</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">datasets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="n">piece_means</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">piece_summary</span> <span class="o">=</span> <span class="n">piece_means</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">piece_summary</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>============================================================
+SymbTr
+============================================================
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>3000.00</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>325.33</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>8.18</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>289.49</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>320.02</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>325.54</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>331.14</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>354.92</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">piece_variances</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">piece_variances</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    3000.000000
+mean      435.237686
+std       259.467586
+min        34.616901
+25%       248.752011
+50%       360.911748
+75%       559.372829
+max      2110.490095
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribution-of-mean-feature-values">
+<h2>Distribution of Mean Feature Values<a class="headerlink" href="#distribution-of-mean-feature-values" title="Link to this heading">#</a></h2>
+<p>The following histograms illustrate the distribution of the average numerical feature values for each musical piece. The mean and median are highlighted to facilitate comparison of the central tendency and overall distribution across datasets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Distribution of mean feature values</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">datasets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+    <span class="n">piece_means</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+        <span class="n">piece_means</span><span class="p">,</span>
+        <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+        <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span>
+    <span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span>
+        <span class="n">piece_means</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Mean = </span><span class="si">{</span><span class="n">piece_means</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span>
+        <span class="n">piece_means</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+        <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Median = </span><span class="si">{</span><span class="n">piece_means</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: Distribution of Mean Feature Values&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Mean Feature Value&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Pieces&quot;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3923de10f04efcaae05690f02ed980b647f2e35632305deeceb779d557905a84.png" src="../_images/3923de10f04efcaae05690f02ed980b647f2e35632305deeceb779d557905a84.png" />
+</div>
+</div>
+</section>
+<section id="feature-variability-analysis">
+<h2>Feature Variability Analysis<a class="headerlink" href="#feature-variability-analysis" title="Link to this heading">#</a></h2>
+<p>Feature variability provides important information about the distribution of numerical characteristics within the dataset. Features with very low variance often contribute little discriminatory information, whereas highly variable features are more likely to capture meaningful differences among musical pieces.</p>
+<p>Examining feature variance therefore serves two purposes. First, it offers a better understanding of the statistical properties of the SymbTr dataset. Second, it provides an intuitive motivation for subsequent dimensionality reduction techniques, such as Principal Component Analysis (PCA), where highly informative features contribute more effectively to the extracted principal components.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Feature variability analysis</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">datasets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+
+    <span class="n">feature_variance</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Variance&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">feature_variance</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>======================================================================
+SymbTr
+======================================================================
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Variance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>p183</th>
+      <td>1222.69</td>
+    </tr>
+    <tr>
+      <th>p184</th>
+      <td>922.34</td>
+    </tr>
+    <tr>
+      <th>p92</th>
+      <td>875.66</td>
+    </tr>
+    <tr>
+      <th>p274</th>
+      <td>807.45</td>
+    </tr>
+    <tr>
+      <th>p275</th>
+      <td>805.85</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>p361</th>
+      <td>215.18</td>
+    </tr>
+    <tr>
+      <th>p362</th>
+      <td>189.18</td>
+    </tr>
+    <tr>
+      <th>p363</th>
+      <td>165.25</td>
+    </tr>
+    <tr>
+      <th>p364</th>
+      <td>136.81</td>
+    </tr>
+    <tr>
+      <th>p365</th>
+      <td>126.37</td>
+    </tr>
+  </tbody>
+</table>
+<p>365 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Distribution of feature variance</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">datasets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+    <span class="n">feature_variance</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+        <span class="n">feature_variance</span><span class="p">,</span>
+        <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+        <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span>
+    <span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span>
+        <span class="n">feature_variance</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Mean = </span><span class="si">{</span><span class="n">feature_variance</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span>
+        <span class="n">feature_variance</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+        <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Median = </span><span class="si">{</span><span class="n">feature_variance</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: Distribution of Feature Variance&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Variance&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Features&quot;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/1f585a671ccd4c3c249791348c7434f46134e674ef3830d10367b0e6b6c4a71e.png" src="../_images/1f585a671ccd4c3c249791348c7434f46134e674ef3830d10367b0e6b6c4a71e.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Comparative summary</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">comparison</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">datasets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+    <span class="n">values</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+
+    <span class="n">comparison</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s2">&quot;Dataset&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+        <span class="s2">&quot;Pieces&quot;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="s2">&quot;Features&quot;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="s2">&quot;Missing Values&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span>
+        <span class="s2">&quot;Mean&quot;</span><span class="p">:</span> <span class="n">values</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="s2">&quot;Median&quot;</span><span class="p">:</span> <span class="n">values</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+        <span class="s2">&quot;Std&quot;</span><span class="p">:</span> <span class="n">values</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span>
+        <span class="s2">&quot;Minimum&quot;</span><span class="p">:</span> <span class="n">values</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+        <span class="s2">&quot;Maximum&quot;</span><span class="p">:</span> <span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="p">})</span>
+
+<span class="n">comparison_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">comparison</span><span class="p">)</span>
+
+<span class="n">comparison_df</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dataset</th>
+      <th>Pieces</th>
+      <th>Features</th>
+      <th>Missing Values</th>
+      <th>Mean</th>
+      <th>Median</th>
+      <th>Std</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>SymbTr</td>
+      <td>3000</td>
+      <td>365</td>
+      <td>20293</td>
+      <td>325.29</td>
+      <td>327.0</td>
+      <td>22.45</td>
+      <td>0.0</td>
+      <td>402.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="correlation-analysis">
+<h2>Correlation Analysis<a class="headerlink" href="#correlation-analysis" title="Link to this heading">#</a></h2>
+<p>This section examines pairwise correlations among numerical features in the SymbTr dataset. Correlation analysis helps identify relationships and possible redundancy among features before applying dimensionality reduction methods such as PCA.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Correlation analysis</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">symbtr_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">[</span><span class="s2">&quot;SymbTr&quot;</span><span class="p">]</span>
+
+<span class="n">correlation_matrix</span> <span class="o">=</span> <span class="n">symbtr_data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+
+<span class="n">correlation_matrix</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>p1</th>
+      <th>p2</th>
+      <th>p3</th>
+      <th>p4</th>
+      <th>p5</th>
+      <th>p6</th>
+      <th>p7</th>
+      <th>p8</th>
+      <th>p9</th>
+      <th>p10</th>
+      <th>...</th>
+      <th>p356</th>
+      <th>p357</th>
+      <th>p358</th>
+      <th>p359</th>
+      <th>p360</th>
+      <th>p361</th>
+      <th>p362</th>
+      <th>p363</th>
+      <th>p364</th>
+      <th>p365</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>p1</th>
+      <td>1.00</td>
+      <td>0.85</td>
+      <td>0.73</td>
+      <td>0.62</td>
+      <td>0.56</td>
+      <td>0.51</td>
+      <td>0.48</td>
+      <td>0.48</td>
+      <td>0.41</td>
+      <td>0.41</td>
+      <td>...</td>
+      <td>0.05</td>
+      <td>0.05</td>
+      <td>0.04</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.03</td>
+      <td>0.02</td>
+      <td>0.02</td>
+      <td>0.02</td>
+      <td>0.02</td>
+    </tr>
+    <tr>
+      <th>p2</th>
+      <td>0.85</td>
+      <td>1.00</td>
+      <td>0.83</td>
+      <td>0.69</td>
+      <td>0.63</td>
+      <td>0.57</td>
+      <td>0.49</td>
+      <td>0.51</td>
+      <td>0.45</td>
+      <td>0.43</td>
+      <td>...</td>
+      <td>0.06</td>
+      <td>0.08</td>
+      <td>0.05</td>
+      <td>0.05</td>
+      <td>0.05</td>
+      <td>0.03</td>
+      <td>0.02</td>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>p3</th>
+      <td>0.73</td>
+      <td>0.83</td>
+      <td>1.00</td>
+      <td>0.76</td>
+      <td>0.68</td>
+      <td>0.61</td>
+      <td>0.52</td>
+      <td>0.51</td>
+      <td>0.46</td>
+      <td>0.46</td>
+      <td>...</td>
+      <td>0.08</td>
+      <td>0.08</td>
+      <td>0.07</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.05</td>
+      <td>0.03</td>
+      <td>0.03</td>
+      <td>0.02</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>p4</th>
+      <td>0.62</td>
+      <td>0.69</td>
+      <td>0.76</td>
+      <td>1.00</td>
+      <td>0.74</td>
+      <td>0.62</td>
+      <td>0.53</td>
+      <td>0.54</td>
+      <td>0.48</td>
+      <td>0.46</td>
+      <td>...</td>
+      <td>0.07</td>
+      <td>0.05</td>
+      <td>0.07</td>
+      <td>0.04</td>
+      <td>0.05</td>
+      <td>0.05</td>
+      <td>0.02</td>
+      <td>0.03</td>
+      <td>0.02</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>p5</th>
+      <td>0.56</td>
+      <td>0.63</td>
+      <td>0.68</td>
+      <td>0.74</td>
+      <td>1.00</td>
+      <td>0.71</td>
+      <td>0.56</td>
+      <td>0.53</td>
+      <td>0.48</td>
+      <td>0.48</td>
+      <td>...</td>
+      <td>0.07</td>
+      <td>0.07</td>
+      <td>0.04</td>
+      <td>0.03</td>
+      <td>0.06</td>
+      <td>0.05</td>
+      <td>0.02</td>
+      <td>0.04</td>
+      <td>0.02</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>p361</th>
+      <td>0.03</td>
+      <td>0.03</td>
+      <td>0.05</td>
+      <td>0.05</td>
+      <td>0.05</td>
+      <td>0.03</td>
+      <td>0.02</td>
+      <td>-0.00</td>
+      <td>0.04</td>
+      <td>0.04</td>
+      <td>...</td>
+      <td>0.46</td>
+      <td>0.48</td>
+      <td>0.51</td>
+      <td>0.58</td>
+      <td>0.70</td>
+      <td>1.00</td>
+      <td>0.70</td>
+      <td>0.61</td>
+      <td>0.62</td>
+      <td>0.61</td>
+    </tr>
+    <tr>
+      <th>p362</th>
+      <td>0.02</td>
+      <td>0.02</td>
+      <td>0.03</td>
+      <td>0.02</td>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.02</td>
+      <td>-0.00</td>
+      <td>...</td>
+      <td>0.47</td>
+      <td>0.47</td>
+      <td>0.50</td>
+      <td>0.55</td>
+      <td>0.59</td>
+      <td>0.70</td>
+      <td>1.00</td>
+      <td>0.75</td>
+      <td>0.69</td>
+      <td>0.68</td>
+    </tr>
+    <tr>
+      <th>p363</th>
+      <td>0.02</td>
+      <td>0.02</td>
+      <td>0.03</td>
+      <td>0.03</td>
+      <td>0.04</td>
+      <td>0.01</td>
+      <td>0.02</td>
+      <td>0.05</td>
+      <td>0.03</td>
+      <td>0.02</td>
+      <td>...</td>
+      <td>0.41</td>
+      <td>0.44</td>
+      <td>0.46</td>
+      <td>0.52</td>
+      <td>0.55</td>
+      <td>0.61</td>
+      <td>0.75</td>
+      <td>1.00</td>
+      <td>0.82</td>
+      <td>0.79</td>
+    </tr>
+    <tr>
+      <th>p364</th>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.02</td>
+      <td>0.02</td>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.02</td>
+      <td>0.04</td>
+      <td>0.02</td>
+      <td>...</td>
+      <td>0.43</td>
+      <td>0.45</td>
+      <td>0.47</td>
+      <td>0.53</td>
+      <td>0.57</td>
+      <td>0.62</td>
+      <td>0.69</td>
+      <td>0.82</td>
+      <td>1.00</td>
+      <td>0.91</td>
+    </tr>
+    <tr>
+      <th>p365</th>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.03</td>
+      <td>0.02</td>
+      <td>0.02</td>
+      <td>0.03</td>
+      <td>0.03</td>
+      <td>0.02</td>
+      <td>...</td>
+      <td>0.43</td>
+      <td>0.44</td>
+      <td>0.47</td>
+      <td>0.54</td>
+      <td>0.58</td>
+      <td>0.61</td>
+      <td>0.68</td>
+      <td>0.79</td>
+      <td>0.91</td>
+      <td>1.00</td>
+    </tr>
+  </tbody>
+</table>
+<p>365 rows × 365 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="correlation-heatmap">
+<h2>Correlation Heatmap<a class="headerlink" href="#correlation-heatmap" title="Link to this heading">#</a></h2>
+<p>The following heatmap visualizes the pairwise correlations among numerical features. The graphical representation makes it easier to identify groups of highly correlated variables and overall dependency patterns within the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Correlation heatmap</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span>
+    <span class="n">correlation_matrix</span><span class="p">,</span>
+    <span class="n">aspect</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+    <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;nearest&quot;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;SymbTr Feature Correlation Matrix&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Features&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Features&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Correlation&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/bd0a4376d22bf805cbeec010059755dd0004cf99fb0d11015a67b842537fee0a.png" src="../_images/bd0a4376d22bf805cbeec010059755dd0004cf99fb0d11015a67b842537fee0a.png" />
+</div>
+</div>
+</section>
+<section id="interpretation-of-the-correlation-structure">
+<h2>Interpretation of the Correlation Structure<a class="headerlink" href="#interpretation-of-the-correlation-structure" title="Link to this heading">#</a></h2>
+<p>The correlation matrix provides an overview of the dependency structure among the numerical features extracted from the SymbTr dataset. Highly correlated features may contain redundant information, whereas weakly correlated features often capture complementary musical characteristics.</p>
+<p>Such redundancy is common in high-dimensional music representations, where multiple descriptors characterize similar acoustic or symbolic properties. Consequently, reducing the dimensionality of the feature space becomes beneficial for both visualization and machine learning.</p>
+<p>The next notebook introduces Principal Component Analysis (PCA), which transforms the original correlated feature space into a smaller set of orthogonal components while preserving most of the variance contained in the data.</p>
+</section>
+<section id="next-step">
+<h2>Next Step<a class="headerlink" href="#next-step" title="Link to this heading">#</a></h2>
+<p>The next notebook focuses on <strong>Visualization</strong>, where the statistical findings presented in this chapter are explored through graphical representations of Turkish Makam Music SymbTr v3.0 Dataset. These visual analyses complement the statistical summaries by revealing structural patterns, feature distributions, melodic characteristics, and annotation properties that are more easily interpreted through visual exploration.</p>
+<p>Together, the statistical and visual analyses establish a comprehensive exploratory data analysis (EDA) workflow that prepares the datasets for subsequent computational methods, including principal component analysis (PCA), clustering, similarity analysis, and machine learning.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "NTugbagulALTANGULGUN/SymbTr-Analysis-Book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02_data_overview.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">SymbTr V3.0 Dataset Characteristics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04_visualizations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exploratory Visualizations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-perform-statistical-analysis-on-the-symbtr-v3-0-dataset">Why Perform Statistical Analysis on the SymbTr v3.0 Dataset?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-overview">Dataset Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-value-analysis">Missing Value Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-missing-values-in-the-symbtr-v3-0-dataset">Interpretation of the Missing Values in the SymbTr V3.0 Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-descriptive-statistics">Global Descriptive Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#piece-wise-descriptive-statistics">Piece-wise Descriptive Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-mean-feature-values">Distribution of Mean Feature Values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-variability-analysis">Feature Variability Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-analysis">Correlation Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-heatmap">Correlation Heatmap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-correlation-structure">Interpretation of the Correlation Structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-step">Next Step</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By N. Tuğbagül Altan Gülgün
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
