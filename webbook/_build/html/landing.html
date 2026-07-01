@@ -177,12 +177,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Dataset</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/01_download_data.html">Accessing the SymbTr Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/02_data_overview.html">Dataset Characteristics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/01_download_data.html">Accessing the SymbTr V3.0 Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/02_data_overview.html">SymbTr V3.0 Dataset Characteristics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exploratory Analysis</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/03_statistical_analysis.html">Descriptive Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/03_statistical_analysis.html">Statistical Analysis of Turkish Makam Music SymbTr v3.0 Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/04_visualizations.html">Exploratory Visualizations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Analysis</span></p>
@@ -191,13 +191,20 @@
 <li class="toctree-l1"><a class="reference internal" href="notebooks/06_clustering.html">Unsupervised Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/07_cluster_interpretation.html">Interpreting Cluster Structure</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Related Datasets</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/08_related_datasets.html">Related Symbolic Music Corpora</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/09_related_datasets_and_research.html">Related Datasets and Research</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/10_literature_review.html">Literature Review</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/11_open_research_problems.html">Open Research Problems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/12_contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/09_related_datasets_and_statistical_analysis.html">Related Datasets and Statistical Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/10_related_datasets_and_research.html">Related Datasets and Research</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Literature Review and Future Directions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/11_literature_review.html">Literature Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/12_open_research_problems.html">Open Research Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Information</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/13_contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">Resources and References</a></li>
 
 
@@ -425,9 +432,9 @@
   <section class="tex2jax_ignore mathjax_ignore" id="welcome">
 <h1>Welcome<a class="headerlink" href="#welcome" title="Link to this heading">#</a></h1>
 <p>Welcome to <strong>Turkish Delight Corpus (TDC): A Repository for Turkish Makam Music Research and Computational Methods</strong>.</p>
-<p>The <strong>Turkish Delight Corpus (TDC)</strong> is an open and interactive Jupyter Book that provides reproducible computational methods, educational resources, and analytical workflows for Turkish makam music research.</p>
-<p>Rather than focusing on a single corpus, the project integrates multiple public symbolic Turkish makam music datasets within a unified computational framework. Using Python and Jupyter notebooks, readers can perform exploratory data analysis, statistical analysis, visualization, dimensionality reduction, clustering, and comparative analysis through fully reproducible workflows.</p>
-<p>The project integrates <strong>three complementary public datasets</strong> representing different levels of symbolic Turkish makam music. <strong>SymbTr v3.0</strong> serves as the primary score-level corpus, while the <strong>Turkish Makam Symbolic Phrase Dataset</strong> and the <strong>Turkish Makam Melodic Phrase Dataset</strong> provide phrase-level representations for comparative computational analysis.</p>
+<p>The <strong>Turkish Delight Corpus (TDC)</strong> is an open, interactive, and fully reproducible Jupyter Book that presents computational methods, educational resources, and analytical workflows for symbolic Turkish makam music research.</p>
+<p>Rather than focusing on a single corpus, the handbook integrates multiple public symbolic Turkish makam music datasets within a unified computational framework. Using Python and Jupyter notebooks, readers can reproduce every stage of the analysis pipeline, from dataset acquisition to advanced computational musicology methods.</p>
+<p>The project combines <strong>three complementary public datasets</strong> representing different levels of symbolic Turkish makam music. <strong>SymbTr v3.0</strong> serves as the primary score-level corpus, while the <strong>Turkish Makam Symbolic Phrase Dataset</strong> and the <strong>Turkish Makam Melodic Phrase Dataset</strong> provide phrase-level representations that enable comparative computational analyses.</p>
 <section id="symbtr-collection-overview">
 <h2>SymbTr Collection Overview<a class="headerlink" href="#symbtr-collection-overview" title="Link to this heading">#</a></h2>
 <p>The latest version of the SymbTr collection consists of:</p>
@@ -442,13 +449,14 @@
 <p>The collection includes scores in multiple formats such as MusicXML, MIDI, PDF, text, mu2, making it suitable for computational analysis and music software applications.</p>
 <p><em>Source: SymbTr v3.0 Zenodo record.</em></p>
 </section>
+<hr class="docutils" />
 <section id="who-is-this-handbook-for">
 <h2>Who is this handbook for?<a class="headerlink" href="#who-is-this-handbook-for" title="Link to this heading">#</a></h2>
 <p>This handbook is intended for researchers, educators, and students interested in computational approaches to Turkish makam music.</p>
 <p>It is particularly suitable for:</p>
 <ul class="simple">
-<li><p>🎓 Graduate students studying Music Information Retrieval (MIR), computational musicology, and machine learning</p></li>
-<li><p>🔬 Researchers working on symbolic music analysis, digital humanities, and artificial intelligence</p></li>
+<li><p>🎓 Graduate students studying Music Information Retrieval (MIR), computational musicology, machine learning, and artificial intelligence</p></li>
+<li><p>🔬 Researchers working on symbolic music analysis, digital humanities, and computational musicology</p></li>
 <li><p>🎼 Musicologists interested in reproducible computational methods</p></li>
 <li><p>💻 Data scientists exploring symbolic music datasets and machine learning workflows</p></li>
 <li><p>🌍 Educators seeking open educational resources for computational music analysis</p></li>
@@ -460,17 +468,17 @@
 <p>By following this handbook, readers will learn how to:</p>
 <ul class="simple">
 <li><p>Acquire and organize public symbolic Turkish makam music datasets</p></li>
-<li><p>Explore musical metadata and dataset characteristics</p></li>
+<li><p>Explore musical metadata and corpus characteristics</p></li>
 <li><p>Perform exploratory data analysis (EDA)</p></li>
-<li><p>Compute descriptive statistics</p></li>
+<li><p>Compute descriptive statistics for multiple symbolic music datasets</p></li>
 <li><p>Visualize symbolic music collections</p></li>
 <li><p>Apply Principal Component Analysis (PCA)</p></li>
-<li><p>Perform clustering analysis</p></li>
-<li><p>Compare multiple symbolic music datasets within a unified computational framework</p></li>
-<li><p>Develop fully reproducible computational musicology workflows</p></li>
+<li><p>Perform clustering and similarity analysis</p></li>
+<li><p>Compare symbolic music datasets at score and phrase levels</p></li>
+<li><p>Explore related datasets, computational research, and open research problems</p></li>
+<li><p>Develop fully reproducible computational musicology workflows using Python</p></li>
 </ul>
-<p>Together, these learning objectives are supported by three complementary public symbolic music datasets that span multiple levels of musical representation. The following sections introduce these datasets and demonstrate how they are integrated into a unified computational workflow.</p>
-<p>The SymbTr collection contains symbolic scores in <strong>MusicXML</strong>, <strong>MIDI</strong>, <strong>PDF</strong>, <strong>TXT</strong>, and <strong>MU2</strong> formats, making it suitable for computational musicology, music information retrieval (MIR), symbolic music analysis, and machine learning.</p>
+<p>Together, these learning objectives are supported by three complementary public symbolic music datasets spanning multiple levels of musical representation.</p>
 </section>
 <hr class="docutils" />
 <section id="public-turkish-makam-music-datasets">
@@ -488,21 +496,21 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>SymbTr v3.0</strong></p></td>
-<td><p>Large-scale symbolic corpus containing complete Turkish makam music scores. It serves as the primary dataset for statistical analysis, visualization, Principal Component Analysis (PCA), and clustering.</p></td>
+<td><p>Large-scale symbolic corpus containing complete Turkish makam music scores. It serves as the primary dataset for statistical analysis, visualization, Principal Component Analysis (PCA), clustering, and similarity analysis.</p></td>
 <td><p><a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="https://doi.org/10.5281/zenodo.15470412"><span>Zenodo</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Turkish Makam Symbolic Phrase Dataset</strong></p></td>
-<td><p>Phrase-level symbolic dataset containing manually annotated musical phrases extracted from Turkish makam music. It is used to demonstrate phrase-level symbolic analysis and complement score-level investigations.</p></td>
+<td><p>Phrase-level symbolic dataset containing manually annotated musical phrases extracted from Turkish makam music. It supports phrase segmentation, annotation analysis, and comparative computational musicology.</p></td>
 <td><p><a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="http://compmusic.upf.edu/node/237"><span>UPF CompMusic</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Turkish Makam Melodic Phrase Dataset</strong></p></td>
-<td><p>Phrase-level dataset containing melodic phrase representations for comparative symbolic music analysis.</p></td>
+<td><p>Phrase-level symbolic dataset containing melodic phrase representations suitable for phrase-level statistical analysis, symbolic music processing, and comparative melodic analysis.</p></td>
 <td><p><a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="http://compmusic.upf.edu/node/236"><span>UPF CompMusic</span></a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Although these datasets differ in scope and granularity, the computational workflow presented throughout this project can be applied consistently across all of them. Together, they provide a reproducible framework for exploratory data analysis, statistical analysis, visualization, dimensionality reduction, clustering, and comparative symbolic music analysis.</p>
+<p>Although these datasets differ in representation and analytical objectives, the computational workflow presented throughout this handbook can be applied consistently across all of them. Together, they establish a unified framework for exploratory data analysis, statistical analysis, visualization, dimensionality reduction, clustering, similarity analysis, and computational musicology.</p>
 </section>
 <hr class="docutils" />
 <section id="how-to-use-this-handbook">
@@ -512,29 +520,32 @@
 <ol class="arabic simple">
 <li><p>Dataset acquisition</p></li>
 <li><p>Dataset overview</p></li>
-<li><p>Statistical analysis</p></li>
+<li><p>Statistical analysis of SymbTr v3.0</p></li>
 <li><p>Data visualization</p></li>
 <li><p>Principal Component Analysis (PCA)</p></li>
 <li><p>Clustering analysis</p></li>
 <li><p>Cluster interpretation</p></li>
-<li><p>Related symbolic music datasets</p></li>
+<li><p>Related symbolic music corpora</p></li>
+<li><p>Statistical analysis of related datasets</p></li>
+<li><p>Related datasets and computational research</p></li>
 <li><p>Literature review</p></li>
 <li><p>Open research problems</p></li>
+<li><p>Contributing</p></li>
 </ol>
-<p>Readers already familiar with these topics may use the sidebar to navigate directly to individual chapters.</p>
+<p>Readers already familiar with these topics may use the navigation sidebar to access individual chapters directly.</p>
 </section>
 <hr class="docutils" />
 <section id="project-workflow">
 <h2>Project Workflow<a class="headerlink" href="#project-workflow" title="Link to this heading">#</a></h2>
-<p>The Turkish Delight Corpus demonstrates a complete end-to-end computational workflow.</p>
+<p>The Turkish Delight Corpus demonstrates a complete end-to-end computational workflow for symbolic Turkish makam music analysis.</p>
 <figure class="align-center" id="tdc-workflow">
 <a class="reference internal image-reference" href="_images/workflow.png"><img alt="_images/workflow.png" src="_images/workflow.png" style="width: 85%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text">Unified computational workflow of the Turkish Delight Corpus (TDC) for reproducible analysis of symbolic Turkish makam music datasets.</span><a class="headerlink" href="#tdc-workflow" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Each stage of the workflow is implemented as a dedicated Jupyter notebook, enabling readers to reproduce every analysis from data acquisition to comparative dataset exploration.</p>
-<p>The workflow consists of the following stages:</p>
+<p>Each stage of the workflow is implemented as an independent Jupyter notebook, allowing readers to reproduce every computational step.</p>
+<p>The workflow consists of:</p>
 <ul class="simple">
 <li><p>Dataset acquisition and preparation</p></li>
 <li><p>Dataset inspection and metadata exploration</p></li>
@@ -544,7 +555,11 @@
 <li><p>Principal Component Analysis (PCA)</p></li>
 <li><p>Clustering analysis</p></li>
 <li><p>Cluster interpretation</p></li>
-<li><p>Cross-dataset comparison</p></li>
+<li><p>Related symbolic music corpora</p></li>
+<li><p>Cross-dataset statistical analysis</p></li>
+<li><p>Related computational research</p></li>
+<li><p>Literature review</p></li>
+<li><p>Open research problems</p></li>
 </ul>
 <p>All analyses are fully reproducible and implemented using Python and Jupyter notebooks.</p>
 </section>
@@ -566,7 +581,6 @@
 <section id="citation">
 <h2>Citation<a class="headerlink" href="#citation" title="Link to this heading">#</a></h2>
 <p>If you use the Turkish Delight Corpus (TDC), the accompanying Jupyter notebooks, or any part of the computational workflow presented in this handbook, please cite the primary dataset and acknowledge this handbook in your publications.</p>
-<p>Additional datasets, software resources, and bibliographic references are available in the <strong>Resources and References</strong> section.</p>
 <section id="primary-dataset">
 <h3>Primary Dataset<a class="headerlink" href="#primary-dataset" title="Link to this heading">#</a></h3>
 <p><a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="https://doi.org/10.5281/zenodo.15470412"><span>SymbTr v3.0 (Zenodo DOI)</span></a></p>
@@ -587,9 +601,13 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Additional datasets, publications, and related resources are available in the <strong>Resources and References</strong> section.</p>
+<p>Additional datasets, computational resources, literature reviews, open research problems, and bibliographic references are available throughout the <strong>Related Datasets</strong>, <strong>Literature Review</strong>, <strong>Open Research Problems</strong>, and <strong>Resources and References</strong> sections.</p>
 </section>
 </section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">

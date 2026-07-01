@@ -23,21 +23,28 @@ parts:
       - file: notebooks/06_clustering
       - file: notebooks/07_cluster_interpretation
 
-  - caption: Resources
+  - caption: Related Datasets
     chapters:
       - file: notebooks/08_related_datasets
         title: Related Symbolic Music Corpora
 
-      - file: notebooks/09_related_datasets_and_research
+      - file: notebooks/09_related_datasets_and_statistical_analysis
+        title: Related Datasets and Statistical Analysis
+
+      - file: notebooks/10_related_datasets_and_research
         title: Related Datasets and Research
 
-      - file: notebooks/10_literature_review
+  - caption: Literature Review and Future Directions
+    chapters:
+      - file: notebooks/11_literature_review
         title: Literature Review
 
-      - file: notebooks/11_open_research_problems
+      - file: notebooks/12_open_research_problems
         title: Open Research Problems
 
-      - file: notebooks/12_contributing
+  - caption: Project Information
+    chapters:
+      - file: notebooks/13_contributing
         title: Contributing
 
       - file: references

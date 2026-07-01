@@ -2,96 +2,179 @@
 
 ## Overview
 
-This tutorial presents a reproducible computational workflow for analyzing symbolic Turkish makam music datasets using Python and Jupyter notebooks.
+This tutorial presents a comprehensive and reproducible computational
+workflow for analyzing symbolic Turkish makam music datasets using
+Python and Jupyter notebooks.
 
-Rather than focusing on a single corpus, the tutorial demonstrates a unified analysis framework applicable to multiple Turkish makam music datasets. Three publicly available Turkish makam music datasets are used throughout the tutorial to demonstrate how a unified computational workflow can be applied consistently across different symbolic music collections with varying structures and levels of granularity.
+Rather than focusing on a single corpus, the tutorial integrates three
+complementary public Turkish makam music datasets representing different
+levels of symbolic musical abstraction. Readers are guided through an
+end-to-end workflow covering data acquisition, exploratory data
+analysis, statistical analysis, visualization, dimensionality reduction,
+clustering, similarity analysis, and comparative computational
+musicology.
 
-Throughout this tutorial, readers will learn how to
+All analyses are fully reproducible and implemented using open-source
+Python software.
 
-* acquire and prepare symbolic music datasets,
-* inspect dataset structures,
-* perform exploratory statistical analyses,
-* visualize musical characteristics,
-* apply dimensionality reduction techniques,
-* perform clustering analyses, and
-* compare multiple Turkish makam music datasets within a common analytical framework.
-
-All analyses are fully reproducible and can be executed directly from the accompanying Jupyter notebooks.
-
+------------------------------------------------------------------------
 
 ## Why This Tutorial?
 
-Computational analysis of Turkish makam music requires expertise from multiple disciplines, including music information retrieval, symbolic music processing, statistics, and machine learning. Although several Turkish makam music datasets are publicly available, practical educational resources demonstrating a complete computational workflow remain limited.
+Computational analysis of Turkish makam music combines concepts from
+Music Information Retrieval (MIR), computational musicology, symbolic
+music processing, statistics, and machine learning. Although several
+public datasets are available, practical educational resources
+demonstrating a complete computational workflow remain limited.
 
-This tutorial bridges that gap by presenting an end-to-end, reproducible workflow that integrates multiple symbolic music datasets within a unified analytical framework. Rather than focusing on a single analysis technique, the tutorial demonstrates how statistical analysis, visualization, dimensionality reduction, and clustering can be combined to better understand symbolic Turkish makam music.
+This tutorial addresses that need by presenting a unified workflow that
+integrates multiple symbolic datasets while preserving the
+characteristics of each representation.
+
+------------------------------------------------------------------------
 
 ## Prerequisites
 
-Basic familiarity with Python programming and Jupyter notebooks is recommended. Prior knowledge of machine learning or Turkish makam music is beneficial but not required, since each analysis step is explained throughout the tutorial.
+Readers are expected to have:
+
+-   Basic Python knowledge
+-   Basic familiarity with Jupyter Notebooks
+-   Interest in symbolic music analysis
+
+Prior knowledge of Turkish makam music is helpful but not required.
+
+------------------------------------------------------------------------
 
 ## Learning Objectives
 
-After completing this tutorial, readers will be able to
+After completing this tutorial, readers will be able to:
 
-- understand the structure of symbolic Turkish makam music datasets,
-- perform exploratory data analysis,
-- generate statistical summaries automatically,
-- visualize symbolic music data,
-- apply Principal Component Analysis (PCA),
-- perform clustering analysis,
-- interpret computational results,
-- compare multiple Turkish makam music datasets using a common analytical framework.
+-   Download and organize symbolic Turkish makam music datasets.
+-   Explore dataset structure and metadata.
+-   Perform exploratory data analysis.
+-   Compute descriptive statistics.
+-   Visualize symbolic music datasets.
+-   Apply Principal Component Analysis (PCA).
+-   Perform clustering analysis.
+-   Interpret computational results.
+-   Compare multiple symbolic music datasets.
+-   Explore related datasets and current research.
+-   Identify open research problems.
+-   Build reproducible computational musicology workflows.
 
+------------------------------------------------------------------------
 
 ## Datasets Used
 
-This tutorial is based on three publicly available datasets that represent complementary aspects of symbolic Turkish makam music. Together, these datasets provide a comprehensive foundation for demonstrating reproducible computational music analysis techniques across different levels of musical representation.
+The tutorial integrates three complementary public datasets.
 
-| Dataset                                   | Description                                                                                                                                                                                                                            | Official Source                                    |
-| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| **SymbTr**                                | A large-scale symbolic corpus containing complete Turkish makam music scores. It serves as the primary dataset for exploratory data analysis, statistical analysis, visualization, Principal Component Analysis (PCA), and clustering. | [Zenodo](https://doi.org/10.5281/zenodo.15470412)  |
-| **Turkish Makam Symbolic Phrase Dataset** | A phrase-level symbolic dataset containing annotated musical phrases extracted from Turkish makam music. It is used to demonstrate phrase-level symbolic analysis and to complement score-level investigations.                        | [UPF CompMusic](http://compmusic.upf.edu/node/237) |
-| **Turkish Makam Melodic Phrase Dataset**  | A phrase-level dataset containing melodic phrase representations derived from Turkish makam music. It is used for comparative analysis of melodic structures and phrase-based symbolic music representations.                          | [UPF CompMusic](http://compmusic.upf.edu/node/236) |
+  -----------------------------------------------------------------------
+  Dataset                 Representation          Primary Use
+  ----------------------- ----------------------- -----------------------
+  SymbTr v3.0             Complete symbolic       EDA, statistics,
+                          scores                  visualization, PCA,
+                                                  clustering, similarity
 
-Although these datasets differ in their scope and granularity, the computational workflow presented in this tutorial can be applied consistently across all of them. By integrating score-level and phrase-level datasets within a unified analytical framework, this tutorial demonstrates how statistical analysis, visualization, dimensionality reduction, and clustering techniques can be used to investigate symbolic Turkish makam music in a reproducible and extensible manner.
+  Turkish Makam Symbolic  Expert phrase           Phrase segmentation and
+  Phrase Dataset          annotations             annotation analysis
 
+  Turkish Makam Melodic   Melodic phrase          Phrase-level
+  Phrase Dataset          sequences               statistical analysis
+                                                  and symbolic music
+                                                  processing
+  -----------------------------------------------------------------------
+
+Together these datasets provide a unified computational framework for
+symbolic Turkish makam music research.
+
+------------------------------------------------------------------------
 
 ## Tutorial Workflow
 
-The tutorial follows a reproducible computational workflow that guides readers from dataset acquisition to the interpretation of analytical results. Each notebook represents one stage of the workflow and builds upon the outputs of the previous stage.
+The tutorial is organized as thirteen interconnected notebooks.
 
-```{figure} _static/workflow.png
----
-width: 90%
-name: tutorial-workflow
----
-Overview of the computational workflow presented throughout this tutorial.
-```
+    Step Notebook
+  ------ ----------------------------------------------
+       1 01_download_data
+       2 02_data_overview
+       3 03_statistical_analysis
+       4 04_visualizations
+       5 05_pca_analysis
+       6 06_clustering
+       7 07_cluster_interpretation
+       8 08_related_datasets
+       9 09_related_datasets_and_statistical_analysis
+      10 10_related_datasets_and_research
+      11 11_literature_review
+      12 12_open_research_problems
+      13 13_contributing
 
-| Step | Objective                                    | Notebook                    |
-| ---- | -------------------------------------------- | --------------------------- |
-| 1    | Download and prepare the datasets            | `01_download_data`          |
-| 2    | Explore dataset structure and metadata       | `02_data_overview`          |
-| 3    | Compute descriptive statistics               | `03_statistical_analysis`   |
-| 4    | Visualize musical characteristics            | `04_visualizations`         |
-| 5    | Apply Principal Component Analysis (PCA)     | `05_pca_analysis`           |
-| 6    | Perform clustering analysis                  | `06_clustering`             |
-| 7    | Interpret clustering results                 | `07_cluster_interpretation` |
-| 8    | Explore related Turkish makam music datasets | `08_related_datasets`       |
+Each notebook builds upon previous analyses while remaining
+independently executable.
 
-The notebooks are designed to be completed sequentially. Together, they provide a complete end-to-end pipeline for reproducible computational analysis of symbolic Turkish makam music datasets, from data acquisition to exploratory analysis, visualization, machine learning, and comparative dataset exploration.
+------------------------------------------------------------------------
 
+## How to Navigate the Tutorial
 
+Readers may follow the notebooks sequentially or access individual
+chapters depending on their research interests.
+
+Recommended sequence:
+
+1.  Dataset acquisition
+2.  Dataset overview
+3.  Statistical analysis
+4.  Visualization
+5.  PCA
+6.  Clustering
+7.  Cluster interpretation
+8.  Related datasets
+9.  Related dataset statistical analysis
+10. Related datasets and research
+11. Literature review
+12. Open research problems
+13. Contributing
+
+------------------------------------------------------------------------
+
+## Reproducibility
+
+All analyses are implemented using open-source software including
+Python, Jupyter Notebook, Jupyter Book, Pandas, NumPy, Matplotlib, and
+scikit-learn. Every figure, table, and statistical summary can be
+regenerated directly from the notebooks.
+
+------------------------------------------------------------------------
 
 ## Target Audience
 
-This tutorial is intended for researchers, students, and practitioners interested in computational musicology, symbolic music analysis, Turkish makam music, and data-driven approaches to music information retrieval.
+This tutorial is intended for:
+
+-   Researchers in computational musicology
+-   Music Information Retrieval researchers
+-   Graduate students
+-   Data scientists
+-   Musicologists
+-   Educators
+
+------------------------------------------------------------------------
 
 ## Expected Outcomes
 
+Upon completion, readers will be able to reproduce a complete
+computational workflow for symbolic Turkish makam music analysis and
+adapt the presented methods to other symbolic music collections.
 
-Upon completing this tutorial, readers will be able to reproduce a complete computational workflow for analyzing symbolic Turkish makam music datasets using Python and Jupyter notebooks. They will gain practical experience in exploratory data analysis, statistical analysis, visualization, dimensionality reduction, clustering, and comparative dataset analysis.
+The workflow supports education, reproducible research, and future
+computational musicology applications.
 
-The workflow presented throughout this tutorial is designed to be reproducible, extensible, and adaptable to other symbolic music collections, making it suitable for education, research, and future computational musicology applications.
+------------------------------------------------------------------------
 
+## Summary
 
+The Turkish Delight Corpus provides a reproducible educational framework
+that integrates multiple symbolic Turkish makam music datasets within a
+unified computational workflow. By combining exploratory data analysis,
+statistical analysis, visualization, machine learning, and comparative
+dataset analysis, the tutorial demonstrates how reproducible
+computational methods can support modern Turkish makam music research.

@@ -1,0 +1,2011 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Statistical Analysis of Turkish Makam Music Datasets &#8212; Turkish Delight Corpus: An Open Handbook for Computational Analysis of Turkish Makam Music</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fb639cf9" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/09_related_datasets_and_statistical_analysis';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Related Datasets and Research Resources" href="10_related_datasets_and_research.html" />
+    <link rel="prev" title="Related Symbolic Music Corpora" href="08_related_datasets.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../landing.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Turkish Delight Corpus: An Open Handbook for Computational Analysis of Turkish Makam Music - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Turkish Delight Corpus: An Open Handbook for Computational Analysis of Turkish Makam Music - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../landing.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">SymbTr Dataset Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Computational Analysis of Turkish Makam Music Datasets: A Practical Tutorial</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dataset</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_download_data.html">Accessing the SymbTr V3.0 Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_data_overview.html">SymbTr V3.0 Dataset Characteristics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exploratory Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="03_statistical_analysis.html">Statistical Analysis of Turkish Makam Music SymbTr v3.0 Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_visualizations.html">Exploratory Visualizations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_pca_analysis.html">Principal Component Analysis (PCA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_clustering.html">Unsupervised Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_cluster_interpretation.html">Interpreting Cluster Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Related Datasets</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="08_related_datasets.html">Related Symbolic Music Corpora</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Related Datasets and Statistical Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_related_datasets_and_research.html">Related Datasets and Research</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Literature Review and Future Directions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_literature_review.html">Literature Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_open_research_problems.html">Open Research Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Information</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13_contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Resources and References</a></li>
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/NTugbagulALTANGULGUN/SymbTr-Analysis-Book/blob/main/webbook/notebooks/09_related_datasets_and_statistical_analysis.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NTugbagulALTANGULGUN/SymbTr-Analysis-Book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NTugbagulALTANGULGUN/SymbTr-Analysis-Book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/09_related_datasets_and_statistical_analysis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/09_related_datasets_and_statistical_analysis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Statistical Analysis of Turkish Makam Music Datasets</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-statistical-analysis-of-turkish-makam-symbolic-phrase-segmentation-dataset">Part I —Statistical Analysis of Turkish Makam Symbolic Phrase Segmentation Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-perform-statistical-analysis-on-the-turkish-makam-symbolic-phrase-segmentation-dataset">Why Perform Statistical Analysis on the Turkish Makam Symbolic Phrase Segmentation Dataset?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corpus-overview">Corpus Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-corpus-overview">Interpretation of the Corpus Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expert-level-annotation-statistics">Expert-Level Annotation Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-expert-level-annotation-statistics">Interpretation of the Expert-Level Annotation Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note-event-statistics">Note Event Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-analyze-note-event-statistics">Why Analyze Note Event Statistics?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-note-events">Distribution of Note Events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-note-event-statistics">Interpretation of the Note Event Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-findings">Key Findings</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-statistical-analysis-of-the-turkish-makam-melodic-phrase-dataset">Part II — Statistical Analysis of the Turkish Makam Melodic Phrase Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-perform-statistical-analysis-on-the-turkish-makam-melodic-phrase-dataset">Why Perform Statistical Analysis on the Turkish Makam Melodic Phrase Dataset?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Corpus Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Interpretation of the Corpus Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Expert-Level Annotation Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Interpretation of the Expert-Level Annotation Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phrase-length-statistics">Phrase Length Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-phrase-length-statistics">Interpretation of the Phrase Length Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-phrase-lengths">Distribution of Phrase Lengths</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-distribution-of-phrase-lengths">Interpretation of the Distribution of Phrase Lengths</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-pitch-distribution-koma53">Symbolic Pitch Distribution (Koma53)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-symbolic-pitch-distribution">Interpretation of the Symbolic Pitch Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-symbolic-pitch-values">Distribution of Symbolic Pitch Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Interpretation of the Symbolic Pitch Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#duration-statistics">Duration Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-duration-statistics">Interpretation of the Duration Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-note-durations">Distribution of Note Durations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-distribution-of-note-durations">Interpretation of the Distribution of Note Durations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#offset-statistics">Offset Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-offset-statistics">Interpretation of the Offset Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-offset-values">Distribution of Offset Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-distribution-of-offset-values">Interpretation of the Distribution of Offset Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Key Findings</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparative-summary">Comparative Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="statistical-analysis-of-turkish-makam-music-datasets">
+<h1>Statistical Analysis of Turkish Makam Music Datasets<a class="headerlink" href="#statistical-analysis-of-turkish-makam-music-datasets" title="Link to this heading">#</a></h1>
+<p>Statistical analysis provides the foundation for understanding the structure, quality, and characteristics of symbolic music datasets before applying more advanced computational methods. By examining descriptive statistics, annotation distributions, feature variability, and corpus organization, researchers can gain valuable insight into the properties of the data and select appropriate analytical techniques for subsequent studies.</p>
+<p>This notebook presents a reproducible statistical analysis workflow for three complementary Turkish makam music datasets. Although all three datasets originate from the same musical tradition, they represent different levels of musical abstraction and therefore require different statistical analysis strategies. Rather than applying identical analyses to every dataset, each corpus is examined using methods that best reflect its underlying data structure and intended research applications.</p>
+<p>The analyses presented in this notebook establish the statistical foundation for the visualization, dimensionality reduction, clustering, and similarity analyses introduced in the following chapters of this tutorial.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset</p></th>
+<th class="head"><p>Statistical Analysis Sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>SymbTr v3.0</strong></p></td>
+<td><p>Dataset Overview, Missing Value Analysis, Feature Variability Analysis, Correlation Analysis</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Turkish Makam Symbolic Phrase Segmentation Dataset</strong></p></td>
+<td><p>Corpus Overview, Expert-Level Annotation Statistics, Note Event Statistics</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Turkish Makam Melodic Phrase Dataset</strong></p></td>
+<td><p>Corpus Overview, Expert-Level Annotation Statistics, Phrase Length Statistics, Symbolic Pitch Distribution (Koma53), Duration Statistics, Offset Statistics</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="part-i-statistical-analysis-of-turkish-makam-symbolic-phrase-segmentation-dataset">
+<h2>Part I —Statistical Analysis of Turkish Makam Symbolic Phrase Segmentation Dataset<a class="headerlink" href="#part-i-statistical-analysis-of-turkish-makam-symbolic-phrase-segmentation-dataset" title="Link to this heading">#</a></h2>
+<p>The Turkish Makam Symbolic Phrase Segmentation Dataset provides expert-generated phrase boundary annotations for symbolic Turkish makam music. Unlike numerical feature datasets, this corpus focuses on the structural segmentation of complete musical scores into meaningful symbolic phrases.</p>
+<p>The dataset supports phrase segmentation research, corpus-based computational musicology, symbolic music processing, and machine learning applications that require phrase-level annotations. The following statistical analyses examine the structural organization of the corpus, expert annotation coverage, and annotation characteristics to establish a reproducible foundation for subsequent computational analyses.</p>
+<section id="why-perform-statistical-analysis-on-the-turkish-makam-symbolic-phrase-segmentation-dataset">
+<h3>Why Perform Statistical Analysis on the Turkish Makam Symbolic Phrase Segmentation Dataset?<a class="headerlink" href="#why-perform-statistical-analysis-on-the-turkish-makam-symbolic-phrase-segmentation-dataset" title="Link to this heading">#</a></h3>
+<p>Statistical analysis of the Turkish Makam Symbolic Phrase Segmentation Dataset is essential for understanding the structural characteristics of the annotation corpus before conducting phrase-level computational analyses. Unlike numerical feature datasets, this corpus consists of expert-generated phrase boundary annotations that describe the internal organization of symbolic Turkish makam music.</p>
+<p>By examining corpus statistics, annotation distributions, expert contributions, and structural characteristics, researchers can evaluate the completeness, consistency, and representativeness of the dataset. These analyses also provide valuable insights into the annotation process and establish a reproducible analytical framework for symbolic phrase segmentation research.</p>
+<p>The findings presented in this section provide the foundation for subsequent phrase visualization, corpus comparison, and computational musicology applications discussed throughout this tutorial.</p>
+</section>
+<section id="corpus-overview">
+<h3>Corpus Overview<a class="headerlink" href="#corpus-overview" title="Link to this heading">#</a></h3>
+<p>The following table summarizes the basic structural characteristics of the Turkish Makam Symbolic Phrase Segmentation Dataset, including the number of expert annotators, annotation files, and corpus organization. This overview provides an initial understanding of the annotation corpus before more detailed statistical analyses are performed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Dataset paths</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">project_root</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span>
+
+<span class="n">annotation_dir</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">project_root</span>
+    <span class="o">/</span> <span class="s2">&quot;data&quot;</span>
+    <span class="o">/</span> <span class="s2">&quot;raw&quot;</span>
+    <span class="o">/</span> <span class="s2">&quot;symbolic_phrase&quot;</span>
+    <span class="o">/</span> <span class="s2">&quot;extracted&quot;</span>
+    <span class="o">/</span> <span class="s2">&quot;MTG-otmm_symbolic_phrase_dataset-2f6cca9&quot;</span>
+    <span class="o">/</span> <span class="s2">&quot;annotations&quot;</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">annotation_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\tualtan\Projects\SymbTr-Analysis-Book\webbook\data\raw\symbolic_phrase\extracted\MTG-otmm_symbolic_phrase_dataset-2f6cca9\annotations
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Corpus overview</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">expert_dirs</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">annotation_dir</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()</span> <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()]</span>
+<span class="p">)</span>
+
+<span class="n">annotation_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">annotation_dir</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">))</span>
+
+<span class="n">corpus_overview</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+
+    <span class="s2">&quot;Metric&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Expert Annotators&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Annotation Files&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Annotation Format&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Corpus Directory&quot;</span>
+    <span class="p">],</span>
+
+    <span class="s2">&quot;Value&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="nb">len</span><span class="p">(</span><span class="n">expert_dirs</span><span class="p">),</span>
+        <span class="nb">len</span><span class="p">(</span><span class="n">annotation_files</span><span class="p">),</span>
+        <span class="s2">&quot;TXT&quot;</span><span class="p">,</span>
+        <span class="n">annotation_dir</span><span class="o">.</span><span class="n">name</span>
+    <span class="p">]</span>
+
+<span class="p">})</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">corpus_overview</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Metric</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Expert Annotators</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annotation Files</td>
+      <td>888</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Annotation Format</td>
+      <td>TXT</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Corpus Directory</td>
+      <td>annotations</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="interpretation-of-the-corpus-overview">
+<h3>Interpretation of the Corpus Overview<a class="headerlink" href="#interpretation-of-the-corpus-overview" title="Link to this heading">#</a></h3>
+<p>The corpus overview demonstrates that the Turkish Makam Symbolic Phrase Segmentation Dataset consists of multiple expert-generated annotation collections organized in a structured text-based format. The presence of annotations from multiple experts provides a valuable resource for phrase segmentation research and supports reproducible computational analyses of symbolic Turkish makam music.</p>
+</section>
+<section id="expert-level-annotation-statistics">
+<h3>Expert-Level Annotation Statistics<a class="headerlink" href="#expert-level-annotation-statistics" title="Link to this heading">#</a></h3>
+<p>The Turkish Makam Symbolic Phrase Segmentation Dataset was independently annotated by three expert musicians. Examining the number of annotation files contributed by each expert provides an overview of annotation coverage and reveals how the corpus is distributed among the annotators.</p>
+<p>Because expert-generated annotations constitute the foundation of phrase segmentation research, understanding the contribution of each annotator is essential for evaluating corpus completeness, selecting appropriate subsets for comparative analyses, and designing reproducible computational experiments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expert_summary</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">expert</span> <span class="ow">in</span> <span class="n">expert_dirs</span><span class="p">:</span>
+
+    <span class="n">files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">expert</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">))</span>
+
+    <span class="n">expert_summary</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s2">&quot;Expert&quot;</span><span class="p">:</span> <span class="n">expert</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="s2">&quot;Annotation Files&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+    <span class="p">})</span>
+
+<span class="n">expert_summary</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">expert_summary</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">expert_summary</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Expert</th>
+      <th>Annotation Files</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>expert1</td>
+      <td>488</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>expert2</td>
+      <td>199</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>expert3</td>
+      <td>201</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="interpretation-of-the-expert-level-annotation-statistics">
+<h3>Interpretation of the Expert-Level Annotation Statistics<a class="headerlink" href="#interpretation-of-the-expert-level-annotation-statistics" title="Link to this heading">#</a></h3>
+<p>The expert-level annotation statistics show that the Turkish Makam Symbolic Phrase Segmentation Dataset is composed of annotations contributed by three expert musicians. While <strong>expert1</strong> provides annotations for the complete collection of musical scores, <strong>expert2</strong> and <strong>expert3</strong> contribute annotations for complementary subsets of the corpus. This asymmetric distribution reflects the original annotation strategy of the dataset rather than missing or incomplete data.</p>
+<p>Understanding the annotation coverage of each expert is important when selecting subsets of the corpus for phrase segmentation studies, expert agreement analyses, and supervised machine learning applications. Researchers should therefore consider the available expert annotations when designing reproducible computational experiments based on this dataset.</p>
+</section>
+<section id="note-event-statistics">
+<h3>Note Event Statistics<a class="headerlink" href="#note-event-statistics" title="Link to this heading">#</a></h3>
+<p>Each annotation file contains a sequence of symbolic note events describing the musical content associated with a segmented composition. The following statistics summarize the distribution of note events across the annotation corpus and provide an overview of the structural complexity of the annotated musical scores.</p>
+</section>
+<section id="why-analyze-note-event-statistics">
+<h3>Why Analyze Note Event Statistics?<a class="headerlink" href="#why-analyze-note-event-statistics" title="Link to this heading">#</a></h3>
+<p>The number of symbolic note events is one of the primary structural characteristics of symbolic music datasets. Examining the distribution of note events helps researchers understand the complexity of annotated musical scores, evaluate corpus diversity, and identify variations in musical length and density across the collection.</p>
+<p>These statistics provide an important reference for symbolic music analysis, computational musicology, and machine learning applications operating on note-level symbolic representations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Note event statistics</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">note_event_counts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">failed_files</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">expert1_dir</span> <span class="o">=</span> <span class="n">annotation_dir</span> <span class="o">/</span> <span class="s2">&quot;expert1&quot;</span>
+
+<span class="k">for</span> <span class="n">txt_file</span> <span class="ow">in</span> <span class="n">expert1_dir</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">txt_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span>   <span class="c1"># skip header</span>
+                <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="p">]</span>
+
+        <span class="n">note_event_counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">))</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">failed_files</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">txt_file</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Successfully read : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">note_event_counts</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to read    : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">failed_files</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">failed_files</span><span class="p">:</span>
+    <span class="n">failed_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">failed_files</span><span class="p">,</span>
+        <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;File&quot;</span><span class="p">,</span> <span class="s2">&quot;Error&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">failed_df</span><span class="p">)</span>
+
+<span class="n">note_event_statistics</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="n">note_event_counts</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Note Events per Musical Score&quot;</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span>
+    <span class="n">note_event_statistics</span>
+    <span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully read : 488
+Failed to read    : 0
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Note Events per Musical Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>488.00</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>551.50</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>378.59</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>52.00</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>398.00</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>492.00</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>612.00</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>6636.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="distribution-of-note-events">
+<h3>Distribution of Note Events<a class="headerlink" href="#distribution-of-note-events" title="Link to this heading">#</a></h3>
+<p>The following histogram illustrates the distribution of symbolic note events across annotated musical scores. Visualizing the distribution provides additional insight into the structural diversity of the corpus and complements the descriptive statistics presented above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Imports</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Distribution of note events</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+    <span class="n">note_event_counts</span><span class="p">,</span>
+    <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution of Symbolic Note Events&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Number of Note Events per Musical Score&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Musical Scores&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6de52ec9d9c582d349ec2dca56e424637b446646b6823536a9d944ed5c4b8bb3.png" src="../_images/6de52ec9d9c582d349ec2dca56e424637b446646b6823536a9d944ed5c4b8bb3.png" />
+</div>
+</div>
+</section>
+<section id="interpretation-of-the-note-event-statistics">
+<h3>Interpretation of the Note Event Statistics<a class="headerlink" href="#interpretation-of-the-note-event-statistics" title="Link to this heading">#</a></h3>
+<p>The note event statistics reveal substantial variation in the number of symbolic note events contained within annotated musical scores. While many compositions exhibit a moderate number of note events, others contain considerably denser symbolic representations, indicating differences in musical complexity and structural organization.</p>
+<p>This variability reflects the diversity of Turkish makam music represented in the corpus and demonstrates that the dataset encompasses musical scores with a wide range of structural characteristics. The complete analysis of all annotated musical scores provides a reliable statistical foundation for phrase segmentation research, symbolic music analysis, computational musicology, and machine learning applications.</p>
+</section>
+<section id="key-findings">
+<h3>Key Findings<a class="headerlink" href="#key-findings" title="Link to this heading">#</a></h3>
+<p>The statistical analyses demonstrate that the Turkish Makam Symbolic Phrase Segmentation Dataset provides a comprehensive and well-structured expert-annotated corpus for phrase-level symbolic music research. The analyses confirmed the completeness of the annotation corpus, revealed the distribution of expert contributions, and characterized the structural variability of symbolic note events across annotated musical scores.</p>
+<p>Together, these findings establish a reliable foundation for phrase segmentation, corpus-based computational musicology, symbolic music processing, expert agreement studies, and machine learning applications based on expert-generated symbolic annotations.</p>
+</section>
+</section>
+<section id="part-ii-statistical-analysis-of-the-turkish-makam-melodic-phrase-dataset">
+<h2>Part II — Statistical Analysis of the Turkish Makam Melodic Phrase Dataset<a class="headerlink" href="#part-ii-statistical-analysis-of-the-turkish-makam-melodic-phrase-dataset" title="Link to this heading">#</a></h2>
+<p>The Turkish Makam Melodic Phrase Dataset provides a phrase-level symbolic representation of Turkish makam music by segmenting complete musical scores into individual melodic phrases. Unlike the SymbTr v3.0 dataset, which represents complete musical pieces using numerical feature vectors, this corpus consists of expert-curated melodic phrase annotations that preserve the symbolic and melodic structure of each phrase.</p>
+<p>The dataset supports phrase-level computational musicology, symbolic music processing, melodic similarity analysis, sequence modeling, and machine learning applications. The following statistical analyses investigate the structural characteristics of the corpus, expert annotation coverage, and note-level musical properties, establishing a reproducible foundation for subsequent computational analyses.</p>
+<section id="why-perform-statistical-analysis-on-the-turkish-makam-melodic-phrase-dataset">
+<h3>Why Perform Statistical Analysis on the Turkish Makam Melodic Phrase Dataset?<a class="headerlink" href="#why-perform-statistical-analysis-on-the-turkish-makam-melodic-phrase-dataset" title="Link to this heading">#</a></h3>
+<p>Statistical analysis provides an essential first step in understanding the structure and characteristics of the Turkish Makam Melodic Phrase Dataset before applying phrase-level computational methods. Unlike numerical feature datasets, this corpus contains symbolic note sequences representing individual melodic phrases extracted from Turkish makam music.</p>
+<p>By examining corpus statistics, phrase length, symbolic pitch usage, rhythmic properties, and temporal organization, researchers can evaluate the representativeness of the corpus and gain insight into its melodic characteristics. These analyses establish the statistical foundation for subsequent visualization, similarity analysis, sequence modeling, and machine learning applications presented throughout this tutorial.</p>
+</section>
+<section id="id1">
+<h3>Corpus Overview<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>The following table summarizes the overall structure of the Turkish Makam Melodic Phrase Dataset after automatic extraction and preparation. The overview includes the number of expert annotators, annotation files, and annotation format, providing a concise description of the corpus before more detailed statistical analyses are performed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Melodic Phrase dataset path</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">melodic_root</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">project_root</span>
+    <span class="o">/</span> <span class="s2">&quot;data&quot;</span>
+    <span class="o">/</span> <span class="s2">&quot;raw&quot;</span>
+    <span class="o">/</span> <span class="s2">&quot;melodic_phrase&quot;</span>
+    <span class="o">/</span> <span class="s2">&quot;extracted&quot;</span>
+    <span class="o">/</span> <span class="s2">&quot;turkish_makam_melodic_phrase_1.0&quot;</span>
+    <span class="o">/</span> <span class="s2">&quot;112E162&quot;</span>
+<span class="p">)</span>
+
+<span class="n">annotation_root</span> <span class="o">=</span> <span class="n">melodic_root</span> <span class="o">/</span> <span class="s2">&quot;annotations&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">annotation_root</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">annotation_root</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\tualtan\Projects\SymbTr-Analysis-Book\webbook\data\raw\melodic_phrase\extracted\turkish_makam_melodic_phrase_1.0\112E162\annotations
+True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_melodic_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">annotation_root</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">))</span>
+
+<span class="n">melodic_corpus_overview</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+
+    <span class="s2">&quot;Metric&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+        <span class="s2">&quot;Expert Annotators&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Melodic Phrase Files&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Annotation Format&quot;</span>
+
+    <span class="p">],</span>
+
+    <span class="s2">&quot;Value&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+        <span class="nb">len</span><span class="p">([</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">annotation_root</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()</span> <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()]),</span>
+        <span class="nb">len</span><span class="p">(</span><span class="n">all_melodic_files</span><span class="p">),</span>
+        <span class="s2">&quot;TXT&quot;</span>
+
+    <span class="p">]</span>
+
+<span class="p">})</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">melodic_corpus_overview</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Metric</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Expert Annotators</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Melodic Phrase Files</td>
+      <td>890</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Annotation Format</td>
+      <td>TXT</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="id2">
+<h3>Interpretation of the Corpus Overview<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>The corpus overview shows that the Turkish Makam Melodic Phrase Dataset consists of expert-generated symbolic note annotations organized into a structured collection of melodic phrase files. The corpus provides extensive phrase-level symbolic representations of Turkish makam music, establishing a solid foundation for subsequent analyses of melodic structure, pitch organization, rhythmic characteristics, and temporal properties.</p>
+</section>
+<section id="id3">
+<h3>Expert-Level Annotation Statistics<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>This section reports the number of melodic phrase annotation files associated with each expert annotator.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Expert-level annotation statistics</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">melodic_expert_stats</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">expert</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">annotation_root</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()):</span>
+    <span class="k">if</span> <span class="n">expert</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+        <span class="n">txt_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">expert</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">))</span>
+
+        <span class="n">melodic_expert_stats</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s2">&quot;Expert&quot;</span><span class="p">:</span> <span class="n">expert</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;Annotation Files&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">txt_files</span><span class="p">)</span>
+        <span class="p">})</span>
+
+<span class="n">melodic_expert_stats</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">melodic_expert_stats</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">melodic_expert_stats</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Expert</th>
+      <th>Annotation Files</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>uzman1</td>
+      <td>489</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>uzman2</td>
+      <td>199</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>uzman3</td>
+      <td>202</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="id4">
+<h3>Interpretation of the Expert-Level Annotation Statistics<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>The expert-level annotation statistics show that the Turkish Makam Melodic Phrase Dataset is composed of melodic phrase annotations contributed by three expert musicians. While <strong>uzman1</strong> provides annotations for the largest portion of the corpus, <strong>uzman2</strong> and <strong>uzman3</strong> contribute complementary subsets of melodic phrase annotations. This distribution reflects the original construction and annotation strategy of the dataset rather than missing or incomplete data.</p>
+<p>Understanding the annotation coverage of each expert is important for studies involving phrase-level melodic analysis, symbolic sequence modeling, expert agreement, and supervised machine learning. Researchers should therefore consider the available expert annotations when selecting corpus subsets and designing reproducible computational analyses based on melodic phrase representations.</p>
+</section>
+<section id="phrase-length-statistics">
+<h3>Phrase Length Statistics<a class="headerlink" href="#phrase-length-statistics" title="Link to this heading">#</a></h3>
+<p>Each melodic phrase annotation file consists of a sequence of symbolic note events describing the internal musical structure of an individual melodic phrase. The number of note events contained within each phrase serves as a quantitative measure of phrase length and provides insight into the structural variability of melodic phrases across the corpus.</p>
+<p>The following statistics summarize the distribution of phrase lengths computed from all melodic phrase annotation files. By examining phrase length distributions, researchers can evaluate corpus diversity, identify structural differences among melodic phrases, and establish a statistical foundation for phrase-level computational musicology, symbolic music analysis, similarity analysis, and machine learning applications.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Phrase length statistics</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">phrase_lengths</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">failed_files</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">txt_file</span> <span class="ow">in</span> <span class="n">annotation_root</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">txt_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;cp1254&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+
+            <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span>      <span class="c1"># Skip header</span>
+                <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="p">]</span>
+
+        <span class="n">phrase_lengths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">))</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+        <span class="n">failed_files</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">txt_file</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Successfully read : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">phrase_lengths</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to read    : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">failed_files</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">failed_files</span><span class="p">:</span>
+
+    <span class="n">failed_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">failed_files</span><span class="p">,</span>
+        <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;File&quot;</span><span class="p">,</span> <span class="s2">&quot;Error&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">failed_df</span><span class="p">)</span>
+
+<span class="n">phrase_length_statistics</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="n">phrase_lengths</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Phrase Length (Note Events)&quot;</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span>
+    <span class="n">phrase_length_statistics</span>
+        <span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully read : 890
+Failed to read    : 0
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Phrase Length (Note Events)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>890.00</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>534.47</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>307.06</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>401.00</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>491.50</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>609.75</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>6636.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="interpretation-of-the-phrase-length-statistics">
+<h3>Interpretation of the Phrase Length Statistics<a class="headerlink" href="#interpretation-of-the-phrase-length-statistics" title="Link to this heading">#</a></h3>
+<p>The phrase length statistics reveal substantial variability in the number of symbolic note events contained within individual melodic phrases. While many phrases consist of a relatively small number of note events, others are considerably longer, reflecting differences in melodic development, phrase complexity, and structural organization across the corpus.</p>
+<p>This variability demonstrates that the Turkish Makam Melodic Phrase Dataset encompasses a diverse collection of melodic phrases with varying structural characteristics. The complete analysis of all melodic phrase annotation files provides a reliable statistical foundation for phrase-level symbolic music analysis, similarity analysis, computational musicology, and machine learning applications based on melodic phrase representations.</p>
+</section>
+<section id="distribution-of-phrase-lengths">
+<h3>Distribution of Phrase Lengths<a class="headerlink" href="#distribution-of-phrase-lengths" title="Link to this heading">#</a></h3>
+<p>The following histogram illustrates the distribution of phrase lengths, measured as the number of symbolic note events contained within each melodic phrase annotation. Visualizing the distribution of phrase lengths provides insight into the structural diversity of the corpus, identifies common phrase lengths, and highlights the presence of both short and extended melodic phrases across the Turkish makam music repertoire.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Distribution of Phrase Lengths</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+    <span class="n">phrase_lengths</span><span class="p">,</span>
+    <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution of Phrase Lengths&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Number of Symbolic Note Events per Melodic Phrase&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Melodic Phrases&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/99b9f5013a56a6a6f47e330af151425f47684b35c814df2d20d03584e1d607ee.png" src="../_images/99b9f5013a56a6a6f47e330af151425f47684b35c814df2d20d03584e1d607ee.png" />
+</div>
+</div>
+</section>
+<section id="interpretation-of-the-distribution-of-phrase-lengths">
+<h3>Interpretation of the Distribution of Phrase Lengths<a class="headerlink" href="#interpretation-of-the-distribution-of-phrase-lengths" title="Link to this heading">#</a></h3>
+<p>The distribution of phrase lengths indicates that melodic phrases in the Turkish Makam Melodic Phrase Dataset exhibit considerable structural diversity. While shorter phrases occur more frequently, the corpus also contains longer melodic phrases with substantially greater numbers of symbolic note events, reflecting variations in melodic development and phrase organization.</p>
+<p>The observed distribution demonstrates that the dataset encompasses a broad range of phrase structures characteristic of Turkish makam music. This structural diversity provides a reliable foundation for phrase-level comparative analysis, melodic similarity analysis, symbolic sequence modeling, computational musicology, and machine learning applications.</p>
+</section>
+<section id="symbolic-pitch-distribution-koma53">
+<h3>Symbolic Pitch Distribution (Koma53)<a class="headerlink" href="#symbolic-pitch-distribution-koma53" title="Link to this heading">#</a></h3>
+<p>The Turkish Makam Melodic Phrase Dataset represents pitch using the traditional 53-comma (Koma53) tuning system employed in Turkish makam music. Examining the distribution of symbolic pitch values provides insight into the tonal characteristics of the corpus and reveals how frequently different pitch classes occur across annotated melodic phrases.</p>
+<p>The following analyses summarize the frequency distribution of Koma53 pitch values and establish a statistical foundation for investigating melodic structure, pitch organization, and computational modeling of Turkish makam music.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Symbolic pitch distribution (Koma53)</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">pitch_values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">failed_files</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">txt_file</span> <span class="ow">in</span> <span class="n">annotation_root</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">txt_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;cp1254&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+
+            <span class="n">header</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="s2">&quot;Koma53&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">header</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">pitch_index</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Koma53&quot;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+
+                <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="n">fields</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">pitch_index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">fields</span><span class="p">):</span>
+
+                    <span class="k">try</span><span class="p">:</span>
+
+                        <span class="n">value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fields</span><span class="p">[</span><span class="n">pitch_index</span><span class="p">])</span>
+
+                        <span class="n">pitch_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+                    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                        <span class="k">continue</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+        <span class="n">failed_files</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">txt_file</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Successfully read : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">annotation_root</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s1">&#39;*.txt&#39;</span><span class="p">)))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to read    : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">failed_files</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">pitch_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="n">pitch_values</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Koma53&quot;</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span>
+    <span class="n">pitch_series</span>
+        <span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully read : 890
+Failed to read    : 0
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Koma53</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>469530.00</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>295.81</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>99.66</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>-1.00</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>310.00</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>327.00</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>340.00</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>402.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="interpretation-of-the-symbolic-pitch-distribution">
+<h3>Interpretation of the Symbolic Pitch Distribution<a class="headerlink" href="#interpretation-of-the-symbolic-pitch-distribution" title="Link to this heading">#</a></h3>
+<p>The symbolic pitch distribution reveals that pitch usage within the Turkish Makam Melodic Phrase Dataset is not uniformly distributed across the 53-comma (Koma53) pitch system. Instead, certain pitch values occur considerably more frequently than others, indicating that specific pitch classes are used more prominently throughout the melodic phrase corpus.</p>
+<p>These findings reflect the characteristic tonal organization of Turkish makam music and demonstrate that the dataset captures meaningful pitch usage patterns suitable for computational analysis. Consequently, the symbolic pitch statistics provide a reliable quantitative foundation for investigating melodic structure, pitch organization, phrase similarity, symbolic pattern discovery, computational musicology, and machine learning applications based on symbolic music representations.</p>
+</section>
+<section id="distribution-of-symbolic-pitch-values">
+<h3>Distribution of Symbolic Pitch Values<a class="headerlink" href="#distribution-of-symbolic-pitch-values" title="Link to this heading">#</a></h3>
+<p>The following histogram illustrates the frequency distribution of symbolic pitch values represented in the 53-comma (Koma53) pitch system. Visualizing the distribution of pitch values provides insight into the tonal characteristics of the corpus, highlights the most frequently occurring pitch classes, and reveals the overall pitch usage patterns across annotated melodic phrases.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Distribution of Symbolic Pitch Values</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+    <span class="n">pitch_series</span><span class="p">,</span>
+    <span class="n">bins</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution of Symbolic Pitch Values (Koma53)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Koma53 Pitch Value&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Note Events&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/81ffdf0a0cbef8718f149592e64f335d347b37fae5609a07290808573428a5e7.png" src="../_images/81ffdf0a0cbef8718f149592e64f335d347b37fae5609a07290808573428a5e7.png" />
+</div>
+</div>
+</section>
+<section id="id5">
+<h3>Interpretation of the Symbolic Pitch Distribution<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>The symbolic pitch distribution reveals that pitch usage within the Turkish Makam Melodic Phrase Dataset is not uniformly distributed across the 53-comma pitch system. Instead, certain pitch values occur considerably more frequently than others, reflecting the characteristic tonal organization and pitch preferences of Turkish makam music.</p>
+<p>This distribution is consistent with the modal structure of Turkish makam music, in which specific pitch collections play a central role in melodic organization. Consequently, the pitch statistics provide a reliable quantitative foundation for investigating melodic structure, symbolic pattern discovery, phrase similarity analysis, clustering, and machine learning applications based on symbolic pitch representations.</p>
+</section>
+<section id="duration-statistics">
+<h3>Duration Statistics<a class="headerlink" href="#duration-statistics" title="Link to this heading">#</a></h3>
+<p>Each symbolic note event in the Turkish Makam Melodic Phrase Dataset is associated with a duration value expressed in milliseconds (<code class="docutils literal notranslate"><span class="pre">Ms</span></code>). Analyzing the distribution of note durations provides insight into the rhythmic characteristics of the corpus and reveals how temporal values are distributed across annotated melodic phrases.</p>
+<p>The following statistics summarize the distribution of note durations extracted from all melodic phrase annotation files. These analyses establish a quantitative foundation for investigating rhythmic organization, temporal structure, melodic similarity, and computational modeling of Turkish makam music.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Duration statistics</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">duration_values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">failed_files</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">txt_file</span> <span class="ow">in</span> <span class="n">annotation_root</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">txt_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;cp1254&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+
+            <span class="n">header</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="s2">&quot;Ms&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">header</span> <span class="ow">and</span> <span class="s2">&quot;MS&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">header</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">duration_column</span> <span class="o">=</span> <span class="s2">&quot;Ms&quot;</span> <span class="k">if</span> <span class="s2">&quot;Ms&quot;</span> <span class="ow">in</span> <span class="n">header</span> <span class="k">else</span> <span class="s2">&quot;MS&quot;</span>
+            <span class="n">duration_index</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">duration_column</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+
+                <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="n">fields</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">duration_index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">fields</span><span class="p">):</span>
+
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fields</span><span class="p">[</span><span class="n">duration_index</span><span class="p">])</span>
+
+                        <span class="n">duration_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+                    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                        <span class="k">continue</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+        <span class="n">failed_files</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">txt_file</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Successfully read : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">annotation_root</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s1">&#39;*.txt&#39;</span><span class="p">)))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to read    : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">failed_files</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">duration_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="n">duration_values</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Duration (ms)&quot;</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span>
+    <span class="n">duration_series</span>
+        <span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully read : 890
+Failed to read    : 0
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Duration (ms)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>471122.00</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>387.56</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>352.18</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>208.00</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>278.00</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>455.00</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>6000.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="interpretation-of-the-duration-statistics">
+<h3>Interpretation of the Duration Statistics<a class="headerlink" href="#interpretation-of-the-duration-statistics" title="Link to this heading">#</a></h3>
+<p>The duration statistics reveal substantial variability in the temporal characteristics of symbolic note events across the Turkish Makam Melodic Phrase Dataset. While shorter note durations occur more frequently, longer duration values are observed less often, indicating diversity in rhythmic organization and temporal structure among melodic phrases.</p>
+<p>These findings demonstrate that the dataset captures a broad range of rhythmic patterns characteristic of Turkish makam music. Consequently, the duration statistics provide a reliable quantitative foundation for rhythm analysis, temporal pattern analysis, melodic similarity analysis, computational musicology, and machine learning applications based on symbolic music representations.</p>
+</section>
+<section id="distribution-of-note-durations">
+<h3>Distribution of Note Durations<a class="headerlink" href="#distribution-of-note-durations" title="Link to this heading">#</a></h3>
+<p>The following histogram illustrates the distribution of symbolic note durations expressed in milliseconds (<code class="docutils literal notranslate"><span class="pre">Ms</span></code>). Visualizing the duration distribution provides insight into the rhythmic characteristics of the corpus, identifies the most frequently occurring note durations, and reveals the temporal patterns underlying melodic phrase construction in Turkish makam music.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Distribution of Note Durations</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+    <span class="n">duration_series</span><span class="p">,</span>
+    <span class="n">bins</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution of Symbolic Note Durations&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Note Duration (ms)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Note Events&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/672479348f1164edcec7008d579dd5522736389b0b2b12ed2d6a2dccd427e953.png" src="../_images/672479348f1164edcec7008d579dd5522736389b0b2b12ed2d6a2dccd427e953.png" />
+</div>
+</div>
+</section>
+<section id="interpretation-of-the-distribution-of-note-durations">
+<h3>Interpretation of the Distribution of Note Durations<a class="headerlink" href="#interpretation-of-the-distribution-of-note-durations" title="Link to this heading">#</a></h3>
+<p>The distribution of symbolic note durations indicates that the Turkish Makam Melodic Phrase Dataset contains a wide range of temporal values. While shorter note durations occur more frequently throughout the corpus, longer durations appear less often, reflecting the diversity of rhythmic structures and temporal organization found in Turkish makam music.</p>
+<p>The observed distribution demonstrates that the dataset captures a broad spectrum of rhythmic characteristics, ranging from rapidly articulated note sequences to more sustained melodic events. This temporal diversity provides a reliable foundation for rhythm analysis, melodic similarity analysis, symbolic sequence modeling, computational musicology, and machine learning applications based on symbolic music representations.</p>
+</section>
+<section id="offset-statistics">
+<h3>Offset Statistics<a class="headerlink" href="#offset-statistics" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">Offset</span></code> attribute represents the temporal position of each symbolic note event within a melodic phrase. Analyzing the distribution of offset values provides insight into the temporal organization of melodic phrases by describing where note events occur throughout the phrase structure.</p>
+<p>The following statistics summarize the distribution of offset values extracted from all melodic phrase annotation files. These analyses provide a quantitative foundation for investigating temporal progression, phrase organization, melodic similarity, and computational modeling of Turkish makam music.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Offset statistics</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">offset_values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">failed_files</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">txt_file</span> <span class="ow">in</span> <span class="n">annotation_root</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">txt_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;cp1254&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+
+            <span class="n">header</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="s2">&quot;Offset&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">header</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">offset_index</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Offset&quot;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+
+                <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="n">fields</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">offset_index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">fields</span><span class="p">):</span>
+
+                    <span class="k">try</span><span class="p">:</span>
+
+                        <span class="n">value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fields</span><span class="p">[</span><span class="n">offset_index</span><span class="p">])</span>
+
+                        <span class="n">offset_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+                    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                        <span class="k">continue</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+        <span class="n">failed_files</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">txt_file</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Successfully read : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">annotation_root</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s1">&#39;*.txt&#39;</span><span class="p">)))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to read    : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">failed_files</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">offset_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="n">offset_values</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Offset&quot;</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span>
+    <span class="n">offset_series</span>
+        <span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully read : 890
+Failed to read    : 0
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Offset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>416642.00</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>33.69</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>33.11</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>12.75</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>26.11</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>44.33</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>390.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="interpretation-of-the-offset-statistics">
+<h3>Interpretation of the Offset Statistics<a class="headerlink" href="#interpretation-of-the-offset-statistics" title="Link to this heading">#</a></h3>
+<p>The offset statistics reveal substantial variability in the temporal positions of symbolic note events within melodic phrases. Note events occur at different positions throughout the phrase structure, reflecting the temporal progression and sequential organization of melodic phrases across the corpus.</p>
+<p>These findings demonstrate that the Turkish Makam Melodic Phrase Dataset captures diverse temporal structures that are characteristic of symbolic Turkish makam music. Consequently, the offset statistics provide a reliable quantitative foundation for phrase alignment, temporal pattern analysis, melodic similarity analysis, symbolic sequence modeling, computational musicology, and machine learning applications based on symbolic music representations.</p>
+</section>
+<section id="distribution-of-offset-values">
+<h3>Distribution of Offset Values<a class="headerlink" href="#distribution-of-offset-values" title="Link to this heading">#</a></h3>
+<p>The following histogram illustrates the distribution of offset values representing the temporal positions of symbolic note events within melodic phrases. Visualizing the distribution of offset values provides insight into how note events are organized throughout melodic phrases, identifies commonly occurring temporal positions, and reveals the overall temporal organization of the Turkish Makam Melodic Phrase Dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================================================</span>
+<span class="c1"># Distribution of Offset Values</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+    <span class="n">offset_series</span><span class="p">,</span>
+    <span class="n">bins</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution of Offset Values&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Offset Position&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Note Events&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/515a18f94b4fb6bf350ef27136f310874de5608161fd7323a9eeb4efd71c535e.png" src="../_images/515a18f94b4fb6bf350ef27136f310874de5608161fd7323a9eeb4efd71c535e.png" />
+</div>
+</div>
+</section>
+<section id="interpretation-of-the-distribution-of-offset-values">
+<h3>Interpretation of the Distribution of Offset Values<a class="headerlink" href="#interpretation-of-the-distribution-of-offset-values" title="Link to this heading">#</a></h3>
+<p>The distribution of offset values indicates that symbolic note events occur throughout different temporal positions within melodic phrases rather than being concentrated at a single location. This variability reflects the temporal progression and structural organization of melodic phrases across the corpus.</p>
+<p>The observed distribution demonstrates that the dataset captures diverse temporal patterns characteristic of Turkish makam music. These temporal characteristics provide a reliable quantitative foundation for phrase alignment, temporal pattern analysis, melodic similarity analysis, symbolic sequence modeling, computational musicology, and machine learning applications based on symbolic music representations.</p>
+</section>
+<section id="id6">
+<h3>Key Findings<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>The statistical analyses demonstrate that the Turkish Makam Melodic Phrase Dataset provides a comprehensive and well-structured phrase-level representation of Turkish makam music. The analyses characterized the structural variability of melodic phrases, quantified symbolic pitch usage within the 53-comma pitch system, examined note duration distributions, and described the temporal organization of note events through offset analysis.</p>
+<p>Together, these findings establish a reliable statistical foundation for phrase-level symbolic music analysis, melodic similarity analysis, symbolic sequence modeling, computational musicology, and machine learning applications based on symbolic music representations.</p>
+</section>
+</section>
+<section id="comparative-summary">
+<h2>Comparative Summary<a class="headerlink" href="#comparative-summary" title="Link to this heading">#</a></h2>
+<p>The statistical analyses presented throughout this notebook demonstrate that the three Turkish makam music datasets represent complementary levels of symbolic musical abstraction and therefore require different analytical approaches.</p>
+<p><strong>SymbTr v3.0</strong> provides feature-based numerical representations that support descriptive statistics, feature variability analysis, missing value analysis, correlation analysis, and machine learning. The <strong>Turkish Makam Symbolic Phrase Segmentation Dataset</strong> focuses on expert-generated phrase boundary annotations, enabling analyses of corpus organization, annotation coverage, expert contributions, and symbolic note event distributions. In contrast, the <strong>Turkish Makam Melodic Phrase Dataset</strong> represents melodic phrases as symbolic note sequences, supporting phrase-level analyses of phrase length, symbolic pitch usage within the 53-comma (Koma53) pitch system, note duration distributions, and temporal organization through offset analysis.</p>
+<p>Together, these complementary analyses provide quantitative insight into the structural and musical characteristics of Turkish makam music while demonstrating that different symbolic music representations require analysis strategies tailored to their underlying data structures. The unified computational workflow presented in this notebook establishes a reproducible statistical foundation for subsequent visualization, dimensionality reduction, clustering, similarity analysis, and machine learning throughout the Turkish Delight Corpus (TDC) tutorial.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset</p></th>
+<th class="head"><p>Representation</p></th>
+<th class="head"><p>Primary Analysis Unit</p></th>
+<th class="head"><p>Statistical Analyses Performed</p></th>
+<th class="head"><p>Typical Applications</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>SymbTr v3.0</strong></p></td>
+<td><p>Numerical feature vectors</p></td>
+<td><p>Complete musical score</p></td>
+<td><p>Descriptive statistics, missing value analysis, feature variability, correlation analysis</p></td>
+<td><p>Statistical analysis, PCA, clustering, similarity analysis, machine learning</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Turkish Makam Symbolic Phrase Segmentation Dataset</strong></p></td>
+<td><p>Expert-generated symbolic annotations</p></td>
+<td><p>Complete musical score</p></td>
+<td><p>Corpus overview, expert annotation statistics, note event statistics</p></td>
+<td><p>Phrase segmentation, annotation analysis, computational musicology, expert agreement analysis</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Turkish Makam Melodic Phrase Dataset</strong></p></td>
+<td><p>Symbolic note sequences</p></td>
+<td><p>Melodic phrase</p></td>
+<td><p>Corpus overview, phrase length statistics, Koma53 pitch distribution, duration statistics, offset statistics</p></td>
+<td><p>Melodic analysis, symbolic music processing, sequence modeling, similarity analysis, machine learning</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "NTugbagulALTANGULGUN/SymbTr-Analysis-Book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="08_related_datasets.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Related Symbolic Music Corpora</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="10_related_datasets_and_research.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Related Datasets and Research Resources</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-statistical-analysis-of-turkish-makam-symbolic-phrase-segmentation-dataset">Part I —Statistical Analysis of Turkish Makam Symbolic Phrase Segmentation Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-perform-statistical-analysis-on-the-turkish-makam-symbolic-phrase-segmentation-dataset">Why Perform Statistical Analysis on the Turkish Makam Symbolic Phrase Segmentation Dataset?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corpus-overview">Corpus Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-corpus-overview">Interpretation of the Corpus Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expert-level-annotation-statistics">Expert-Level Annotation Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-expert-level-annotation-statistics">Interpretation of the Expert-Level Annotation Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note-event-statistics">Note Event Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-analyze-note-event-statistics">Why Analyze Note Event Statistics?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-note-events">Distribution of Note Events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-note-event-statistics">Interpretation of the Note Event Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-findings">Key Findings</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-statistical-analysis-of-the-turkish-makam-melodic-phrase-dataset">Part II — Statistical Analysis of the Turkish Makam Melodic Phrase Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-perform-statistical-analysis-on-the-turkish-makam-melodic-phrase-dataset">Why Perform Statistical Analysis on the Turkish Makam Melodic Phrase Dataset?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Corpus Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Interpretation of the Corpus Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Expert-Level Annotation Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Interpretation of the Expert-Level Annotation Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phrase-length-statistics">Phrase Length Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-phrase-length-statistics">Interpretation of the Phrase Length Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-phrase-lengths">Distribution of Phrase Lengths</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-distribution-of-phrase-lengths">Interpretation of the Distribution of Phrase Lengths</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-pitch-distribution-koma53">Symbolic Pitch Distribution (Koma53)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-symbolic-pitch-distribution">Interpretation of the Symbolic Pitch Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-symbolic-pitch-values">Distribution of Symbolic Pitch Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Interpretation of the Symbolic Pitch Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#duration-statistics">Duration Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-duration-statistics">Interpretation of the Duration Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-note-durations">Distribution of Note Durations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-distribution-of-note-durations">Interpretation of the Distribution of Note Durations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#offset-statistics">Offset Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-offset-statistics">Interpretation of the Offset Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-offset-values">Distribution of Offset Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-distribution-of-offset-values">Interpretation of the Distribution of Offset Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Key Findings</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparative-summary">Comparative Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By N. Tuğbagül Altan Gülgün
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
