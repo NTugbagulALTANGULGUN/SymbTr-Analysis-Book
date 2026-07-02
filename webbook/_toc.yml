@@ -31,20 +31,28 @@ parts:
       - file: notebooks/09_related_datasets_and_statistical_analysis
         title: Related Datasets and Statistical Analysis
 
-      - file: notebooks/10_related_datasets_and_research
+      - file: notebooks/10_related_datasets_and_computational_analysis
+        title: Related Datasets and Computational Analysis
+
+      - file: notebooks/11_related_datasets_and_research
         title: Related Datasets and Research
 
-  - caption: Literature Review and Future Directions
+  - caption: Literature and Future Directions
     chapters:
-      - file: notebooks/11_literature_review
+      - file: notebooks/12_literature_review
         title: Literature Review
 
-      - file: notebooks/12_open_research_problems
+      - file: notebooks/13_open_research_problems
         title: Open Research Problems
+
+  - caption: Interactive Demos
+    chapters:
+      - file: notebooks/14_interactive_makam_following_demo
+        title: Interactive Makam Following Demo
 
   - caption: Project Information
     chapters:
-      - file: notebooks/13_contributing
+      - file: notebooks/15_contributing
         title: Contributing
 
       - file: references

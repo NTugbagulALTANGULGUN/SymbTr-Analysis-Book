@@ -1,4 +1,4 @@
-# Welcome
+# Home
 
 Welcome to **Turkish Delight Corpus (TDC): A Repository for Turkish Makam Music Research and Computational Methods**.
 
@@ -39,7 +39,7 @@ By following this handbook, readers will learn how to:
 - Apply Principal Component Analysis (PCA)
 - Perform clustering and similarity analysis
 - Compare symbolic music datasets at score and phrase levels
-- Explore related datasets, computational research, and open research problems
+- Explore related datasets, statistical analyses, computational research, interactive demonstrations, and open research problems
 - Develop fully reproducible computational musicology workflows using Python
 
 Together, these learning objectives are supported by three complementary public symbolic music datasets spanning multiple levels of musical representation.
@@ -70,19 +70,22 @@ The handbook is organized as a sequence of independent but interconnected Jupyte
 
 For readers new to computational music analysis, the recommended reading order is:
 
-1. Dataset acquisition
-2. Dataset overview
-3. Statistical analysis of SymbTr v3.0
-4. Data visualization
-5. Principal Component Analysis (PCA)
-6. Clustering analysis
-7. Cluster interpretation
-8. Related symbolic music corpora
-9. Statistical analysis of related datasets
-10. Related datasets and computational research
-11. Literature review
-12. Open research problems
-13. Contributing
+- Dataset acquisition and preparation
+- Dataset inspection and metadata exploration
+- Exploratory Data Analysis (EDA)
+- Statistical analysis
+- Data visualization
+- Principal Component Analysis (PCA)
+- Clustering analysis
+- Cluster interpretation
+- Related symbolic music corpora
+- Cross-dataset statistical analysis
+- Computational analysis of related datasets
+- Related datasets, computational analyses, and research
+- Literature review
+- Open research problems
+- Interactive Makam Following demonstration
+- Community contributions
 
 Readers already familiar with these topics may use the navigation sidebar to access individual chapters directly.
 
@@ -115,9 +118,12 @@ The workflow consists of:
 - Cluster interpretation
 - Related symbolic music corpora
 - Cross-dataset statistical analysis
-- Related computational research
+- Computational analysis of related datasets
+- Related datasets, research, and computational analyses
 - Literature review
 - Open research problems
+- Interactive Makam Following demonstration
+- Community contributions
 
 All analyses are fully reproducible and implemented using Python and Jupyter notebooks.
 
@@ -140,6 +146,8 @@ The computational analyses presented throughout this handbook are implemented en
 ## Citation
 
 If you use the Turkish Delight Corpus (TDC), the accompanying Jupyter notebooks, or any part of the computational workflow presented in this handbook, please cite the primary dataset and acknowledge this handbook in your publications.
+
+In addition to the core computational workflow, the handbook provides access to complementary symbolic music datasets, comparative statistical analyses, computational research resources, interactive demonstrations, literature reviews, open research problems, and bibliographic references. Readers are encouraged to explore these chapters for further educational and research support.
 
 ### Primary Dataset
 
