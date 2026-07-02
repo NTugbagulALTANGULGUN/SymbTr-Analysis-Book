@@ -1,0 +1,761 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Home &#8212; Turkish Delight Corpus: An Open Handbook for Computational Analysis of Turkish Makam Music</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fb639cf9" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'landing';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SymbTr Dataset Analysis" href="introduction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Turkish Delight Corpus: An Open Handbook for Computational Analysis of Turkish Makam Music - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Turkish Delight Corpus: An Open Handbook for Computational Analysis of Turkish Makam Music - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Home
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">SymbTr Dataset Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Computational Analysis of Turkish Makam Music Datasets: A Practical Tutorial</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dataset</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/01_download_data.html">Accessing the SymbTr V3.0 Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/02_data_overview.html">SymbTr V3.0 Dataset Characteristics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exploratory Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/03_statistical_analysis.html">Statistical Analysis of Turkish Makam Music SymbTr v3.0 Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/04_visualizations.html">Exploratory Visualizations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/05_pca_analysis.html">Principal Component Analysis (PCA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/06_clustering.html">Unsupervised Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/07_cluster_interpretation.html">Interpreting Cluster Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Related Datasets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/08_related_datasets.html">Related Symbolic Music Corpora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/09_related_datasets_and_statistical_analysis.html">Related Datasets and Statistical Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/10_related_datasets_and_computational_analysis.html">Related Datasets and Computational Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/11_related_datasets_and_research.html">Related Datasets and Research</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Literature and Future Directions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/12_literature_review.html">Literature Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/13_open_research_problems.html">Open Research Problems</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interactive Demos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/14_interactive_makam_following_demo.html">Interactive Makam Following Demo</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Information</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/15_contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Resources and References</a></li>
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NTugbagulALTANGULGUN/SymbTr-Analysis-Book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NTugbagulALTANGULGUN/SymbTr-Analysis-Book/issues/new?title=Issue%20on%20page%20%2Flanding.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/landing.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Home</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbtr-collection-overview">SymbTr Collection Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-is-this-handbook-for">Who is this handbook for?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-will-learn">What you will learn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#public-turkish-makam-music-datasets">Public Turkish Makam Music Datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-this-handbook">How to use this handbook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-workflow">Project Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technologies">Technologies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primary-dataset">Primary Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handbook">Handbook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bibtex">BibTeX</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="home">
+<h1>Home<a class="headerlink" href="#home" title="Link to this heading">#</a></h1>
+<p>Welcome to <strong>Turkish Delight Corpus (TDC): A Repository for Turkish Makam Music Research and Computational Methods</strong>.</p>
+<p>The <strong>Turkish Delight Corpus (TDC)</strong> is an open, interactive, and fully reproducible Jupyter Book that presents computational methods, educational resources, and analytical workflows for symbolic Turkish makam music research.</p>
+<p>Rather than focusing on a single corpus, the handbook integrates multiple public symbolic Turkish makam music datasets within a unified computational framework. Using Python and Jupyter notebooks, readers can reproduce every stage of the analysis pipeline, from dataset acquisition to advanced computational musicology methods.</p>
+<p>The project combines <strong>three complementary public datasets</strong> representing different levels of symbolic Turkish makam music. <strong>SymbTr v3.0</strong> serves as the primary score-level corpus, while the <strong>Turkish Makam Symbolic Phrase Dataset</strong> and the <strong>Turkish Makam Melodic Phrase Dataset</strong> provide phrase-level representations that enable comparative computational analyses.</p>
+<section id="symbtr-collection-overview">
+<h2>SymbTr Collection Overview<a class="headerlink" href="#symbtr-collection-overview" title="Link to this heading">#</a></h2>
+<p>The latest version of the SymbTr collection consists of:</p>
+<ul class="simple">
+<li><p>Approximately <strong>3000 musical pieces</strong></p></li>
+<li><p><strong>164 makams</strong> (modal structures)</p></li>
+<li><p><strong>135 usuls</strong> (rhythmic cycles)</p></li>
+<li><p><strong>61 musical forms</strong></p></li>
+<li><p>About <strong>1.200.000 musical notes</strong></p></li>
+<li><p>Roughly <strong>145 hours</strong> of nominal playback time</p></li>
+</ul>
+<p>The collection includes scores in multiple formats such as MusicXML, MIDI, PDF, text, mu2, making it suitable for computational analysis and music software applications.</p>
+<p><em>Source: SymbTr v3.0 Zenodo record.</em></p>
+</section>
+<hr class="docutils" />
+<section id="who-is-this-handbook-for">
+<h2>Who is this handbook for?<a class="headerlink" href="#who-is-this-handbook-for" title="Link to this heading">#</a></h2>
+<p>This handbook is intended for researchers, educators, and students interested in computational approaches to Turkish makam music.</p>
+<p>It is particularly suitable for:</p>
+<ul class="simple">
+<li><p>🎓 Graduate students studying Music Information Retrieval (MIR), computational musicology, machine learning, and artificial intelligence</p></li>
+<li><p>🔬 Researchers working on symbolic music analysis, digital humanities, and computational musicology</p></li>
+<li><p>🎼 Musicologists interested in reproducible computational methods</p></li>
+<li><p>💻 Data scientists exploring symbolic music datasets and machine learning workflows</p></li>
+<li><p>🌍 Educators seeking open educational resources for computational music analysis</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="what-you-will-learn">
+<h2>What you will learn<a class="headerlink" href="#what-you-will-learn" title="Link to this heading">#</a></h2>
+<p>By following this handbook, readers will learn how to:</p>
+<ul class="simple">
+<li><p>Acquire and organize public symbolic Turkish makam music datasets</p></li>
+<li><p>Explore musical metadata and corpus characteristics</p></li>
+<li><p>Perform exploratory data analysis (EDA)</p></li>
+<li><p>Compute descriptive statistics for multiple symbolic music datasets</p></li>
+<li><p>Visualize symbolic music collections</p></li>
+<li><p>Apply Principal Component Analysis (PCA)</p></li>
+<li><p>Perform clustering and similarity analysis</p></li>
+<li><p>Compare symbolic music datasets at score and phrase levels</p></li>
+<li><p>Explore related datasets, statistical analyses, computational research, interactive demonstrations, and open research problems</p></li>
+<li><p>Develop fully reproducible computational musicology workflows using Python</p></li>
+</ul>
+<p>Together, these learning objectives are supported by three complementary public symbolic music datasets spanning multiple levels of musical representation.</p>
+</section>
+<hr class="docutils" />
+<section id="public-turkish-makam-music-datasets">
+<h2>Public Turkish Makam Music Datasets<a class="headerlink" href="#public-turkish-makam-music-datasets" title="Link to this heading">#</a></h2>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">3 Public Datasets</span>
+<span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">Reproducible</span>
+<span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">Open Access</span></p>
+<p>The Turkish Delight Corpus integrates three complementary public datasets representing different levels of symbolic Turkish makam music.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Official Resource</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>SymbTr v3.0</strong></p></td>
+<td><p>Large-scale symbolic corpus containing complete Turkish makam music scores. It serves as the primary dataset for statistical analysis, visualization, Principal Component Analysis (PCA), clustering, and similarity analysis.</p></td>
+<td><p><a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="https://doi.org/10.5281/zenodo.15470412"><span>Zenodo</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Turkish Makam Symbolic Phrase Dataset</strong></p></td>
+<td><p>Phrase-level symbolic dataset containing manually annotated musical phrases extracted from Turkish makam music. It supports phrase segmentation, annotation analysis, and comparative computational musicology.</p></td>
+<td><p><a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="http://compmusic.upf.edu/node/237"><span>UPF CompMusic</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Turkish Makam Melodic Phrase Dataset</strong></p></td>
+<td><p>Phrase-level symbolic dataset containing melodic phrase representations suitable for phrase-level statistical analysis, symbolic music processing, and comparative melodic analysis.</p></td>
+<td><p><a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="http://compmusic.upf.edu/node/236"><span>UPF CompMusic</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Although these datasets differ in representation and analytical objectives, the computational workflow presented throughout this handbook can be applied consistently across all of them. Together, they establish a unified framework for exploratory data analysis, statistical analysis, visualization, dimensionality reduction, clustering, similarity analysis, and computational musicology.</p>
+</section>
+<hr class="docutils" />
+<section id="how-to-use-this-handbook">
+<h2>How to use this handbook<a class="headerlink" href="#how-to-use-this-handbook" title="Link to this heading">#</a></h2>
+<p>The handbook is organized as a sequence of independent but interconnected Jupyter notebooks.</p>
+<p>For readers new to computational music analysis, the recommended reading order is:</p>
+<ul class="simple">
+<li><p>Dataset acquisition and preparation</p></li>
+<li><p>Dataset inspection and metadata exploration</p></li>
+<li><p>Exploratory Data Analysis (EDA)</p></li>
+<li><p>Statistical analysis</p></li>
+<li><p>Data visualization</p></li>
+<li><p>Principal Component Analysis (PCA)</p></li>
+<li><p>Clustering analysis</p></li>
+<li><p>Cluster interpretation</p></li>
+<li><p>Related symbolic music corpora</p></li>
+<li><p>Cross-dataset statistical analysis</p></li>
+<li><p>Computational analysis of related datasets</p></li>
+<li><p>Related datasets, computational analyses, and research</p></li>
+<li><p>Literature review</p></li>
+<li><p>Open research problems</p></li>
+<li><p>Interactive Makam Following demonstration</p></li>
+<li><p>Community contributions</p></li>
+</ul>
+<p>Readers already familiar with these topics may use the navigation sidebar to access individual chapters directly.</p>
+</section>
+<hr class="docutils" />
+<section id="project-workflow">
+<h2>Project Workflow<a class="headerlink" href="#project-workflow" title="Link to this heading">#</a></h2>
+<p>The Turkish Delight Corpus demonstrates a complete end-to-end computational workflow for symbolic Turkish makam music analysis.</p>
+<figure class="align-center" id="tdc-workflow">
+<a class="reference internal image-reference" href="_images/workflow.png"><img alt="_images/workflow.png" src="_images/workflow.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Unified computational workflow of the Turkish Delight Corpus (TDC) for reproducible analysis of symbolic Turkish makam music datasets.</span><a class="headerlink" href="#tdc-workflow" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Each stage of the workflow is implemented as an independent Jupyter notebook, allowing readers to reproduce every computational step.</p>
+<p>The workflow consists of:</p>
+<ul class="simple">
+<li><p>Dataset acquisition and preparation</p></li>
+<li><p>Dataset inspection and metadata exploration</p></li>
+<li><p>Exploratory Data Analysis (EDA)</p></li>
+<li><p>Statistical analysis</p></li>
+<li><p>Data visualization</p></li>
+<li><p>Principal Component Analysis (PCA)</p></li>
+<li><p>Clustering analysis</p></li>
+<li><p>Cluster interpretation</p></li>
+<li><p>Related symbolic music corpora</p></li>
+<li><p>Cross-dataset statistical analysis</p></li>
+<li><p>Computational analysis of related datasets</p></li>
+<li><p>Related datasets, research, and computational analyses</p></li>
+<li><p>Literature review</p></li>
+<li><p>Open research problems</p></li>
+<li><p>Interactive Makam Following demonstration</p></li>
+<li><p>Community contributions</p></li>
+</ul>
+<p>All analyses are fully reproducible and implemented using Python and Jupyter notebooks.</p>
+</section>
+<hr class="docutils" />
+<section id="technologies">
+<h2>Technologies<a class="headerlink" href="#technologies" title="Link to this heading">#</a></h2>
+<p>The computational analyses presented throughout this handbook are implemented entirely using open-source scientific computing tools.</p>
+<ul class="simple">
+<li><p>Python</p></li>
+<li><p>Jupyter Notebook</p></li>
+<li><p>Jupyter Book</p></li>
+<li><p>Pandas</p></li>
+<li><p>NumPy</p></li>
+<li><p>Matplotlib</p></li>
+<li><p>scikit-learn</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Link to this heading">#</a></h2>
+<p>If you use the Turkish Delight Corpus (TDC), the accompanying Jupyter notebooks, or any part of the computational workflow presented in this handbook, please cite the primary dataset and acknowledge this handbook in your publications.</p>
+<p>In addition to the core computational workflow, the handbook provides access to complementary symbolic music datasets, comparative statistical analyses, computational research resources, interactive demonstrations, literature reviews, open research problems, and bibliographic references. Readers are encouraged to explore these chapters for further educational and research support.</p>
+<section id="primary-dataset">
+<h3>Primary Dataset<a class="headerlink" href="#primary-dataset" title="Link to this heading">#</a></h3>
+<p><a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="https://doi.org/10.5281/zenodo.15470412"><span>SymbTr v3.0 (Zenodo DOI)</span></a></p>
+<p>Karaosmanoğlu, M. K. (2025). <em>Turkish Maqam Music Symbolic Data (SymbTr v3.0).</em> Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.15470412">https://doi.org/10.5281/zenodo.15470412</a></p>
+</section>
+<section id="handbook">
+<h3>Handbook<a class="headerlink" href="#handbook" title="Link to this heading">#</a></h3>
+<p>Altan Gülgün, N. T. (2026). <em>Turkish Delight Corpus: An Open Handbook for Computational Analysis of Turkish Makam Music.</em> Jupyter Book.</p>
+</section>
+<section id="bibtex">
+<h3>BibTeX<a class="headerlink" href="#bibtex" title="Link to this heading">#</a></h3>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@misc</span><span class="p">{</span><span class="nl">tdc2026</span><span class="p">,</span>
+<span class="w">  </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Altan Gülgün, N. Tuğbagül}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Turkish Delight Corpus: An Open Handbook for Computational Analysis of Turkish Makam Music}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2026}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">howpublished</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Jupyter Book}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">note</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{\url{https://ntugbagulaltangulgun.github.io/SymbTr-Analysis-Book/}}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Additional datasets, computational resources, literature reviews, open research problems, and bibliographic references are available throughout the <strong>Related Datasets</strong>, <strong>Literature Review</strong>, <strong>Open Research Problems</strong>, and <strong>Resources and References</strong> sections.</p>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "NTugbagulALTANGULGUN/SymbTr-Analysis-Book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="introduction.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">SymbTr Dataset Analysis</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbtr-collection-overview">SymbTr Collection Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-is-this-handbook-for">Who is this handbook for?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-will-learn">What you will learn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#public-turkish-makam-music-datasets">Public Turkish Makam Music Datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-this-handbook">How to use this handbook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-workflow">Project Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technologies">Technologies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primary-dataset">Primary Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handbook">Handbook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bibtex">BibTeX</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By N. Tuğbagül Altan Gülgün
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
