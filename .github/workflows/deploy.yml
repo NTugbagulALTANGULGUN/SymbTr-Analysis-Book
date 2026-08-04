@@ -39,23 +39,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Show Jupyter Book version
+        run: |
+          jupyter-book --version
+
       - name: Build Jupyter Book
         run: |
           jupyter-book clean .
-          jupyter-book build .
-
-      - name: Show build output
-        run: |
-          ls -la _build/html
-          find _build/html -maxdepth 2 -type f | sort
+          jupyter-book build . --all
 
       - name: Verify build output
         run: |
+          ls -la ./_build/html
           test -f "./_build/html/index.html"
 
       - name: Add nojekyll file
         run: |
-          touch "./_build/html/.nojekyll"
+          touch ./_build/html/.nojekyll
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
