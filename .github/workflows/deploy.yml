@@ -44,18 +44,23 @@ jobs:
           jupyter-book clean .
           jupyter-book build .
 
+      - name: Show build output
+        run: |
+          ls -la _build/html
+          find _build/html -maxdepth 2 -type f | sort
+
       - name: Verify build output
         run: |
-          test -f "_build/html/index.html"
+          test -f "./_build/html/index.html"
 
       - name: Add nojekyll file
         run: |
-          touch "_build/html/.nojekyll"
+          touch "./_build/html/.nojekyll"
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _build/html
+          path: ./_build/html
 
   deploy:
     name: Deploy GitHub Pages
