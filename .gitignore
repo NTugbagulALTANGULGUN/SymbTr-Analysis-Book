@@ -1,0 +1,11 @@
+﻿webbook/data/processed/X_pca.csv
+webbook/data/processed/symbtr_corpus.csv
+webbook/data/raw/pdf_v3.zip
+webbook/data/interim/
+_build/
+**/_build/
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+__pycache__/
+*.pyc
+data/raw/pdf_v3.zip

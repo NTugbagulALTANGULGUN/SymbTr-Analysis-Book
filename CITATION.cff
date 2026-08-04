@@ -1,0 +1,21 @@
+## Citation
+
+If you use the Turkish Delight Corpus (TDC) in your research, please cite both the original datasets and this software.
+
+### Software DOI
+
+**Software DOI:** <https://doi.org/10.5281/zenodo.21399104>
+
+### BibTeX
+
+```bibtex
+@software{altan_gulgun_serra_2026_tdc,
+  author       = {N. Tuğbagül Altan Gülgün and Xavier Serra},
+  title        = {Turkish Delight Corpus (TDC): A Reproducible Computational Framework for Symbolic Turkish Makam Music Research},
+  year         = {2026},
+  publisher    = {Zenodo},
+  version      = {1.0},
+  doi          = {10.5281/zenodo.21399104},
+  url          = {https://doi.org/10.5281/zenodo.21399104}
+}
+```

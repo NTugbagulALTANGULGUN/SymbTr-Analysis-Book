@@ -1,0 +1,64 @@
+format: jb-book
+
+root: landing
+
+parts:
+
+  - caption: Introduction
+    chapters:
+      - file: webbook/notebooks/tutorial
+        title: How to Use This Analysis Book
+
+      - file: webbook/notebooks/01_literature_review
+        title: Literature Review
+
+  - caption: Computational Workflow
+    chapters:
+      - file: webbook/notebooks/02_accessing_and_preparing_the_symbtr_v3_dataset
+        title: Accessing and Preparing the SymbTr v3.0 Dataset
+
+      - file: webbook/notebooks/03_individual_composition_analysis
+        title: Individual Composition Analysis
+
+      - file: webbook/notebooks/04_exploring_and_statistically_analyzing_the_symbtr_txt_collection
+        title: Exploring and Statistically Analyzing the SymbTr TXT Collection
+
+      - file: webbook/notebooks/05_statistical_visualizations
+        title: Statistical Visualizations
+
+      - file: webbook/notebooks/06_pca_analysis
+        title: Principal Component Analysis
+
+      - file: webbook/notebooks/07_clustering_analysis
+        title: Clustering Analysis
+
+      - file: webbook/notebooks/08_txt_to_musicxml_conversion
+        title: TXT to MusicXML Conversion
+
+      - file: webbook/notebooks/09_markov_chain_music_generation
+        title: Markov Chain Music Generation
+
+      - file: webbook/notebooks/10_midi_tempo_modification
+        title: MIDI Tempo Modification
+
+      - file: webbook/notebooks/11_related_datasets
+        title: Related Datasets
+
+      - file: webbook/notebooks/12_related_datasets_and_statistical_analysis
+        title: Related Datasets and Statistical Analysis
+
+      - file: webbook/notebooks/13_interactive_makam_following_demo
+        title: Interactive Makam Following Demo
+
+  - caption: Conclusion
+    chapters:
+      - file: webbook/notebooks/14_open_research_problems
+        title: Open Research Problems
+
+      - file: webbook/notebooks/15_contributing
+        title: Contributing
+
+  - caption: References
+    chapters:
+    - file: references
+      title: Resources and References

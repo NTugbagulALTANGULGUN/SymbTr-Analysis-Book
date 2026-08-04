@@ -1,0 +1,135 @@
+# ============================================================
+# Turkish Delight Corpus (TDC) Analysis Book
+# Jupyter Book configuration
+# ============================================================
+
+# ------------------------------------------------------------
+# Book information
+# ------------------------------------------------------------
+
+title: "Turkish Delight Corpus (TDC): An Analysis Book for Turkish Makam Music Research and Computational Methods"
+author: "N. Tuğbagül Altan Gülgün and Xavier Serra"
+copyright: "2026"
+description: >
+  An open and reproducible Jupyter Book presenting computational workflows
+  for Turkish makam music research, including symbolic data preparation,
+  statistical analysis, visualization, dimensionality reduction, clustering,
+  TXT-to-MusicXML conversion, Markov-chain-based music generation,
+  MIDI tempo modification, and related dataset analysis.
+
+language: en
+
+# Build only the files listed in _toc.yml.
+only_build_toc_files: true
+
+
+# ------------------------------------------------------------
+# Visual identity
+# ------------------------------------------------------------
+
+logo: # ------------------------------------------------------------
+# Visual identity
+# ------------------------------------------------------------
+
+logo: # ------------------------------------------------------------
+# Visual identity
+# ------------------------------------------------------------
+
+logo: webbook/notebooks/images/logo.png
+
+
+# ------------------------------------------------------------
+# Bibliography
+# ------------------------------------------------------------
+
+bibtex_bibfiles:
+  - references.bib
+
+
+# ------------------------------------------------------------
+# Notebook execution
+# ------------------------------------------------------------
+
+execute:
+  # Notebook outputs are preserved without re-executing notebooks during build.
+  execute_notebooks: "off"
+  allow_errors: false
+  timeout: 20000
+  stderr_output: remove
+
+
+# ------------------------------------------------------------
+# Launch buttons
+# ------------------------------------------------------------
+
+launch_buttons:
+  notebook_interface: jupyterlab
+  colab_url: "https://colab.research.google.com"
+  thebe: true
+
+
+# ------------------------------------------------------------
+# GitHub repository
+# ------------------------------------------------------------
+
+repository:
+  url: "https://github.com/NTugbagulALTANGULGUN/TDC-Analysis-Book"
+  path_to_book: "."
+  branch: main
+
+
+# ------------------------------------------------------------
+# HTML output
+# ------------------------------------------------------------
+
+html:
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+  use_download_button: true
+  home_page_in_navbar: true
+
+
+# ------------------------------------------------------------
+# Files excluded from the build
+# ------------------------------------------------------------
+
+exclude_patterns:
+  - ".venv/**"
+  - "venv/**"
+  - "_build/**"
+  - ".jupyter_cache/**"
+  - "**/.ipynb_checkpoints/**"
+  - "data/raw/**"
+  - "data/processed/**"
+  - "data/interim/**"
+  - "data/external/**"
+  - "*.pyc"
+  - "__pycache__/**"
+  - ".DS_Store"
+  - "Thumbs.db"
+
+
+# ------------------------------------------------------------
+# Sphinx configuration
+# ------------------------------------------------------------
+
+sphinx:
+  extra_extensions:
+    - sphinx_design
+    - sphinx_copybutton
+    - sphinx_togglebutton
+
+  config:
+    html_static_path:
+      - "_static"
+
+    html_css_files:
+      - "custom.css"
+
+    html_last_updated_fmt: "%d %B %Y"
+    html_show_sourcelink: false
+    html_copy_source: false
+    html_title: "Turkish Delight Corpus (TDC)"
+    numfig: true
+    bibtex_reference_style: author_year
